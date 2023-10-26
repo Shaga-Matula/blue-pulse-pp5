@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
     'home',
+
+    # Extra Apps
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +85,8 @@ LOGIN_REDIRECT_URL = '/'
 
 
 ROOT_URLCONF = 'bluepulse.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
