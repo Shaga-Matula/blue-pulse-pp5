@@ -27,7 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu105.gitpod.io', 'bluepulsepp5-165b4a2f3a08.herokuapp.com']
+ALLOWED_HOSTS = ['8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu105.gitpod.io',
+                 'bluepulsepp5-165b4a2f3a08.herokuapp.com']
 
 
 # Application definition
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -109,7 +111,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # needed for allauth
+                'django.template.context_processors.request',  # allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
