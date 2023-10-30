@@ -1,13 +1,9 @@
-/*  Fonts */
-@font-face {
-    font-family: 'ECG Font';
-    src: url('/static/lifeline-font/Lifeline-7O6A.ttf') format('truetype');
-}
+/* General page setup */
 
-.lifeline-font {
-    font-family: 'ECG Font', sans-serif;
-    font-weight: 100;
-    font-size: xx-large;
+.center-element {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 
@@ -34,11 +30,9 @@
 }
 
 .nav-bar-text {
-    color: black;
+    color: white;
     font-size: large;
 }
-
-/* Landing Page */
 
 .all-body {
     background-image: url('/static/images/studio_back.jpg');
@@ -53,7 +47,7 @@
     width: 100vw;
 }
 
-/* Footer */
+/* Footer phantom main page */
 
 .min-height-main-footer {
     min-height: calc(100vh - 135px);
@@ -111,7 +105,21 @@ audio {
     background-color: yellow;
 }
 
+/*  Fonts */
+@font-face {
+    font-family: 'ECG Font';
+    src: url('/static/lifeline-font/Lifeline-7O6A.ttf') format('truetype');
+}
 
+/* Pulse Font */
+.lifeline-font {
+    font-family: 'ECG Font', sans-serif;
+    font-weight: 100;
+    font-size: xx-large;
+    color: white;
+
+
+}
 
 /* Allauth  */
 
@@ -122,5 +130,59 @@ audio {
 .login input[type="password"] {
     color: white;
 
+}
 
+.item-discpt {
+    color: white;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.navbar {
+    background-color: #001f2b;
+}
+
+.card-title,
+.card-text {
+    color: antiquewhite;
+}
+
+.merch-card-text {
+    color: antiquewhite;
+}
+
+/* detain main */
+
+.detail-main-background {
+    background-color: white;
+}
+
+
+
+/* Merchandise Discription Text Tags */
+
+
+.discription-page-text {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Star Rating */
+.stars {
+    display: inline-block;
+    font-size: 0;
+}
+
+.star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    /* background-color: #ccc; */
+}
+
+.star.gold {
+    background-color: gold;
 }
