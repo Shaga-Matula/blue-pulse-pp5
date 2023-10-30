@@ -4,7 +4,7 @@ from .models import MerchandiseMod
 from django.views.generic.detail import DetailView
 
 
-class AllMerchandiseView(TemplateView):
+class AllMerchView(TemplateView):
     """
     Gets All Merchandise
     """
@@ -14,4 +14,15 @@ class AllMerchandiseView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['all_merch'] = MerchandiseMod.objects.all()
+        return context
+
+
+class MerchendiseDetailView(DetailView):
+    model = MerchandiseMod
+    template_name = 'merchandise/merch_item.html'
+    context_object_name = 'merch_item'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['merch_item'] = self.object
         return context

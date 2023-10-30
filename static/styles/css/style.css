@@ -139,7 +139,6 @@ audio {
 }
 
 
-
 .navbar {
     background-color: #001f2b;
 }
@@ -160,7 +159,6 @@ audio {
 }
 
 
-
 /* Merchandise Discription Text Tags */
 
 
@@ -168,7 +166,6 @@ audio {
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
-
 /* Star Rating */
 .stars {
     display: inline-block;
@@ -185,4 +182,27 @@ audio {
 
 .star.gold {
     background-color: gold;
+}
+
+.merch-main-height{
+    min-height: 100vh;
+}
+
+.merch-item-height {
+    height: auto;
+    background-color: #00415a;
+    
+
+}
+
+/* Media Sizes */
+
+/* Remove gap at to of screen */
+@media(max-width: 767px) {
+    .merch-main-height {
+        align-items: flex-start;
+        min-height: auto;
+        padding-top: 70px;
+        
+    }
 }
