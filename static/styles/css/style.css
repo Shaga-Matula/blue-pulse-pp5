@@ -1,3 +1,16 @@
+/*  Fonts */
+@font-face {
+    font-family: 'ECG Font';
+    src: url('/static/lifeline-font/Lifeline-7O6A.ttf') format('truetype');
+}
+
+.lifeline-font {
+    font-family: 'ECG Font', sans-serif;
+    font-weight: 100;
+    font-size: xx-large;
+}
+
+
 /* Song page songs <ul> No Bullet */
 
 .song-li {
@@ -26,21 +39,9 @@
 }
 
 /* Landing Page */
-/* .blue-pulse-hero-imag {
-    background-image: url('/static/images/bluepulseback.bmp');
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-} */
 
 .all-body {
-    background-image: url('/static/images/bluepulseback.jpg');
+    background-image: url('/static/images/studio_back.jpg');
     background-position: center center;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -110,18 +111,7 @@ audio {
     background-color: yellow;
 }
 
-/*  Fonts */
-@font-face {
-    font-family: 'ECG Font';
-    src: url('/static/lifeline-font/Lifeline-7O6A.ttf') format('truetype');
-}
 
-.lifeline-font {
-    font-family: 'ECG Font', sans-serif;
-    font-weight: 100;
-    font-size: xx-large;
-    font-size: 100px;
-}
 
 /* Allauth  */
 
@@ -131,6 +121,6 @@ audio {
 .login input[type="email"],
 .login input[type="password"] {
     color: white;
-    
-    
+
+
 }
