@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container-fluid">
+    <h1 class="text-center lifeline-font" style="margin-top: 70px;"> <i>Merchandise</i></h1>
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-xl-9 col-md-11 col-sm-12 col-12">
+            <div class="row justify-content-center">
+                {% for merch in all_merch %}
+                <div class="col-lg-3 col-md-6 col-sm-8 col-12 p-1">
+                    <div class="card indigo-dye">
+                        <a href="#">
+                            <img src="{{ merch.image.url }}" alt="{{ merch.name }}"
+                                class="card-img-top img-fluid p-3 rounded-6" />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ merch.name }}</h5>
+                            <p class="card-text">Price: €{{ merch.price }}</p>
+                            <p class="card-text">Category: {{ merch.category }}</p>
+                            {% if merch.rating %}
+                            <small class="text-muted"><i class="fas fa-star mr-1 star" style="color: gold"></i><span class="text-white">{{ merch.rating }} / 5</span></small>
+                            {% else %}
+                            <small class="text-muted">No Rating</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
