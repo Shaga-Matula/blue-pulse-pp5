@@ -5,11 +5,9 @@ from django.dispatch import receiver
 
 class CategoryMod(models.Model):
     CATEGORY_CHOICES = (
-        ('caps', 'Caps'),
-        ('t-shirts', 'T-Shirts'),
-        ('pens', 'Pens'),
-        ('mugs', 'Mugs'),
-        ('bags', 'Bags'),
+        ('clothes', 'Clothes'),
+        ('memorabilia', 'Memorabilia'), 
+        ('cd', 'CD'), 
     )
 
     name = models.CharField(

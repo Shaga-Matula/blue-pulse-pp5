@@ -246,6 +246,27 @@ audio {
     background-color: gold;
 }
 
+/* Shopping bag */
+
+.shopping-text{
+    color: white;
+}
+
+.shopping-text-hr{
+    color: white;
+    font-weight: 600;
+    height: 5px;
+}
+
+
+/* Bag Page */
+
+.btn-outline-black {
+    background: white;
+    color: black !important;    /*  Override link colors */
+    border: 1px solid black;
+}
+
 
 /* Media Sizes */
 /* ------------------------------------- */
