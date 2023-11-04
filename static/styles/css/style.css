@@ -1,13 +1,42 @@
 /* General page setup */
 
+.all-body {
+    background-image: url('/static/images/studio_back.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 140px);
+    width: 100vw;
+}
+
+/* Div Centering to left */
 .center-element {
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
+/* Merchandis all */
 
-/* Song page songs <ul> No Bullet */
+.card-img-top {
+    max-width: 90%;
+    max-height: 80%;
+    width: 250px;
+    height: 250px;
+
+}
+
+.card-music-height {
+    min-height: 50px;
+
+}
+
+
+/* Song/Music/List  */
 
 .song-li {
     list-style-type: none;
@@ -28,33 +57,50 @@
     background-color: deepskyblue;
 
 }
-
+/* Navbar Top */
 .nav-bar-text {
     color: white;
     font-size: large;
 }
 
-.all-body {
-    background-image: url('/static/images/studio_back.jpg');
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: calc(100vh - 100px);
-    width: 100vw;
+.navbar-top {
+    background-color: #00719c;
 }
+
+/* Navbar Bottom */
+.second-navbar {
+    background-color: #001f2b;
+
+}
+.second-navbar-li {
+
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #EAEAEA;
+}
+
+.second-navbar-li a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    white-space: nowrap;
+    font-size: ;
+}
+
 
 /* Footer phantom main page */
 
-.min-height-main-footer {
-    min-height: calc(100vh - 100px);
+.min-height {
+    min-height: calc(100vh - 350px);
+}
+
+.min-height-login {
+
+    padding-top: 200px;
 }
 
 
 /* Swatch Colors background colors */
+
 .deep-sky-blue {
     background-color: #00b8ff;
 }
@@ -70,6 +116,7 @@
 .indigo-dye {
     background-color: #00415a
 }
+
 
 .rich-black {
     background-color: #001f2b
@@ -131,16 +178,13 @@ audio {
 
 }
 
+/* Cards */
 .item-discpt {
     color: white;
     font-size: small;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
-.navbar {
-    background-color: #001f2b;
-}
 
 .card-title,
 .card-text {
@@ -151,7 +195,7 @@ audio {
     color: antiquewhite;
 }
 
-/* detain main */
+/* Detail main */
 
 .detail-main-background {
     background-color: white;
@@ -165,6 +209,7 @@ audio {
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
+
 /* Star Rating */
 .stars {
     display: inline-block;
@@ -176,7 +221,7 @@ audio {
     width: 20px;
     height: 20px;
     margin: 0 2px;
-    
+
 }
 
 .star.gold {
@@ -189,15 +234,30 @@ audio {
     background-color: #00415a
 }
 
-/* Media Sizes */
+/* To Be deleted */
+.black-line {
+    height: 20px;
+    background-color: black;
+}
 
-/* Remove gap at to of screen */
+/* Gold horizontal line */
+.gold-line {
+    height: 20px;
+    background-color: gold;
+}
+
+
+/* Media Sizes */
+/* ------------------------------------- */
+
+
+/* Remove gap at to of small screen */
 @media(max-width: 767px) {
-    .min-height-main-footer,
+    .min-height,
     .adjust-index-height {
         align-items: flex-start;
         min-height: auto;
-        
-        
+
+
     }
 }
