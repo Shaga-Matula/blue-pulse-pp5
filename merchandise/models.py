@@ -29,6 +29,7 @@ class MerchandiseMod(models.Model):
     name = models.CharField(max_length=254, verbose_name='Name')
     description = models.TextField(verbose_name='Description')
     price = models.DecimalField(max_digits=6, decimal_places=2, verbose_name='Price')
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name='Rating')
     image = CloudinaryField('image', default='placeholder', null=True, blank=True)
 
