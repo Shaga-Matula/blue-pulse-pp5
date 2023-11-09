@@ -11,6 +11,14 @@
     background-repeat: no-repeat;
     min-height: calc(100vh - 140px);
     width: 100vw;
+    margin-top: 160px;
+}
+
+/* Padding Pages */
+
+
+.nav-padding-merch-item{
+    padding-top: 20px;
 }
 
 /* Div Centering to left */
@@ -19,21 +27,11 @@
     justify-content: start;
     align-items: center;
 }
-
-/* Merchandis all */
-
-.card-img-top {
-    max-width: 90%;
-    max-height: 80%;
-    width: 250px;
-    height: 250px;
-
+/* page height */
+.distance-top-na-v{
+    min-height: calc(100vh - 140px);
 }
 
-.card-music-height {
-    min-height: 50px;
-
-}
 
 /* Signup/Signout/Signin */
 .signup-container {
@@ -54,7 +52,23 @@
     color:white;
 }
 
-/* merch_item page */
+/* Merchandis all */
+
+.card-img-top {
+    max-width: 90%;
+    max-height: 80%;
+    width: 250px;
+    height: 250px;
+
+}
+
+.card-music-height {
+    min-height: 50px;
+
+}
+
+/* merch_item (Increment and decrement) */
+
 
 .btn-black {
     background: black;
@@ -83,6 +97,25 @@
     background: #222;
     color: white;
 }
+
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+
+
+
 
 
 /* Song/Music/List  */
@@ -132,7 +165,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     white-space: nowrap;
-    font-size: ;
+    font-size: large;
 }
 
 
@@ -315,6 +348,81 @@ audio {
     color: black !important;    /*  Override link colors */
     border: 1px solid black;
 }
+
+
+/* ------------------------------- bootstrap toasts */
+.text-bg-bag-message {
+    background-color: #001f2b;
+    color: white;
+}
+.message-container {
+    
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 4px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
 
 
 /* Media Sizes */

@@ -27,8 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu105.gitpod.io',
-                 'bluepulsepp5-165b4a2f3a08.herokuapp.com']
+ALLOWED_HOSTS = ['8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu105.gitpod.io', '8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -52,6 +51,7 @@ INSTALLED_APPS = [
 
     # Extra Apps
     'crispy_forms',
+    'whitenoise',
 ]
 
 MESSAGE_TAGS = {
@@ -73,6 +73,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
 
