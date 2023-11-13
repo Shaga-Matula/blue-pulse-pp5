@@ -20,7 +20,7 @@ def add_to_bag(request, item_id):
 
     if 'product_size' in request.POST:
         size = request.POST['product_size']
-        print(f"Size Mate: {size}") 
+    
     bag = request.session.get('bag', {})
 
     if size:
@@ -44,7 +44,7 @@ def add_to_bag(request, item_id):
             bag[item_id] = quantity
             messages.success(request, f'Added {product.name} to your bag')
 
-          
+        
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -93,7 +93,6 @@ class AdjustBagView(View):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
-    
 
     try:
         product = get_object_or_404(MerchandiseMod, pk=item_id)
@@ -117,6 +116,4 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         return HttpResponse(status=500)
 
-
-    
 
