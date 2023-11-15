@@ -1,1 +1,1 @@
-Blue Pulse Confirmation for Order Number {{ order.order_number }}
+Blue Pulse Order Number {{ order.order_number }} has been confirmed.
