@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 
+from django.contrib.auth.decorators import login_required
 from .forms import MerchandiseForm
 from .models import MerchandiseMod
 
@@ -54,7 +55,7 @@ class MerchandiseDetailView(DetailView):
         context["merch_item"] = self.object
         return context
 
-
+@login_required
 def add_merch(request):
     """Add a product to the store"""
     if request.method == 'POST':
@@ -75,7 +76,7 @@ def add_merch(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     product = get_object_or_404(MerchandiseMod, pk=product_id)
@@ -99,7 +100,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     product = get_object_or_404(MerchandiseMod, pk=product_id)

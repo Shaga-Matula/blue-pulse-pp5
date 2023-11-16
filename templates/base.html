@@ -151,7 +151,10 @@
                 </div>
             </div>
         </nav>
-
+        {% load account %}
+        {% if request.user.is_authenticated %}
+        <h4 class="align-items-center text-white p-1">Welcome, {{ user }}!</h4>
+        {% endif %}
     </header>
     <!-- Messages alert area -->
     {% if messages %}
