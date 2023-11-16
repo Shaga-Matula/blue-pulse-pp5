@@ -11,9 +11,16 @@
                 {% for merch in all_merch %}
                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 p-1">
                                 <div class="card indigo-dye">
-                            <a href="{% url 'merch_item' merch.id %}" class="mx-auto ">
-                                <img src="{{ merch.image.url }}" alt="{{ merch.name }}" class="card-img-top img-fluid p-3" />
-                            </a>
+                                    {% if merch.image %}
+                                    <a href="{% url 'merch_item' merch.id %}" class="mx-auto red">
+                                        <img src="{{ merch.image.url }}" alt="{{ merch.name }}"
+                                            class="card-img-top img-fluid p-3" />
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'merch_item' merch.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title">{{ merch.name }}</h5>
                                 <p class="card-text">Price: €{{ merch.price }}</p>
