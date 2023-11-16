@@ -58,6 +58,9 @@ class MerchandiseDetailView(DetailView):
 @login_required
 def add_merch(request):
     """Add a product to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store administrators can do that.')
+        return redirect(reverse('home'))
     if request.method == 'POST':
         form = MerchandiseForm(request.POST, request.FILES)
         if form.is_valid():
@@ -79,6 +82,9 @@ def add_merch(request):
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store administrators can do that.')
+        return redirect(reverse('home'))
     product = get_object_or_404(MerchandiseMod, pk=product_id)
     if request.method == 'POST':
         form = MerchandiseForm(request.POST, request.FILES, instance=product)
@@ -103,6 +109,9 @@ def edit_product(request, product_id):
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store administrators can do that.')
+        return redirect(reverse('home'))
     product = get_object_or_404(MerchandiseMod, pk=product_id)
     product.delete()
     messages.success(request, 'Item deleted!')
