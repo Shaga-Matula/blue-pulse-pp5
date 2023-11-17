@@ -1,11 +1,11 @@
 # Music App Urls
 
-from django.contrib import admin
+
 from django.urls import path
 from . import views
 
 
 urlpatterns = [
-    path("song_list", views.song_list, name="song_list"),
+    path("song_list", views.SongListView.as_view(), name="song_list"),
     
 ] 
