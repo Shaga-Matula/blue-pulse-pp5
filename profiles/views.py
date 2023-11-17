@@ -12,7 +12,7 @@ from .models import UserProfile
 def profile(request):
     """Display the user's profile."""
     if not request.user.is_superuser:
-        messages.error(request, "Sorry, only store administrators can do that.")
+        messages.error(request, "Sorry, only administrators can do that.")
         return redirect(reverse("home"))
     profile = get_object_or_404(UserProfile, user=request.user)
 
