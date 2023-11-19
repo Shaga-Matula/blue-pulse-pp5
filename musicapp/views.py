@@ -1,9 +1,26 @@
 from django.contrib import messages
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
-
-from .forms import MusicModForm
+from django.shortcuts import get_object_or_404
+from .forms import MusicModForm, CommentForm
 from .models import MusicMod, CommentMod
+
+
+
+
+class AddCommentToSongView(CreateView):
+    model = CommentMod  # Specify the model
+    template_name = "comments/comment_add.html"
+    form_class = CommentForm
+
+    def form_valid(self, form):
+        song = get_object_or_404(MusicMod, pk=self.kwargs['pk'])
+        form.instance.music = song
+        form.instance.user_profile = self.request.user.userprofile
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('song_all_comments')
 
 
 class SongListCommentView(ListView):

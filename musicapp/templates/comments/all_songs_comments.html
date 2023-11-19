@@ -24,7 +24,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <a href="#" class="btn btn-primary mt-3">Add Comment</a>
+            <a href="{% url 'add_comment_to_song' pk=song.pk %}" class="btn btn-primary mt-3">Add Comment</a>
         </div>
     </div>
     {% endfor %}
