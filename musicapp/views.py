@@ -4,7 +4,14 @@ from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from django.shortcuts import get_object_or_404
 from .forms import MusicModForm, CommentForm
 from .models import MusicMod, CommentMod
+from django.http import HttpResponseForbidden
 
+
+class SongCommentEditView(UpdateView):
+    model = CommentMod
+    form_class = CommentForm
+    template_name = "comments/comment_edit.html"
+    success_url = reverse_lazy("song_all_comments")
 
 
 
