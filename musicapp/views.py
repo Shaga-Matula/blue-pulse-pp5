@@ -1,13 +1,10 @@
 from django.contrib import messages
+from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
-from django.shortcuts import get_object_or_404
-from django.shortcuts import redirect, reverse
-from .forms import MusicModForm, CommentForm
-from .models import MusicMod, CommentMod
 
-
-
+from .forms import CommentForm, MusicModForm
+from .models import CommentMod, MusicMod
 
 
 class CommentDeleteView(DeleteView):
@@ -15,32 +12,36 @@ class CommentDeleteView(DeleteView):
     success_url = reverse_lazy("song_all_comments")
 
     def get_object(self, queryset=None):
-        return get_object_or_404(CommentMod, pk=self.kwargs['pk'])
+        return get_object_or_404(CommentMod, pk=self.kwargs["pk"])
 
     def get(self, request, *args, **kwargs):
         self.object = self.get_object()
-        # success_message = f"Comment with ID {self.object.pk} has been deleted."
-        # messages.success(self.request, success_message)
-        
+
         self.object.delete()
-        messages.success(request, 'Item deleted!')
-        
+        success_message = f"Comment has been successfully deleted."
+        messages.success(self.request, success_message)
         return redirect(self.success_url)
 
 
+class SongCommentEditView(DeleteView):
+    def get(self, request, pk):
+        comment = get_object_or_404(CommentMod, pk=pk)
+        form = CommentForm(instance=comment)
+        return render(
+            request, "comments/comment_edit.html", {"form": form, "comment": comment}
+        )
 
-class SongCommentEditView(UpdateView):
-    model = CommentMod
-    form_class = CommentForm
-    template_name = "comments/comment_edit.html"
-    success_url = reverse_lazy("song_all_comments")
-
-    def form_valid(self, form):
-        song = get_object_or_404(MusicMod, pk=self.kwargs['pk'])
-        form.instance.music = song
-        form.instance.user_profile = self.request.user.userprofile
-        return super().form_valid(form)
-
+    def post(self, request, pk):
+        comment = get_object_or_404(CommentMod, pk=pk)
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            success_message = f"Comment has been successfully edited ."
+            messages.success(self.request, success_message)
+            form.save()
+            return redirect("song_all_comments")
+        return render(
+            request, "comments/comment_edit.html", {"form": form, "comment": comment}
+        )
 
 
 class AddCommentToSongView(CreateView):
@@ -49,13 +50,15 @@ class AddCommentToSongView(CreateView):
     form_class = CommentForm
 
     def form_valid(self, form):
-        song = get_object_or_404(MusicMod, pk=self.kwargs['pk'])
+        song = get_object_or_404(MusicMod, pk=self.kwargs["pk"])
         form.instance.music = song
         form.instance.user_profile = self.request.user.userprofile
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('song_all_comments')
+        success_message = f"Comment has been created successfully."
+        messages.success(self.request, success_message)
+        return reverse("song_all_comments")
 
 
 class SongListCommentView(ListView):
