@@ -59,7 +59,7 @@ class MerchandiseDetailView(DetailView):
 def add_merch(request):
     """Add a product to the store"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store administrators can do that.')
+        messages.error(request, 'Sorry, Band Members can do that.')
         return redirect(reverse('home'))
     if request.method == 'POST':
         form = MerchandiseForm(request.POST, request.FILES)

@@ -3,6 +3,7 @@ from django.urls import path
 
 from .views import SongCreateView, SongListView, SongUpdateView, SongDeleteView
 from .views import SongListCommentView, AddCommentToSongView, SongCommentEditView
+from .views import CommentDeleteView
 
 
 urlpatterns = [
@@ -14,5 +15,6 @@ urlpatterns = [
     path('song_all_comments/', SongListCommentView.as_view(), name='song_all_comments'),
     path('song/<int:pk>/add_comment/', AddCommentToSongView.as_view(), name='add_comment_to_song'),
     path('comment/edit/<int:pk>/', SongCommentEditView.as_view(), name='edit_comment'),
+    path('comment/<int:pk>/delete/', CommentDeleteView.as_view(), name='comment_delete'),
     
 ]

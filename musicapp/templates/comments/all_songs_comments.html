@@ -17,7 +17,7 @@
                                     <!-- Your content for the user who wrote the comment or a superuser goes here -->
                                     <a href="{% url 'edit_comment' pk=comment.pk %}" class="btn btn-primary btn-sm">Edit</a>
                                     <!-- Yes/No enabled JavaScript-->
-                                    <a href="#" class="btn btn-danger confirm-delete btn-sm">Delete</a>
+                                    <a href="{% url 'comment_delete' comment.pk %}" class="btn btn-danger confirm-delete btn-sm">Delete</a>
                                 {% endif %}
                             </div>
                         </li>

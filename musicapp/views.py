@@ -1,10 +1,32 @@
 from django.contrib import messages
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from django.shortcuts import get_object_or_404
+from django.shortcuts import redirect, reverse
 from .forms import MusicModForm, CommentForm
 from .models import MusicMod, CommentMod
-from django.http import HttpResponseForbidden
+
+
+
+
+
+class CommentDeleteView(DeleteView):
+    model = CommentMod
+    success_url = reverse_lazy("song_all_comments")
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(CommentMod, pk=self.kwargs['pk'])
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        # success_message = f"Comment with ID {self.object.pk} has been deleted."
+        # messages.success(self.request, success_message)
+        
+        self.object.delete()
+        messages.success(request, 'Item deleted!')
+        
+        return redirect(self.success_url)
+
 
 
 class SongCommentEditView(UpdateView):
@@ -12,6 +34,12 @@ class SongCommentEditView(UpdateView):
     form_class = CommentForm
     template_name = "comments/comment_edit.html"
     success_url = reverse_lazy("song_all_comments")
+
+    def form_valid(self, form):
+        song = get_object_or_404(MusicMod, pk=self.kwargs['pk'])
+        form.instance.music = song
+        form.instance.user_profile = self.request.user.userprofile
+        return super().form_valid(form)
 
 
 
