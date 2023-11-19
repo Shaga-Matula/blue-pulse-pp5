@@ -3,9 +3,21 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 
 from .forms import MusicModForm
-from .models import MusicMod
+from .models import MusicMod, CommentMod
 
 
+class SongListCommentView(ListView):
+    model = MusicMod
+    template_name = "comments/all_songs_comments.html"
+    context_object_name = "songs"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["comments"] = CommentMod.objects.all()
+        return context
+
+
+###########
 class SongListView(ListView):
     model = MusicMod
     template_name = "musicapp/song_list.html"
