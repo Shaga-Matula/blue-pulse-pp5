@@ -8,7 +8,7 @@ class MusicMod(models.Model):
     artist_name = models.CharField(max_length=100)
     song_title = models.CharField(max_length=100)
     song_file = CloudinaryField("song_file", resource_type="auto")
-    song_image = CloudinaryField("song_image", default="placeholder")
+    song_image = CloudinaryField("song_image", default="https://res.cloudinary.com/dsqr7dgjt/image/upload/v1700499377/jnepz9qayczlbb0gqvao.png")
 
     def __str__(self):
         return f"{self.artist_name} - {self.song_title}"
