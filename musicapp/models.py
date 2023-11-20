@@ -27,3 +27,25 @@ class CommentMod(models.Model):
     def __str__(self):
         user = self.user_profile.user
         return f"Comment by {user.username} on {self.music.artist_name} - {self.music.song_title}"
+
+
+########### Contact Us
+
+
+class ContactMod(models.Model):
+    """
+    This is the Contacts Mod
+    """
+
+    class Meta:
+        verbose_name = "Contact"
+        verbose_name_plural = "Contacts"
+
+    fname = models.CharField(max_length=50, verbose_name="First Name")
+    lname = models.CharField(max_length=50, verbose_name="Last Name")
+    email = models.EmailField(verbose_name="Email Address")
+    phone = models.CharField(max_length=20, verbose_name="Contact Number")
+    msg = models.TextField(verbose_name="Message")
+
+    def __str__(self):
+        return f"{self.lname}, {self.fname}"
