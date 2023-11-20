@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_object_or_404, redirect, render, reverse
+from django.shortcuts import get_object_or_404, render
 
 from checkout.models import Order
 
@@ -11,9 +11,7 @@ from .models import UserProfile
 @login_required
 def profile(request):
     """Display the user's profile."""
-    if not request.user.is_superuser:
-        messages.error(request, "Sorry, only administrators can do that.")
-        return redirect(reverse("home"))
+
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == "POST":
