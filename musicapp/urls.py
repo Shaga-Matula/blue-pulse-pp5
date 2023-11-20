@@ -1,9 +1,10 @@
 # Music App Urls
 from django.urls import path
-
+from django.conf import settings
+from django.conf.urls.static import static
 from .views import SongCreateView, SongListView, SongUpdateView, SongDeleteView
 from .views import SongListCommentView, AddCommentToSongView, SongCommentEditView
-from .views import CommentDeleteView
+from .views import CommentDeleteView, ContactUsView
 
 
 urlpatterns = [
@@ -16,8 +17,9 @@ urlpatterns = [
     path('song/<int:pk>/add_comment/', AddCommentToSongView.as_view(), name='add_comment_to_song'),
     path('comment/edit/<int:pk>/', SongCommentEditView.as_view(), name='edit_comment'),
     path('comment/<int:pk>/delete/', CommentDeleteView.as_view(), name='comment_delete'),
+    path('contact_us/', ContactUsView.as_view(), name='contact_us'),
     
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 handler404 = "musicapp.views.error_404"
