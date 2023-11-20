@@ -124,3 +124,11 @@ class SongDeleteView(DeleteView):
             f"Successfully deleted {self.get_object().artist_name} - {self.get_object().song_title}.",
         )
         return super().delete(request, *args, **kwargs)
+
+
+
+def error_404(request, exception):
+    """
+    This is a 404 page to catch errors
+    """
+    return render(request, '404.html', status=404)

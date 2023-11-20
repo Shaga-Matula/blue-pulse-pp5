@@ -18,3 +18,6 @@ urlpatterns = [
     path('comment/<int:pk>/delete/', CommentDeleteView.as_view(), name='comment_delete'),
     
 ]
+
+
+handler404 = "musicapp.views.error_404"
