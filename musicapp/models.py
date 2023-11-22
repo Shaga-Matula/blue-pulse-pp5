@@ -5,6 +5,11 @@ from profiles.models import UserProfile, User
 
 
 class MusicMod(models.Model):
+
+    class Meta:
+        verbose_name = "Music"
+        verbose_name_plural = "Music"
+
     artist_name = models.CharField(max_length=100)
     song_title = models.CharField(max_length=100)
     song_file = CloudinaryField("song_file", resource_type="auto")
@@ -15,6 +20,11 @@ class MusicMod(models.Model):
 
 
 class CommentMod(models.Model):
+
+    class Meta:
+        verbose_name = "Comment"
+        verbose_name_plural = "Comments"
+
     music = models.ForeignKey(MusicMod, on_delete=models.CASCADE, related_name='comments')
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     text = models.TextField()
