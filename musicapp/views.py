@@ -1,10 +1,59 @@
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DeleteView, ListView, UpdateView
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView, View
+
+from django.http import HttpResponseNotFound, HttpResponseRedirect
 
 from .forms import CommentForm, MusicModForm
 from .models import CommentMod, MusicMod, ContactMod
+
+
+### like/dis-like
+
+
+class LikeCommentView(View):
+    """ Gets likes from comments """
+    def post(self, request, pk):
+        comment = get_object_or_404(CommentMod, pk=pk)
+        user = request.user
+        if user.is_authenticated:
+            if user not in comment.likes.all():
+                comment.likes.add(user)
+                comment.dislikes.remove(user) # remove from dislike
+                success_message = f"You have successfully added a like to this comment"
+                messages.success(self.request, success_message)
+                comment.save()
+            else:
+                success_message = f"You have already liked this comment"
+                messages.success(self.request, success_message)
+
+        return HttpResponseRedirect(reverse("song_all_comments"))
+
+class DisLikeCommentView(View):
+    def post(self, request, pk):
+        comment = get_object_or_404(CommentMod, pk=pk)
+        user = request.user
+        if user.is_authenticated:
+            if user not in comment.dislikes.all():
+                comment.dislikes.add(user)
+                comment.likes.remove(user)# remove from likes
+                success_message = f"You have successfully added a Dis-like to this comment"
+                messages.success(self.request, success_message)
+                comment.save()
+            else:
+                success_message = f"You have already dis liked this comment"
+                messages.success(self.request, success_message)
+
+        return HttpResponseRedirect(reverse("song_all_comments"))
+
+
+
+#################################
+
+
+
+
 
 
 class CommentDeleteView(DeleteView):

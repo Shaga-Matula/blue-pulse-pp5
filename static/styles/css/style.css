@@ -3,6 +3,43 @@
     height: 50px;
 }
 
+
+
+.btn-del-edit{
+    min-width: 60px;
+}
+
+.all_song_card {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #00415a;
+}
+.title-all-song {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+}
+
+.btn-del-edit,
+.like-icon {
+    margin-left: 1rem;
+}
+.dis-like-button {
+    border: grey;
+    color: white;
+    background-color: red;
+}
+
+.like-button {
+    border: grey;
+    color: white;
+    background-color: green;
+}
+
+.like-count {
+    margin-left: 5px; /* Adjust margin as needed */
+    color: black;
+    font-weight: bold;
+}
+
 /* Comments Template */
 
 .comments-card{

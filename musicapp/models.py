@@ -1,7 +1,7 @@
 from cloudinary.models import CloudinaryField
 from django.db import models
 
-from profiles.models import UserProfile
+from profiles.models import UserProfile, User
 
 
 class MusicMod(models.Model):
@@ -20,8 +20,8 @@ class CommentMod(models.Model):
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
-    likes = models.PositiveIntegerField(default=0)
-    dislikes = models.PositiveIntegerField(default=0)
+    likes = models.ManyToManyField(User, related_name="comment_likes")
+    dislikes = models.ManyToManyField(User, related_name="comment_dis_likes")
     reply_to = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='replies')
 
     def __str__(self):
