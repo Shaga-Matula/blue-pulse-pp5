@@ -66,6 +66,18 @@
 <script type="text/javascript">
     $('.toast').toast('show');
 </script>
+<!-- Scroll back to comment -->
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+
+    });
+
+    window.onbeforeunload = function (e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Wait for the DOM to be fully loaded before attaching the click event handler
