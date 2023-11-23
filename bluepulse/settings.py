@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     # Extra Apps
     'crispy_forms',
+    'django_summernote',
     'whitenoise',
 ]
 
