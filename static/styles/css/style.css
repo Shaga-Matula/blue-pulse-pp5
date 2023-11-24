@@ -4,6 +4,14 @@
 }
 
 
+/* Add Merch */
+.text-add-merch{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+
+}
+
+/* Songs */
 
 .btn-del-edit{
     min-width: 60px;
