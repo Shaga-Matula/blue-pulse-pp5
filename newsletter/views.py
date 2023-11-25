@@ -1,8 +1,10 @@
 from django.shortcuts import redirect, render
 from django.views import View
+from django.core.mail import send_mail
 
 from .forms import SubscribeForm
 from .models import NewsLetterMod
+from django.contrib import messages
 
 
 class SubscribeView(View):
@@ -16,7 +18,8 @@ class SubscribeView(View):
         form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            # Need a success message here 
+            success_message = f"You have successfully subscribe to the news letter"
+            messages.success(self.request, success_message)
             return redirect("subscribe_success")
 
         return render(request, self.template_name, {"form": form})

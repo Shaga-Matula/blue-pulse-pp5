@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.core.mail import send_mail, settings
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView, View
@@ -175,29 +176,60 @@ class SongDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
+
 class ContactUsView(CreateView):
     template_name = "comments/contact_us.html"
+    model = ContactMod  # Replace with the actual import path for your ContactMod model
+    fields = ['fname', 'lname', 'email', 'phone', 'msg']  # List all the fields in your form
+    success_url = reverse_lazy("contact_us")
 
-    def post(self, request, *args, **kwargs):
-        fname = request.POST.get("fname")
-        lname = request.POST.get("lname")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
-        msg = request.POST.get("msg")
+    def form_valid(self, form):
+        # Save the form data to the database
+        response = super().form_valid(form)
 
-        contact = ContactMod(
-            fname=fname, lname=lname, email=email, phone=phone, msg=msg
-        )
-        contact.save()
+        # Send verification email to the user
+        self.send_verification_email()
 
+        # Send email notification
+        self.send_notification_email()
+
+        # Display success message
         messages.success(
-            request, "Your message was sent successfully. We will be in touch ASAP."
+            self.request, "Your message was sent successfully. We will be in touch ASAP."
         )
 
-        return redirect("home")
+        return response
 
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name)
+    def form_invalid(self, form):
+        # Handle form validation errors
+        messages.error(self.request, "There was an error with your submission. Please check your input.")
+        return super().form_invalid(form)
+
+    def send_verification_email(self):
+        instance = self.object
+
+        # Send email to the user for verification
+        user_subject = 'Contact Form Submission Verification'
+        user_message = f'Thank you for contacting us! Your message has been received.\n\nMessage: {instance.msg}'
+        user_from_email = 'bluepulseband@gmail.com'  
+        user_recipient_list = [instance.email]
+        print(f"User Recipient List: {user_recipient_list}")
+
+        send_mail(user_subject, user_message, user_from_email, user_recipient_list)
+
+    def send_notification_email(self):
+        instance = self.object
+
+        # Send email notification to admin 'bluepulseband@gmail.com'
+        admin_subject = 'New Contact Form Submission'
+        admin_message = f'A new contact form submission:\n\nName: {instance.fname} {instance.lname}\nEmail: {instance.email}\nPhone: {instance.phone}\nMessage: {instance.msg}'
+        admin_from_email = 'bluepulseband@gmail.com'  
+        admin_recipient_list = ['bluepulseband@gmail.com']
+
+        send_mail(admin_subject, admin_message, admin_from_email, admin_recipient_list)
+
+        return reverse("contact_us")
+
 
 
 
