@@ -1,9 +1,10 @@
+from django.contrib import messages
+from django.core.mail import send_mail, settings
 from django.shortcuts import redirect, render
 from django.views import View
-from django.core.mail import send_mail
+
 from .forms import SubscribeForm
 from .models import NewsLetterMod
-from django.contrib import messages
 
 
 class SubscribeView(View):
@@ -43,7 +44,6 @@ class SubscribeView(View):
             return redirect("subscribe_success")
 
         return render(request, self.template_name, {"form": form})
-
 
 
 class SubscribeSuccessView(View):
