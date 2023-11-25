@@ -16,4 +16,5 @@ urlpatterns = [
     path("", include("bag.urls")),
     path("profile/", include("profiles.urls")),
     path("", include("musicapp.urls")),
+    path('newsletter/', include('newsletter.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
