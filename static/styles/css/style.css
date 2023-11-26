@@ -260,6 +260,29 @@
     font-size: large;
 }
 
+/* Nav bar active highlight */
+.nav-active-color.active {
+    color: white !important;
+    background-color: #00415a;
+    border-radius: 50%;
+
+}
+.nav-link:hover {
+    /* background-color: #00415a; */
+    color: white;
+    background-color: #00415a;
+    border-radius: 25%;
+}
+.nav-link:focus {
+    color: #17a2b8;
+    border-radius: 25%;
+}
+.nav-link {
+    border-radius: 25%;
+}
+
+
+
 /* Footer phantom main page */
 
 .min-height {

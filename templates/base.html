@@ -14,6 +14,11 @@
     Muddy Waters, and BB King. Since 1998, they've crafted a unique sound in Shagamatula 
     Studios, using Cubase: Music Production Software. Feel the #BluesyExcitement and dedication in every note played by this 
     talented duo. #BluePulse #RockMusic #BluesMusic">
+    <meta name="keywords"
+        content="Blue Pulse, Music, Merchandise, Demo, Band, Album, Concert, Apparel, Rock Music, Blues Music, Fan Merchandise, Online Store">
+    <meta name="author" content="Paul Gleeson">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007BFF">
     {% endblock %}
 
     {% block extra_meta_links %}
@@ -146,36 +151,57 @@
                     <span class="navbar-toggler-icon bg-white"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse second-navbar-li" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item second-navbar-li">
-                            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <li class="nav-item second-navbar-li ">
+                            <a class="nav-link nav-active-color {% if request.path == '/' %}active{% endif %}"
+                                href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item second-navbar-li">
-                            <a class="nav-link" aria-current="page" href="{% url 'contact_us' %}">Contact Us</a>
+                            <a class="nav-link nav-active-color {% if request.path == '/song_list' %}active{% endif %}"
+                                aria-current="" href="{% url 'song_list' %}">Anthology</a>
+                        </li>
+                        <li class="nav-item second-navbar-li">
+                            <a class="nav-link nav-active-color {% if request.path == '/contact_us/' %}active{% endif %}"
+                                aria-current="" href="{% url 'contact_us' %}">Contact Us</a>
                         </li>
                         {% if request.user.is_authenticated %}
                         <li class="nav-item second-navbar-li">
-                            <a class="nav-link" aria-current="page" href="{% url 'song_all_comments' %}">Comments</a>
+                            <a class="nav-link nav-active-color {% if request.path == '/song_all_comments/' %}active{% endif %}"
+                                aria-current="" href="{% url 'song_all_comments' %}">Comments</a>
                         </li>
                         {% endif %}
-                        <li class="nav-item second-navbar-li">
-                            <a class="nav-link" aria-current="page" href="{% url 'song_list' %}">Anthology</a>
-                        </li>
-                        <li class="nav-item second-navbar-li">
-                            <a class="nav-link" href="{% url 'all_merchandise' %}">All Merchandise</a>
-                        </li>
-                        <li class="nav-item second-navbar-li">
-                            <a class="nav-link" href="{% url 'all_merchandise' %}?category=clothes">Clothes</a>
-                        </li>
-                        <li class="nav-item second-navbar-li">
-                            <a class="nav-link" href="{% url 'all_merchandise' %}?category=memorabilia">Memorabilia</a>
-                        </li>
-                        <li class="nav-item second-navbar-li">
-                            <a class="nav-link" href="{% url 'all_merchandise' %}?category=cd">Anthology CD</a>
-                        </li>
 
-                    </ul>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="" href="#" role="button"
+                                id="merchandiseDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Merchandise
+                            </a>
+                            <div class="dropdown-menu border-0 custom-dropdown-menu "
+                                aria-labelledby="merchandiseDropdown">
+                                <ul class="navbar-nav flex-column">
+                                    <!-- Change the class to 'flex-column' for a vertical layout -->
+                                    <li class="nav-item second-navbar-li second-navbar">
+                                        <a class="nav-link nav-bar-status dropdown-item"
+                                            href="{% url 'all_merchandise' %}">All
+                                            Merchandise</a>
+                                    </li>
+                                    <li class="nav-item second-navbar-li second-navbar">
+                                        <a class="nav-link nav-bar-status dropdown-item"
+                                            href="{% url 'all_merchandise' %}?category=clothes">Clothes</a>
+                                    </li>
+                                    <li class="nav-item second-navbar-li second-navbar">
+                                        <a class="nav-link nav-bar-status dropdown-item"
+                                            href="{% url 'all_merchandise' %}?category=memorabilia">Memorabilia</a>
+                                    </li>
+                                    <li class="nav-item second-navbar-li second-navbar">
+                                        <a class="nav-link nav-bar-status dropdown-item"
+                                            href="{% url 'all_merchandise' %}?category=cd">Anthology CD</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                 </div>
             </div>
         </nav>
