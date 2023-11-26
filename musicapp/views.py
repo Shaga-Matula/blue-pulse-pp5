@@ -52,11 +52,6 @@ class DisLikeCommentView(View):
 
 #################################
 
-
-
-
-
-
 class CommentDeleteView(DeleteView):
     model = CommentMod
     success_url = reverse_lazy("song_all_comments")
@@ -233,8 +228,9 @@ class ContactUsView(CreateView):
 
 
 
-def error_404(request, exception):
+#############
+def handler404(request, exception):
     """
     This is a 404 page to catch errors
     """
-    return render(request, '404.html', status=404)
+    return render(request, "404.html", status=404)
