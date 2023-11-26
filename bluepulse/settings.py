@@ -25,7 +25,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu105.gitpod.io', '8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu106.gitpod.io', 'bluepulsepp5-165b4a2f3a08.herokuapp.com']
 
