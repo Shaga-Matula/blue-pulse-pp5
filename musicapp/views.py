@@ -226,8 +226,6 @@ class ContactUsView(CreateView):
         return reverse("contact_us")
 
 
-
-
 #############
 def handler404(request, exception):
     """
