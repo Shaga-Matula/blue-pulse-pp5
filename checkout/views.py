@@ -7,6 +7,7 @@ import json
 import stripe
 from django.conf import settings
 from django.contrib import messages
+from django.core.mail import send_mail
 from django.shortcuts import HttpResponse, get_object_or_404, redirect, render, reverse
 from django.views.decorators.http import require_POST
 
@@ -192,7 +193,7 @@ def checkout_success(request, order_number):
     )
 
     cd_in_order = any(
-    item.product.name == "Blue Pulse - CD Umbrel Street"
+    item.product.name == "Blue Pulse - CD Umbrella Street"
     for item in order.lineitems.all()
 )
 
