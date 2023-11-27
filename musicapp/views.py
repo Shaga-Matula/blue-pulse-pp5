@@ -119,10 +119,16 @@ class SongListCommentView(ListView):
 
 ###########
 class SongListView(ListView):
+    """
+    ListView for displaying a sorted list of songs.
+    """
     model = MusicMod
     template_name = "musicapp/song_list.html"
     context_object_name = "songs"
 
+    def get_queryset(self):
+        """Order the queryset by song_title."""
+        return MusicMod.objects.all().order_by('song_title')
 
 class SongCreateView(CreateView):
     model = MusicMod
