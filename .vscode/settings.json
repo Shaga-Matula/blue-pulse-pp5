@@ -26,5 +26,8 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "[python]": {
       "editor.defaultFormatter": "trunk.io"
+   },
+   "[markdown]": {
+      "editor.defaultFormatter": "trunk.io"
    }
 }

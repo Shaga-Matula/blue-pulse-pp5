@@ -12,9 +12,8 @@ from django.views.decorators.http import require_POST
 
 from bag.contexts import bag_contents
 from merchandise.models import MerchandiseMod
-
-from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -192,6 +191,17 @@ def checkout_success(request, order_number):
         email will be sent to {order.email}.",
     )
 
+    cd_in_order = any(
+    item.product.name == "Blue Pulse - CD Umbrel Street"
+    for item in order.lineitems.all()
+)
+
+    # If the CD is in the order, send an ISO email
+    if cd_in_order:
+        send_iso_email(order)
+    else:
+        pass
+    
     if "bag" in request.session:
         del request.session["bag"]
 
@@ -201,3 +211,23 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+
+
+def send_iso_email(order):
+    """
+    Sends an ISO email to the user who bought a CD.
+
+    The function retrieves the necessary information from the order,
+    including the user's email address, and sends a congratulatory email
+    containing a link to the ISO file, the unlock code, and a discount code
+    for future purchases.
+    """
+    instance = order
+
+    # Send ISO email to the
+    user_subject = "Congratulations on buying our CD ISO"
+    user_message = 'Here is a link to your ISO file... http:\\your_cd.ect and the unlock code is "ZZTOP"  Us This code for your 10% Discount on future purchases BLUE22'
+    user_from_email = "bluepulseband@gmail.com"
+    user_recipient_list = [instance.email]
+    send_mail(user_subject, user_message, user_from_email, user_recipient_list)
