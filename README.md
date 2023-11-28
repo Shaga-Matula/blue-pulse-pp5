@@ -9,6 +9,10 @@
 - [Blue Pulse Repository](https://github.com/Shaga-Matula/blue-pulse-pp5)
 - [Heroku Site](https://bluepulsepp5-165b4a2f3a08.herokuapp.com)
 
+## Introduction
+The creator of the Blue Pulse project is Paul Gleeson a student as Code Institute. The project aims to provide a toung and cheek view to a fictious band called Blue Pulse. Whilst the band is fictious (Fingers Gleeson) the music is real and was recorded by the group in home studios throughout the years. The mail goal is to "get the music out there" and hopefully someone will like a song or two and help us record the tracks properly in a studio. Merchandis and branding picture were created with the permission of  - [My Free Logo](https://myfreelogomaker.com/ )
+
+
 # Project Discription
 
 - Blue Pulse is a band that creates soulful music that touches the heart and soul of its listeners. The official website of the band offers a range of features that cater to the needs of its fans and potential new listeners.
@@ -26,6 +30,136 @@
 - Finally, in the Contact section, fans can send them a message, book them for a gig, or just say hello, making it easy for fans to connect with the band and join a newsletter.
 
 - The website is designed to provide a comprehensive overview of the band and their music to their fans and potential new listeners, making it easy for them to stay up-to-date with the band's latest news and events.
+
+# How to use the site
+
+
+* Landing page 
+
+Welcome to Blue Pulse!
+
+Attempting a Clean and Captivating Design
+
+The landing page is crafted for a UX experience, Its design is clean and captivating, inviting visitors into the world of Blue Pulse. The goal is to make the journey through the page visually appealing and easygoing.
+
+Introduction
+
+"Blue Pulse" isn't just a name; it's the musical story—crafted by Paul "Fingers" Gleeson and Daren "The Belter" Hines. The landing page aims to connect with visitors through the introduction, creating an immediate bond with the audience.
+Our Musical Journey
+
+Explore the musical journey, established in 1998 and committed to the soulful realms of rock and blues-based music. The content is structured to offer visitors a seamless understanding of the history and influences that shape the sound.
+Responsive Design
+
+The landing page ensures that its responsive design, courtesy of Bootstrap, adapts gracefully to various screen sizes. The aim is for visitors to experience Blue Pulse seamlessly, whether they're on a desktop, tablet, or mobile device.
+Easy Navigation
+
+The top navigation bar serves as a guide to the heart of Blue Pulse. It's kept simple yet powerful, providing quick links to the home page, the song anthology, contact details, and a variety of merchandise categories. The landing page has seamlessly integrated user-friendly options, such as account management, to enhance the experience.
+User Account Icons
+
+At the top right, you'll find icons for easy account access. If you are logged in, click on the "My Account" icon (<i class="fas fa-user"></i>) to manage your profile. If you are not logged in, click on the "Login/Signup" icon (<i class="fas fa-sign-in-alt"></i>) to access your account.
+Visual Appeal
+
+Icons and images, like the FontAwesome icons and the unique Blue Pulse favicon, are carefully chosen to add an extra layer to the visual appeal. These elements aim to enhance the Blue Pulse brand and create a memorable visual identity.
+Meta Information
+
+The meta information in the <head> section not only boosts visibility on search engines but also gives visitors a snapshot of what Blue Pulse is all about. Easily share the essence of Blue Pulse on favorite social media platforms.
+Subtle Communication
+
+Toast notifications are there to subtly communicate with visitors. Whether it's a quick heads up, a success celebration, or an informational nugget, the aim is to keep visitors informed without interrupting their exploration.
+Personal Greeting
+
+The experience on the landing page is personalized. Depending on authentication status, visitors are greeted in a warm and inviting way, adding a personal touch to their visit.
+Stylish Consistency
+
+Consistency in styling, from fonts to stylesheets, presents the Blue Pulse landing page as a cohesive and stylish entity. The aim is for visitors to feel the rhythm of the landing page through a visually harmonious experience.
+In summary, The Blue Pulse landing page is crafted to offer visitors more than just information—it's an immersive experience. Come along, explore, and let the heartbeat of The Blue Pulse landing page resonate with you.
+
+
+# Antholigy 
+
+Blue Pulse Anthology
+
+Diverse Song Collection
+
+The Blue Pulse Anthology serves as a comprehensive platform for managing a diverse selection of songs. Utilizing CRUD (Create, Read, Update, Delete) functionality, it allows seamless curation and presentation of our extensive collection in rock and blues-based music.
+Immersive Song Cards
+
+Explore an experience with visually compelling song cards. Each card, supported by CRUD operations, features images, artist names, and song titles, providing insights into the soulful melodies crafted by Blue Pulse.
+Audio Functionality
+
+Access audio controls for each song, allowing for a straightforward listening experience directly on the Anthology page. CRUD functionality ensures efficient updates and maintenance of the audio content.
+User-Friendly Interface
+
+Designed for user convenience, the Anthology page incorporates CRUD operations for easy navigation, enabling users to explore, add, modify, or remove songs effortlessly.
+Superuser Privileges
+
+Superusers benefit from additional CRUD functionalities, such as editing song details and secure deletion with a confirmation prompt, offering efficient management of the Anthology content.
+Interactive Deletion
+
+The deletion process is deliberate, requiring confirmation to ensure conscious decision-making. CRUD operations play a crucial role in maintaining the integrity of the Anthology collection.
+Responsive Design
+
+Similar to our landing page, the Anthology page features a responsive design, adapting seamlessly to various devices for a consistent user experience during CRUD interactions.
+Enhanced Interaction
+
+The Anthology page offers an interactive experience with a clean and engaging design, enhancing overall CRUD interactions without unnecessary embellishments.
+In summary, the Blue Pulse Anthology page, powered by CRUD functionality, serves as a robust platform for exploring, managing, and interacting with a diverse musical collection. Users can navigate, listen, and connect with the narratives embedded in each song, contributing to the vibrant tapestry of our musical journey.
+
+# Contact Page
+
+Direct Communication
+
+Utilize our Contact Us page to send messages, ask questions, or provide feedback directly to Blue Pulse.
+User-Friendly Form
+
+The page incorporates a straightforward form for submitting information, including first and last name, email, phone number, and messages.
+Newsletter Subscription
+
+An option to subscribe to Blue Pulse's newsletter is available for users interested in receiving occasional updates.
+Responsive Design
+
+The Contact Us page is designed to adapt seamlessly across devices, ensuring a consistent experience on desktops, tablets, and mobile devices.
+Communication Options
+
+Users can choose between using the form for direct inquiries or opting for newsletter subscription for periodic updates.
+In summary, the Contact Us page serves as a direct communication channel, featuring a user-friendly form and an optional newsletter subscription for users interested in staying informed. The design ensures a consistent experience across devices.
+
+# Comments Page
+
+
+Comments Page
+
+All Songs with Comments
+
+Explore the comprehensive collection of songs alongside user comments on the Comments page. Each song is presented with associated feedback from the Blue Pulse community.
+Commented Songs
+
+For each song, comments are neatly organized in a structured format. Gain insights into user opinions, reflections, and discussions surrounding specific songs.
+Comment Display
+
+Comments feature user-generated content, providing textual insights into the Blue Pulse community's thoughts on each song. Users can engage with comments, expressing appreciation through likes and dislikes.
+User Interaction
+
+Users have the option to interact with comments by liking or disliking, offering a dynamic way to express sentiments towards particular user-generated content.
+Timestamps
+
+Comments include timestamps, providing transparency regarding when the comments were created and modified. This information enhances the context around user interactions.
+Editing and Deletion
+
+Users with appropriate privileges, such as superusers or the original comment author, can edit or delete comments. These actions contribute to maintaining the quality and relevance of the comment section.
+Add Comment Feature
+
+Users can actively participate by contributing new comments. The "Add Comment" button allows for the seamless addition of user-generated content to the discussion.
+User CRUD Operations
+
+Superusers and authorized individuals can perform CRUD (Create, Read, Update, Delete) operations on comments, ensuring efficient management of user-generated content.
+Toast Notifications
+
+Toast notifications subtly inform users of relevant events or updates, enhancing the overall user experience on the Comments page.
+Scroll Position Persistence
+
+The page retains scroll position to ensure a smooth and user-friendly experience, allowing users to pick up where they left off during previous visits.
+In summary, the Blue Pulse Comments page provides an interactive platform for users to engage in discussions, share thoughts, and contribute to a vibrant community dialogue surrounding the musical content curated by Blue Pulse. The inclusion of CRUD operations ensures effective content management, maintaining a high standard of quality within the comment section.
 
 # Design
 
@@ -182,7 +316,7 @@ Thank you for supporting Blue Pulse and being part of our online community!
 - As a new visitor to Blue Pulse's website, I want to easily navigate the website menu, so that I can quickly find the information I am looking for.
 - As a fan of Blue Pulse, I want to be able to listen to their latest tracks and access their music on various platforms, so that I can enjoy their music easily.
 - As a potential customer of Blue Pulse's merchandise, I want to be able to view their merchandise and purchase it easily, so that I can show my support for the band.
-- As a fan of Blue Pulse, I want to be able to read their latest news and blog posts, so that I can stay up-to-date with the band's activities and creative process.
+- As a fan of Blue Pulse, I want to be able to read their latest news and comment posts, so that I can stay up-to-date with the band's activities and creative process.
 - As a potential customer of Blue Pulse, I want to be able to contact the band easily, so that I can book them for a gig or send them a message.
 - As a member of Blue Pulse, I want to be able to customize the website template to reflect the band's personality and style, so that the website accurately represents the band.
 - As a member of Blue Pulse, I want to be able to integrate the website with the band's social media accounts, so that fans can easily follow and engage with the band on different platforms.
