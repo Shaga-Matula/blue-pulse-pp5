@@ -151,6 +151,10 @@
 
 /* Merchandis all */
 
+.merch-card-height {
+    min-height:45vh;
+}
+
 .card-img-top {
     max-height: 80%;
     width: auto;

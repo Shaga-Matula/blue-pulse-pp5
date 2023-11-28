@@ -6,7 +6,7 @@
     {% for song in songs %}
     <div class="card mb-4">
         <div class="card-body all_song_card">
-            <h2 class="card-title comments-card-title">{{ song.artist_name }} - {{ song.song_title }}</h2>
+            <h2 class="card-title comments-card-title"> {{ song.song_title }} - {{ song.artist_name }}</h2>
             <ul class="list-group col-12">
                 {% for comment in comments %}
                 {% if comment.music == song %}

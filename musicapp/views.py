@@ -153,6 +153,10 @@ class SongListCommentView(ListView):
     template_name = "comments/all_songs_comments.html"
     context_object_name = "songs"
 
+    def get_queryset(self):
+        """Order the queryset by song_title."""
+        return MusicMod.objects.all().order_by("song_title")
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["comments"] = CommentMod.objects.all()
