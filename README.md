@@ -183,7 +183,7 @@ In summary, the Blue Pulse Comments page provides an interactive platform for us
 
 - Maintain Consistent Branding: The website will have consistent branding, including the use of the band's logo, colors, and fonts.
 
-- Create Engaging Content: Blue Pulse will create engaging content, including the band's latest news, music, and merchandise. The blog section will provide a glimpse into the band's personal lives and creative process.
+- Create Engaging Content: Blue Pulse will create engaging content, including the band's latest news, music, and merchandise. The comments section will provide a glimpse into the band's personal lives and creative process.
 
 - Integrate Social Media: The website will be integrated with the band's social media accounts, making it easy for fans to follow and engage with the band on different platforms.
 
@@ -191,7 +191,7 @@ In summary, the Blue Pulse Comments page provides an interactive platform for us
 
 ## Blue Pulse Balsamic Mockup
 
-- Blue Pulse's website will have a unique design that includes balsamic drawings to showcase the band's personality and style. The website will have different sections, including Home, Bio, Music, Store, Blog, and Contact. Here is a description of each section:
+- Blue Pulse's website will have a unique design that includes balsamic drawings to showcase the band's personality and style. The website will have different sections, including Home, Music, Store and Contact. Here is a description of each section:
 
 ### Landing Page/Home:
 
@@ -213,7 +213,7 @@ In summary, the Blue Pulse Comments page provides an interactive platform for us
 
 ### Comments Page
 
-- Blog Page Balsamic Drawing : This section will have a page that reflects the band's personal lives and creative process. It is where the band shares their thoughts on music, life, and everything in between using the guid of Balsamic Drawings.
+- Comments Page Balsamic Drawing : This section will have a page that reflects the band's personal lives and creative process. It is where the band shares their thoughts on music, life, and everything in between using the guid of Balsamic Drawings.
 
 <img src="static/images/readme/blogpage.png"  alt="Music Page"  width="500">
 

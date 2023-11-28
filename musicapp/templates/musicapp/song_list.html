@@ -37,6 +37,8 @@
 
 {% endblock %}
 {% block postloadjs %}
+{{ block.super }}
+
 <script>
     document.addEventListener('play', function(e){
         var audios = document.getElementsByTagName('audio');

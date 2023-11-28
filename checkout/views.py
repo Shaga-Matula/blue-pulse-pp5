@@ -124,17 +124,19 @@ def checkout(request):
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
-                order_form = OrderForm(initial={
-                    'full_name': profile.user.get_full_name(),
-                    'email': profile.user.email,
-                    'phone_number': profile.default_phone_number,
-                    'country': profile.default_country,
-                    'postcode': profile.default_postcode,
-                    'town_or_city': profile.default_town_or_city,
-                    'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,
-                    'county': profile.default_county,
-                })
+                order_form = OrderForm(
+                    initial={
+                        "full_name": profile.user.get_full_name(),
+                        "email": profile.user.email,
+                        "phone_number": profile.default_phone_number,
+                        "country": profile.default_country,
+                        "postcode": profile.default_postcode,
+                        "town_or_city": profile.default_town_or_city,
+                        "street_address1": profile.default_street_address1,
+                        "street_address2": profile.default_street_address2,
+                        "county": profile.default_county,
+                    }
+                )
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
         else:
@@ -192,43 +194,9 @@ def checkout_success(request, order_number):
         email will be sent to {order.email}.",
     )
 
-    cd_in_order = any(
-    item.product.name == "Blue Pulse - CD Umbrella Street"
-    for item in order.lineitems.all()
-)
-
-    # If the CD is in the order, send an ISO email
-    if cd_in_order:
-        send_iso_email(order)
-    else:
-        pass
-    
-    if "bag" in request.session:
-        del request.session["bag"]
-
     template = "checkout/checkout_success.html"
     context = {
         "order": order,
     }
 
     return render(request, template, context)
-
-
-
-def send_iso_email(order):
-    """
-    Sends an ISO email to the user who bought a CD.
-
-    The function retrieves the necessary information from the order,
-    including the user's email address, and sends a congratulatory email
-    containing a link to the ISO file, the unlock code, and a discount code
-    for future purchases.
-    """
-    instance = order
-
-    # Send ISO email to the
-    user_subject = "Congratulations on buying our CD ISO"
-    user_message = 'Here is a link to your ISO file... http:\\your_cd.ect and the unlock code is "ZZTOP"  Us This code for your 10% Discount on future purchases BLUE22'
-    user_from_email = "bluepulseband@gmail.com"
-    user_recipient_list = [instance.email]
-    send_mail(user_subject, user_message, user_from_email, user_recipient_list)

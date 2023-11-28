@@ -45,7 +45,7 @@
                                 <a href="{% url 'edit_comment' pk=comment.pk %}" class="btn btn-primary btn-sm btn-del-edit tester" >Edit</a>
                             </div>
                             <div>
-                                <a href="{% url 'comment_delete' comment.pk %}" class="btn btn-danger btn-sm btn-del-edit" >Delete</a>
+                                <a href="{% url 'comment_delete' comment.pk %}" class="btn btn-danger btn-sm btn-del-edit confirm-delete" >Delete</a>
                             </div>
                             {% endif %}
                         </div>
