@@ -95,6 +95,7 @@
                         </div>
                     </form>
                 </div>
+
                 <!-- Login/Logout seperate in first nav bar-->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
@@ -243,6 +244,28 @@
 
     {% block content %}
     {% endblock %}
+    <footer class="w-100 flex-shrink-0 mx-auto mt-5">
+
+        <div class="row justify-content-center ">
+            <div class="col-12">
+                <div class="row  row-1 ">
+                    <div class="col-sm-3  text-center my-auto"><small>&#9400; Blue Pulse Band</small></div>
+                    <div class="col-md-3  "></div>
+                    <div class="col-md-3 "></div>
+                    <div class="col my-auto text-md-left text-right">
+                        <small>
+                            <span>
+                                <a class="btn btn-link btn-floating btn-lg text-white m-1"
+                                    href="https://www.facebook.com/profile.php?id=61554153687984" role="button"
+                                    rel="nofollow" data-mdb-ripple-color="dark">
+                                    Facebook<i class="fa-brands fa-facebook" aria-label="Facebook"></i>
+                                </a>
+                            </span>
+                        </small>
+                    </div>
+                </div>
+            </div>
+    </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
@@ -265,17 +288,17 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
 
-<script>
-    // Allows only song to play at a time
-    document.addEventListener('play', function(e){
-        var audios = document.getElementsByTagName('audio');
-        for(var i = 0, len = audios.length; i < len;i++){
-            if(audios[i] != e.target){
-                audios[i].pause();
+    <script>
+        // Allows only song to play at a time
+        document.addEventListener('play', function (e) {
+            var audios = document.getElementsByTagName('audio');
+            for (var i = 0, len = audios.length; i < len; i++) {
+                if (audios[i] != e.target) {
+                    audios[i].pause();
+                }
             }
-        }
-    }, true);
-</script>
+        }, true);
+    </script>
     {% endblock %}
 
 

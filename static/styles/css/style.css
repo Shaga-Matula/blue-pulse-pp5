@@ -127,6 +127,7 @@
     min-height: calc(100vh - 140px);
     width: 100vw;
     margin-top: 140px;
+    
 }
 
 /* Padding Pages */
@@ -166,6 +167,10 @@
 }
 
 /* Merchandis all */
+.merch-image-custom{
+    border-radius: 5%;
+}
+
 
 .merch-card-height {
     min-height:45vh;
@@ -175,7 +180,8 @@
     max-height: 80%;
     width: auto;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 5%;
+    
 }
 
 .card-music-height {
@@ -239,14 +245,21 @@
     color: #eaeaea;
 }
 
+.face-book{
+   margin-left:20px;
+   background-color: #4267B2;
+}
+
 .song-card {
     color: white;
     min-height: 400px;
     font-family: Georgia, "Times New Roman", Times, serif;
+   
 }
 
 .song-main {
     background-color: deepskyblue;
+    border-radius: 10%;
 }
 /* Navbar Top */
 .nav-bar-text {
@@ -653,3 +666,16 @@ audio {
     padding-bottom: 4px;
     color: white !important;
 }
+
+
+/* footer */
+footer {
+    position: fixed;
+    height: min-content;
+    bottom: 0;
+    width: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #001f2b;
+    color: white; /* Add your desired text color */
+    text-align: center;
+   }
