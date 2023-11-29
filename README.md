@@ -2,80 +2,132 @@
 
 # Blue Pulse (PP5 Paul Gleeson: Code Institute)
 
-<img src="static/images/readme/all-devices-black2.png"  alt="Landing Page"  width="1000">
+<img src="static/images/readme/all-devices-black2.png" alt="Landing Page" width="1000">
 
 # Project Links
 
 - [Blue Pulse Repository](https://github.com/Shaga-Matula/blue-pulse-pp5)
 - [Heroku Site](https://bluepulsepp5-165b4a2f3a08.herokuapp.com)
 
-## Introduction
-The creator of the Blue Pulse project is Paul Gleeson a student as Code Institute. The project aims to provide a toung and cheek view to a fictious band called Blue Pulse. Whilst the band is fictious (Fingers Gleeson) the music is real and was recorded by the group in home studios throughout the years. The mail goal is to "get the music out there" and hopefully someone will like a song or two and help us record the tracks properly in a studio. Merchandis and branding picture were created with the permission of  - [My Free Logo](https://myfreelogomaker.com/ )
+## Note on Business Model
+
+To enhance user interaction, our design approach incorporates succinct 10-second previews for each song. This deliberate choice aims to offer users a glimpse into the musical journey while encouraging them to consider acquiring the complete CD for a comprehensive experience of each track. The user interface is thoughtfully structured to guide users through this informative process, emphasizing the value derived from the entirety of the music collection.
+
+In the context of this Code Institute project, all songs have been released for your perusal. However, please be aware that in a live environment, users would encounter 10-second samples. This deliberate design choice aims to ensure a streamlined and efficient user experience, with complete versions available for more in-depth exploration or in real-world scenarios. Also, we would greatly appreciate any feedback regarding the songs.
 
 
-# Project Discription
+## README Table Content
 
-- Blue Pulse is a band that creates soulful music that touches the heart and soul of its listeners. The official website of the band offers a range of features that cater to the needs of its fans and potential new listeners.
+1. [Introduction](#Introduction)
+2. [Project Description](#Project-Description)
+3. [How to use the site](#How-to-use-the-site)
+    1. [Landing Page](#Landing-Page)
+4. [Registration](#registration-process)
+5. [MVP](#mvp)
 
-- The website has a menu with different sections, including Home, Comments, Anthology, Store, Newsletter, and Contact.
+# Introduction
+
+The creator of the Blue Pulse project is Paul Gleeson, a dedicated student at Code Institute. This project takes a lighthearted approach to present a fictional band named Blue Pulse. Although the band itself is a creation of imagination (Fingers Gleeson), the music is authentic, recorded by the group in home studios over the years.
+
+The primary objective is to share the music far and wide, with the hope that someone might resonate with a song or two, potentially paving the way to record these tracks professionally in a genuine music studio. The visuals, including merchandise and branding, have been crafted with the permission of My Free Logo, adding a unique and polished dimension to the project.
+
+# Project Description
+
+Blue Pulse is a band that creates soulful music that touches the heart and soul of its listeners. The official website of the band offers a range of features that cater to the needs of its fans and potential new listeners.
+
+The website has a menu with different sections, including Home, Comments, Anthology, Store, Newsletter, and Contact.
 
 - The Home section is the landing page of the website, where you can find a brief introduction to the band and their latest news.
-
 - The Music section contains our latest tracks and links to our music on various platforms, making it easy for fans to access their music.
-
 - In the Store section, fans can buy their merchandise, including t-shirts, posters, and CDs, to show their support for the band.
-
 - The Comments/Discussion section is where the band shares their thoughts on music, life, and everything in between, providing a glimpse into their personal lives and creative process.
-
 - Finally, in the Contact section, fans can send them a message, book them for a gig, or just say hello, making it easy for fans to connect with the band and join a newsletter.
 
-- The website is designed to provide a comprehensive overview of the band and their music to their fans and potential new listeners, making it easy for them to stay up-to-date with the band's latest news and events.
+The website is designed to provide a comprehensive overview of the band and their music to their fans and potential new listeners, making it easy for them to stay up-to-date with the band's latest news and events.
 
 # How to use the site
 
+## Landing Page
 
-* Landing page 
+<img src="static/images/readme/landingpagenotlogged.png" alt="Landing Page" width="700">
 
-Welcome to Blue Pulse!
+### Welcome to Blue Pulse!
 
-Attempting a Clean and Captivating Design
+#### Clean and Captivating Design:
 
-The landing page is crafted for a UX experience, Its design is clean and captivating, inviting visitors into the world of Blue Pulse. The goal is to make the journey through the page visually appealing and easygoing.
+The landing page is crafted for a UX (user experience) that is clean and captivating, inviting visitors into the world of Blue Pulse. The goal is to make the journey through the page visually appealing and easygoing.
 
-Introduction
+#### Introduction:
 
-"Blue Pulse" isn't just a name; it's the musical story—crafted by Paul "Fingers" Gleeson and Daren "The Belter" Hines. The landing page aims to connect with visitors through the introduction, creating an immediate bond with the audience.
-Our Musical Journey
+Simply navigate to the [Heroku link](https://bluepulsepp5-165b4a2f3a08.herokuapp.com), and it will bring you to the first page (landing page). This page serves as an introduction to the band and an invitation to continue exploring the rest of the site for a cool musical experience. One of the main purposes of the page is to help fans navigate using the navigation bar.
 
-Explore the musical journey, established in 1998 and committed to the soulful realms of rock and blues-based music. The content is structured to offer visitors a seamless understanding of the history and influences that shape the sound.
+At the pinnacle of the page, the search engine is purposefully crafted to explore merchandise within the dedicated merchandise section. Simultaneously, the logo functions as a convenient home page marker, ensuring seamless navigation.
+
+<img src="static/images/readme/landingpagesearchbar.png" alt="Landing Page" width="700">
+
+Adjacent to the search bar, on the right-hand side, a login/register button is strategically positioned. Noteworthy is its dynamic transformation to "My Profile" upon user login, enhancing user experience and providing quick access to personalized settings.
+
+<img src="static/images/readme/landingpagedropmenu.png" alt="Landing Page" width="200">
+
+
+### Brief Description of the Dropdown Menu
+
+**Product Management (For Superusers):**
+- If the logged-in user is a superuser (administrator with special privileges), they will see links for product management functionalities:
+  - **"Product Management":** Directs to the admin dashboard.
+  - **"Add Merchandise":** Navigates to the page for adding new merchandise.
+  - **"Add Song":** Redirects to the page for adding a new song.
+
+**User-specific Options:**
+- For all authenticated users (both regular users and superusers):
+  - **"My Profile":** Takes the user to their profile page.
+  - **"Logout":** Logs the user out of their account.
+
+**Authentication Options:**
+- For users who are not authenticated (not logged in):
+  - **"Register":** Links to the registration page.
+  - **"Login":** Links to the login page.
+
+These options are presented in a dropdown menu, offering a convenient and organized way for users to access various functionalities based on their authentication status and user type.
+
+
+
+- With the slightly exagerated text "Blue Pulse isn't just a name; it's the musical story—crafted by Paul "Fingers" Gleeson and Daren "The Belter" Hines" The landing page aims to connect with visitors through the introduction, creating an immediate bond with the audience.
+
+- Users are invited to explore and take a musical journey. The content is structured to offer visitors a seamless understanding of the history and influences that shape the sound of the band.
+
+Page Features :-
+
 Responsive Design
 
-The landing page ensures that its responsive design, courtesy of Bootstrap, adapts gracefully to various screen sizes. The aim is for visitors to experience Blue Pulse seamlessly, whether they're on a desktop, tablet, or mobile device.
-Easy Navigation
+- The landing page ensures that its responsive design, courtesy of Bootstrap, adapts gracefully to various screen sizes. The aim is for visitors to experience Blue Pulse seamlessly, whether they're on a desktop, tablet, or mobile device.
+  Easy Navigation
 
-The top navigation bar serves as a guide to the heart of Blue Pulse. It's kept simple yet powerful, providing quick links to the home page, the song anthology, contact details, and a variety of merchandise categories. The landing page has seamlessly integrated user-friendly options, such as account management, to enhance the experience.
+- The top navigation bar serves as a guide to the heart of Blue Pulse. It's kept simple yet powerful, providing quick links to the home page, the song anthology, contact details, and a variety of merchandise categories. The landing page has seamlessly integrated user-friendly options, such as account management, to enhance the experience.
+
 User Account Icons
 
-At the top right, you'll find icons for easy account access. If you are logged in, click on the "My Account" icon (<i class="fas fa-user"></i>) to manage your profile. If you are not logged in, click on the "Login/Signup" icon (<i class="fas fa-sign-in-alt"></i>) to access your account.
-Visual Appeal
+- At the top right, you'll find icons for easy account access. If you are logged in, click on the "My Account" icon (<i class="fas fa-user"></i>) to manage your profile. If you are not logged in, click on the "Login/Signup" icon (<i class="fas fa-sign-in-alt"></i>) to access your account.
+  Visual Appeal
 
-Icons and images, like the FontAwesome icons and the unique Blue Pulse favicon, are carefully chosen to add an extra layer to the visual appeal. These elements aim to enhance the Blue Pulse brand and create a memorable visual identity.
-Meta Information
+- Icons and images, like the FontAwesome icons and the unique Blue Pulse favicon, are carefully chosen to add an extra layer to the visual appeal. These elements aim to enhance the Blue Pulse brand and create a memorable visual identity.
 
-The meta information in the <head> section not only boosts visibility on search engines but also gives visitors a snapshot of what Blue Pulse is all about. Easily share the essence of Blue Pulse on favorite social media platforms.
-Subtle Communication
+- Meta Information
 
-Toast notifications are there to subtly communicate with visitors. Whether it's a quick heads up, a success celebration, or an informational nugget, the aim is to keep visitors informed without interrupting their exploration.
-Personal Greeting
+- The meta information in the <head> section not only boosts visibility on search engines but also gives visitors a snapshot of what Blue Pulse is all about. Easily share the essence of Blue Pulse on favorite social media platforms.
+  Subtle Communication
 
-The experience on the landing page is personalized. Depending on authentication status, visitors are greeted in a warm and inviting way, adding a personal touch to their visit.
-Stylish Consistency
+- Toast notifications are there to subtly communicate with visitors. Whether it's a quick heads up, a success celebration, or an informational nugget, the aim is to keep visitors informed without interrupting their exploration.
+  Personal Greeting
 
-Consistency in styling, from fonts to stylesheets, presents the Blue Pulse landing page as a cohesive and stylish entity. The aim is for visitors to feel the rhythm of the landing page through a visually harmonious experience.
-In summary, The Blue Pulse landing page is crafted to offer visitors more than just information—it's an immersive experience. Come along, explore, and let the heartbeat of The Blue Pulse landing page resonate with you.
+- The experience on the landing page is personalized. Depending on authentication status, visitors are greeted in a warm and inviting way, adding a personal touch to their visit.
+  Stylish Consistency
 
+- Consistency in styling, from fonts to stylesheets, presents the Blue Pulse landing page as a cohesive and stylish entity. The aim is for visitors to feel the rhythm of the landing page through a visually harmonious experience.
 
-# Antholigy 
+- In summary, The Blue Pulse landing page is crafted to offer visitors more than just information—it's an immersive experience.
+
+# Antholigy
 
 Blue Pulse Anthology
 
@@ -125,7 +177,6 @@ Users can choose between using the form for direct inquiries or opting for newsl
 In summary, the Contact Us page serves as a direct communication channel, featuring a user-friendly form and an optional newsletter subscription for users interested in staying informed. The design ensures a consistent experience across devices.
 
 # Comments Page
-
 
 Comments Page
 
@@ -269,7 +320,7 @@ Our primary target audience includes:
 We offer a diverse range of products, including:
 
 - **Merchandise:** T-shirts, hoodies, hats, and other apparel featuring exclusive Blue Pulse designs.
-- **CD Downloads:** Digital downloads of the Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
+- **CD Downloads:** (Planed)Digital downloads of the Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
 
 ## Pricing
 
