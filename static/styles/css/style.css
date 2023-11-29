@@ -185,6 +185,13 @@ html {
 }
 
 /* Merchandis all */
+.merch-image-width {
+    max-width: 80%; /* Adjust this value as needed */
+    height: auto;
+   
+}
+
+
 .merch-image-custom {
     border-radius: 5%;
 }
