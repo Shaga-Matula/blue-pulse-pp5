@@ -13,7 +13,7 @@
                 {% if comment.music == song %}
                 <li class="list-group-item rounded-3">
                     <span class="text-center">{{ comment.text|safe }}</span>
-                    <hr>
+                    <hr class="bg-white-hr">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             -- {{ comment.user_profile.user.username }}
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                 </li>
-                <hr>
+                <hr class="bg-white-hr">
                 {% endif %}
                 {% endfor %}
             </ul>
