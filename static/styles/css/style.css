@@ -1,7 +1,7 @@
 /* test area */
-.image-url-comment {
+/* .image-url-comment {
     height: 50px;
-}
+} */
 
 /* News Letter */
 
@@ -10,6 +10,13 @@
     background-color: #00415a;
 }
 
+/* Feel the beat */
+
+.feel-beat {
+
+    font-family: 'Rock Salt', cursive, 'Helvetica Neue', Arial, sans-serif;
+    font-size: xx-large;
+}
 
 /* Allauth Forms */
 .text-edit-merch .form-group label,
@@ -33,8 +40,8 @@
     min-width: 60px;
 }
 
-.bg-white-hr{
-    background-color:white;
+.bg-white-hr {
+    background-color: white;
     color: white;
 }
 
@@ -42,9 +49,10 @@
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: #00415a;
     border-color: silver;
-    border-style:solid;
+    border-style: solid;
 
 }
+
 .profile-font,
 .title-all-song {
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -55,6 +63,7 @@
 .like-icon {
     margin-left: 1rem;
 }
+
 .dis-like-button {
     border: grey;
     color: white;
@@ -68,22 +77,25 @@
 }
 
 .like-count {
-    margin-left: 5px; /* Adjust margin as needed */
+    margin-left: 5px;
+    /* Adjust margin as needed */
     color: black;
     font-weight: bold;
 }
+
 /* Comments Template */
 #id_login {
     background-color: white;
     color: black;
 }
 
-.comments-intro{
+.comments-intro {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: white;
     background-color: #00415a;
     padding: 10px;
 }
+
 .comments-card {
     width: fit-content;
     padding: 2%;
@@ -99,6 +111,7 @@
     background-color: var(--bs-list-group-bg);
     width: auto;
 }
+
 .comments-card-title {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: x-large;
@@ -143,6 +156,7 @@
     justify-content: start;
     align-items: center;
 }
+
 /* page height */
 .distance-top-na-v {
     min-height: calc(100vh - 140px);
@@ -159,8 +173,10 @@
 }
 
 .signup-form {
-    width: 100%; /* Adjust the width as needed */
-    max-width: 400px; /* Set a maximum width for the form */
+    width: 100%;
+    /* Adjust the width as needed */
+    max-width: 400px;
+    /* Set a maximum width for the form */
 }
 
 .signup-text {
@@ -168,13 +184,13 @@
 }
 
 /* Merchandis all */
-.merch-image-custom{
+.merch-image-custom {
     border-radius: 5%;
 }
 
 
 .merch-card-height {
-    min-height:45vh;
+    min-height: 45vh;
 }
 
 .card-img-top {
@@ -182,7 +198,7 @@
     width: auto;
     height: 250px;
     border-radius: 5%;
-    
+
 }
 
 .card-music-height {
@@ -198,7 +214,8 @@
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -246,22 +263,23 @@
     color: #eaeaea;
 }
 
-.face-book{
-   margin-left:20px;
-   background-color: #4267B2;
+.face-book {
+    margin-left: 20px;
+    background-color: #4267B2;
 }
 
 .song-card {
     color: white;
     min-height: 400px;
     font-family: Georgia, "Times New Roman", Times, serif;
-   
+
 }
 
 .song-main {
     background-color: deepskyblue;
     border-radius: 10%;
 }
+
 /* Navbar Top */
 .nav-bar-text {
     color: white;
@@ -279,9 +297,11 @@
 .form-control {
     color: black;
 }
+
 .second-navbar {
     background-color: #001f2b;
 }
+
 .second-navbar-li {
     padding-left: 25px;
     padding-right: 25px;
@@ -302,16 +322,19 @@
     border-radius: 50%;
 
 }
+
 .nav-link:hover {
     /* background-color: #00415a; */
     color: white;
     background-color: #00415a;
     border-radius: 25%;
 }
+
 .nav-link:focus {
     color: #17a2b8;
     border-radius: 25%;
 }
+
 .nav-link {
     border-radius: 25%;
 }
@@ -321,7 +344,7 @@
 /* Footer phantom main page */
 
 
-.min-height-padding-top{
+.min-height-padding-top {
     margin-top: 100px;
 }
 
@@ -484,7 +507,8 @@ audio {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /*  Override link colors */
+    color: black !important;
+    /*  Override link colors */
     border: 1px solid black;
 }
 
@@ -493,6 +517,7 @@ audio {
     background-color: #001f2b;
     color: white;
 }
+
 .message-container {
     position: fixed;
     top: 72px;
@@ -581,7 +606,7 @@ audio {
     border-color: #dc3545;
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
@@ -592,6 +617,7 @@ audio {
 
 /* Remove gap at to of small screen */
 @media(max-width: 767px) {
+
     .min-height,
     .adjust-index-height {
         align-items: flex-start;
@@ -599,7 +625,7 @@ audio {
         padding-top: 0;
     }
 
-    .min-height-padding-top{
+    .min-height-padding-top {
         margin-top: 10px;
     }
 }
@@ -607,8 +633,10 @@ audio {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -655,10 +683,14 @@ audio {
 }
 
 .allauth-form-inner-content a {
-    color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
-.login label, .login .error-message, .login input[type="email"], #id_remember {
+.login label,
+.login .error-message,
+.login input[type="email"],
+#id_remember {
     color: white;
 }
 
@@ -677,6 +709,7 @@ footer {
     width: 100%;
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: #001f2b;
-    color: white; /* Add your desired text color */
+    color: white;
+    /* Add your desired text color */
     text-align: center;
-   }
+}
