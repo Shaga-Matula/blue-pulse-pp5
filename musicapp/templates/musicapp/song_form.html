@@ -7,8 +7,10 @@
     <div class="overlay"></div>
     <div class="row">
         <div class="col-12 col-md-6">
-            <div class="form-group-change">
-                <h2 class="text-white">Create a new song</h2>
+            <div class="form-group-change pt-5">
+                <hr class="bg-white-hr">
+                <h2 class="text-white ">Create a new song</h2>
+                <hr class="bg-white-hr">
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}

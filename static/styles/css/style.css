@@ -33,6 +33,11 @@
     min-width: 60px;
 }
 
+.bg-white-hr{
+    background-color:white;
+    color: white;
+}
+
 .all_song_card {
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: #00415a;
@@ -40,6 +45,7 @@
     border-style:solid;
 
 }
+.profile-font,
 .title-all-song {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: white !important;

@@ -7,7 +7,7 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body bg-white">
+    <div class="toast-body text-bg-bag-message">
         <div class="row">
             <div class="col">
                 {{ message }}
@@ -15,7 +15,7 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-        <p class="logo-font text-bg-bag-message py-1">
+        <p class=" text-bg-bag-message py-1">
             Your Bag ({{ product_count }})
         </p>
         <div class="bag-notification-wrapper">
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col">
                 <strong>
-                    <p class="mt-3 mb-1 text-black">
+                    <p class="mt-3 mb-1 text-white">
                         Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}:
                         <span class="float-right">${{ total|floatformat:2 }}</span>
                     </p>
