@@ -9,15 +9,15 @@
 {% endblock %}
 
 {% block content %}
-<main class="container-fluid dave">
-    <h1 class="text-center lifeline-font"> <i>Merchandise</i></h1>
+<main class="container-fluid">
+    <h1 class="text-center lifeline-font pt-lg-5 pb-3"> <i>Merchandise</i></h1>
     <!-- Rendering All Merchandise -->
     <div class="row justify-content-center align-items-center">
         <div class="col-xxl-8 col-xl-6 col-md-8 col-sm-10 col-12 ">
             <div class="row justify-content-center">
                 {% for merch in all_merch %}
                 <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 p-1 ">
-                    <div class="card indigo-dye merch-card-height">
+                    <div class="card indigo-dye">
                         {% if merch.image %}
                         <a href="{% url 'merch_item' merch.id %}" class="mx-auto">
                             <img src="{{ merch.image.url }}" alt="{{ merch.name }}"

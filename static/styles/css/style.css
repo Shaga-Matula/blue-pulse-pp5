@@ -36,10 +36,13 @@
 .all_song_card {
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: #00415a;
+    border-color: silver;
+    border-style:solid;
+
 }
 .title-all-song {
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: white;
+    color: white !important;
 }
 
 .btn-del-edit,
@@ -67,6 +70,13 @@
 #id_login {
     background-color: white;
     color: black;
+}
+
+.comments-intro{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    background-color: #00415a;
+    padding: 10px;
 }
 .comments-card {
     width: fit-content;
@@ -110,7 +120,7 @@
     background-repeat: no-repeat;
     min-height: calc(100vh - 140px);
     width: 100vw;
-    margin-top: 160px;
+    margin-top: 140px;
 }
 
 /* Padding Pages */
@@ -159,6 +169,7 @@
     max-height: 80%;
     width: auto;
     height: 250px;
+    border-radius: 50%;
 }
 
 .card-music-height {
@@ -288,6 +299,11 @@
 
 
 /* Footer phantom main page */
+
+
+.min-height-padding-top{
+    margin-top: 100px;
+}
 
 .min-height {
     min-height: calc(100vh - 300px);
@@ -561,6 +577,10 @@ audio {
         align-items: flex-start;
         min-height: 0;
         padding-top: 0;
+    }
+
+    .min-height-padding-top{
+        margin-top: 10px;
     }
 }
 
