@@ -1,7 +1,25 @@
-/* test area */
-/* .image-url-comment {
-    height: 50px;
-} */
+/* General page setup */
+html {
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+.all-body {
+    background-image: url("/static/images/studio_back.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 140px);
+    width: 100vw;
+    margin-top: 140px;
+    margin-bottom: 80px;
+
+}
 
 /* News Letter */
 
@@ -78,7 +96,6 @@
 
 .like-count {
     margin-left: 5px;
-    /* Adjust margin as needed */
     color: black;
     font-weight: bold;
 }
@@ -126,23 +143,7 @@
     color: #333;
 }
 
-/* General page setup */
 
-.all-body {
-    background-image: url("/static/images/studio_back.jpg");
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: calc(100vh - 140px);
-    width: 100vw;
-    margin-top: 140px;
-    margin-bottom: 80px;
-
-}
 
 /* Padding Pages */
 
@@ -612,23 +613,7 @@ audio {
     border-radius: 0;
 }
 
-/* Media Sizes */
-/* ------------------------------------- */
 
-/* Remove gap at to of small screen */
-@media(max-width: 767px) {
-
-    .min-height,
-    .adjust-index-height {
-        align-items: flex-start;
-        min-height: 0;
-        padding-top: 0;
-    }
-
-    .min-height-padding-top {
-        margin-top: 10px;
-    }
-}
 
 /* Allauth form formatting */
 
@@ -710,6 +695,46 @@ footer {
     font-family: Georgia, "Times New Roman", Times, serif;
     background-color: #001f2b;
     color: white;
-    /* Add your desired text color */
     text-align: center;
+}
+
+/* Media Sizes */
+/* ------------------------------------- */
+
+/* Remove gap at to of small screen 767 and below */
+@media(max-width: 767px) {
+
+    .min-height,
+    .adjust-index-height {
+        align-items: flex-start;
+        min-height: 0;
+        padding-top: 0;
+    }
+    .min-height-padding-top {
+        margin-top: 10px;
+    }
+    .nav-active-color.active {
+        color: white !important;
+        background-color: #001f2b;
+        border-radius: 50%;
+    }
+    .nav-link:hover {
+        color: white;
+        background-color: #001f2b;
+    }
+}
+
+  /* Styles for screens below 993 pixels */
+@media (max-width: 992px) {
+
+/* disable link high-light and active */
+    .nav-active-color.active {
+        color: white !important;
+        background-color: #001f2b;
+        border-radius: 50%;
+    }
+    .nav-link:hover {
+        color: white;
+        background-color: #001f2b;
+    }
 }
