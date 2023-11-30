@@ -80,7 +80,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="{% url 'home' %}"><strong>Blue Pulse</strong> </a>
                 <!-- Query -->
-                <div class="col-6 col-lg-4 my-auto py-1 py-lg-0">
+                <div class="col-6 col-lg-4 my-auto py-1 py-lg-0 ">
                     <form method="GET" action="{% url 'all_merchandise' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0 " type="text" name="q"
@@ -97,9 +97,9 @@
                 </div>
 
                 <!-- Login/Logout seperate in first nav bar-->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="list-inline-item dropdown">
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-row justify-content-evenly ">
+                        <li class="list-inline-item dropdown ">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
@@ -126,7 +126,7 @@
                                 {% endif %}
                             </div>
                         </li>
-                        <li class="list-inline-item">
+                        <li class="list-inline-item ">
                             <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
                                 <div class="text-center">
@@ -209,7 +209,7 @@
         </nav>
         {% load account %}
 
-        <div class="d-none d-sm-block">
+        <div class="d-none d-md-block d-sm-block ">
             <!-- Hide on small screens -->
             {% if request.user.is_authenticated %}
             <h4 class="align-items-center text-white title-all-song p-3">Welcome back, {{ user }}!</h4>

@@ -298,6 +298,10 @@ html {
     background-color: #00719c;
 }
 
+.navbar-toggler {
+    border-color: white;
+} 
+
 /* Navbar Bottom */
 
 .textInput,
