@@ -15,13 +15,12 @@ To enhance user interaction, our design approach incorporates succinct 10-second
 
 In the context of this Code Institute project, all songs have been released for your perusal. However, please be aware that in a live environment, users would encounter 10-second samples. This deliberate design choice aims to ensure a streamlined and efficient user experience, with complete versions available for more in-depth exploration or in real-world scenarios. Also, we would greatly appreciate any feedback regarding the songs.
 
-
 ## README Table Content
 
 1. [Introduction](#Introduction)
 2. [Project Description](#Project-Description)
 3. [How to use the site](#How-to-use-the-site)
-    1. [Landing Page](#Landing-Page)
+   1. [Landing Page](#Landing-Page)
 4. [Registration](#registration-process)
 5. [MVP](#mvp)
 
@@ -69,32 +68,30 @@ Adjacent to the search bar, on the right-hand side, a login/register button is s
 
 <img src="static/images/readme/landingpagedropmenu.png" alt="Landing Page" width="200">
 
+<img src="static/images/readme/navbar.png" alt="Landing Page" width="700">
 
 ### Brief Description of the Dropdown Menu
 
 **Product Management (For Superusers):**
+
 - If the logged-in user is a superuser (administrator with special privileges), they will see links for product management functionalities:
   - **"Product Management":** Directs to the admin dashboard.
   - **"Add Merchandise":** Navigates to the page for adding new merchandise.
   - **"Add Song":** Redirects to the page for adding a new song.
 
 **User-specific Options:**
+
 - For all authenticated users (both regular users and superusers):
   - **"My Profile":** Takes the user to their profile page.
   - **"Logout":** Logs the user out of their account.
 
 **Authentication Options:**
+
 - For users who are not authenticated (not logged in):
   - **"Register":** Links to the registration page.
   - **"Login":** Links to the login page.
 
 These options are presented in a dropdown menu, offering a convenient and organized way for users to access various functionalities based on their authentication status and user type.
-
-
-
-- With the slightly exagerated text "Blue Pulse isn't just a name; it's the musical story—crafted by Paul "Fingers" Gleeson and Daren "The Belter" Hines" The landing page aims to connect with visitors through the introduction, creating an immediate bond with the audience.
-
-- Users are invited to explore and take a musical journey. The content is structured to offer visitors a seamless understanding of the history and influences that shape the sound of the band.
 
 Page Features :-
 
@@ -343,6 +340,115 @@ To reach and engage our audience, we employ the following marketing strategies:
 We welcome contributions to enhance the user experience, add new features, or improve existing ones. Feel free to submit pull requests or open issues.
 
 Thank you for supporting Blue Pulse and being part of our online community!
+
+# Database Design
+
+<img src="static/images/readme/gleesonpp5.png"  alt="Color Pallet"  width="300">
+
+# Blue Pulse Database
+
+## Overview
+
+This repository houses the backend database for a Django web application. The database is hosted on ElephantSQL, a PostgreSQL-as-a-Service platform. The diagram above will provide a comprehensive overview of the database structure and relationships.
+
+## Entities
+
+1. **musicapp_commentmod**
+
+   - The `musicapp_commentmod` table represents comments within the music app. It stores user comments on music items, capturing essential information related to user engagement with music content.
+
+2. **checkout_orderlineitem**
+
+   - The `checkout_orderlineitem` table represents line items within checkout orders. It is associated with products and orders, providing a detailed record of items added to each checkout order.
+
+3. **musicapp_musicmod**
+
+   - The `musicapp_musicmod` table represents music items available in the app. It contains information about music content and establishes relationships with user comments through foreign key connections.
+
+4. **checkout_order**
+
+   - The `checkout_order` table represents checkout orders made within the application. It is likely associated with users and individual line items, forming a key component of the e-commerce functionality.
+
+5. **auth_user**
+
+   - The `auth_user` table represents users within the system. It is a fundamental part of the application, likely associated with various aspects, such as comments, orders, and user profiles.
+
+6. **musicapp_commentmod_likes**
+
+   - The `musicapp_commentmod_likes` table represents likes on comments. It establishes a many-to-many relationship between users and comments, capturing user preferences for specific content.
+
+7. **merchandise_merchandisemod**
+
+   - The `merchandise_merchandisemod` table represents merchandise items within the application. It contains information about merchandise available for purchase.
+
+8. **merchandise_categorymod**
+
+   - The `merchandise_categorymod` table represents categories for merchandise. It is associated with merchandise items, providing a structured way to organize and classify products.
+
+9. **profiles_userprofile**
+
+   - The `profiles_userprofile` table represents user profiles within the system. It is likely associated with user accounts, providing additional information about individual users.
+
+10. **musicapp_commentmod_dislikes**
+    - The `musicapp_commentmod_dislikes` table represents dislikes on comments. Similar to the likes table, it establishes a many-to-many relationship between users and comments.
+
+## Relationships
+
+### Foreign Key Relationships:
+
+#### musicapp_commentmod Relationships:
+
+- **`musicapp_commentmod_music_id`**
+
+  - Foreign key to `musicapp_musicmod` on `music_id`.
+
+- **`musicapp_commentmod_reply_to_id`**
+
+  - Foreign key to `profiles_userprofile` on `reply_to_id`.
+
+- **`musicapp_commentmod_user_profile_id`**
+  - Foreign key to `profiles_userprofile` on `user_profile_id`.
+
+#### checkout_orderlineitem Relationships:
+
+- **`checkout_orderlineit_product_id`**
+
+  - Foreign key to `merchandise_merchandisemod` on `product_id`.
+
+- **`checkout_orderlineitem_order_id`**
+  - Foreign key to `checkout_order` on `order_id`.
+
+#### musicapp_commentmod_likes Relationships:
+
+- **`musicapp_commentmod__commentmod_id`**
+
+  - Foreign key to `musicapp_commentmod` on `commentmod_id`.
+
+- **`musicapp_commentmod_likes_user_id`**
+  - Foreign key to `auth_user` on `user_id`.
+
+#### merchandise_merchandisemod Relationships:
+
+- **`merchandise_merchand_category_id`**
+  - Foreign key to `merchandise_categorymod` on `category_id`.
+
+#### checkout_order Relationships:
+
+- **`checkout_order_user_profile_id`**
+  - Foreign key to `profiles_userprofile` on `user_profile_id`.
+
+#### musicapp_commentmod_dislikes Relationships:
+
+- **`musicapp_commentmod__commentmod_id`**
+
+  - Foreign key to `musicapp_commentmod` on `commentmod_id`.
+
+- **`musicapp_commentmod_dislikes_user_id`**
+  - Foreign key to `auth_user` on `user_id`.
+
+### Many-to-Many Relationships:
+
+- `musicapp_commentmod_likes` and `musicapp_commentmod_dislikes` establish many-to-many relationships between users and comments, allowing users to like or dislike multiple comments and comments receiving likes or dislikes from multiple users.
 
 # Features
 
