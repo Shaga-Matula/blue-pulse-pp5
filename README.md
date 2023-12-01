@@ -638,6 +638,17 @@ This repository houses the backend database for a Django web application. The da
 
 
 
+## WC3  
+
+<img src="static/images/readme/audio-controll-error.png" alt="Color Pallet 2" width="400">
+
+
+[W3C Validator Error: Attribute controlslist not allowed on element audio at this point.](https://webmasters.stackexchange.com/questions/132621/w3c-validator-attribute-controlslist-not-allowed-on-element-audio-at-this-p)
+
+
+<img src="static/images/readme/aaria-error.png" alt="Color Pallet 2" width="400">
+
+
 # Features
 
 ## Agile Aproach
