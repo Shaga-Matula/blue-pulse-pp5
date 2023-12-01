@@ -7,7 +7,7 @@
 # Project Links
 
 - [Blue Pulse Repository](https://github.com/Shaga-Matula/blue-pulse-pp5)
-- [Heroku Site](https://bluepulsepp5-165b4a2f3a08.herokuapp.com)
+- [Blue Pulse Live Site](https://bluepulsepp5-165b4a2f3a08.herokuapp.com)
 
 ## Note on Business Model
 
@@ -15,76 +15,80 @@
 
 - In the context of this project, all songs have been released for perusal, but in a live environment, users would encounter 10-second samples with complete versions available for more in-depth exploration of the songs. The store would also greatly appreciate any feedback regarding the songs.
 
-## README Table Content
-
 # Table of Contents
-
-# Table of Contents
-
-1# Table of Contents
 
 1. [Introduction](#introduction)
 2. [Project Description](#project-description)
 3. [How to Use the Site](#how-to-use-the-site)
-    1. [Navigation Overview](#navigation-overview)
-        - [Welcome to Blue Pulse!](#welcome-to-blue-pulse)
-        - [Design](#design)
-        - [Introduction](#introduction-1)
-        - [Landing Page](#landing-page)
-        - [Brief Description of the Dropdown Menu](#brief-description-of-the-dropdown-menu)
-        - [Product Management (For Superusers)](#product-management-for-superusers)
-        - [User-specific Options](#user-specific-options)
-        - [Authentication Options](#authentication-options)
-        - [Facebook link](#facebook-link)
-    2. [Blue Pulse Landing Page (Index)](#blue-pulse-landing-page-index)
-        - [Responsive Design](#responsive-design)
-        - [Easy Navigation](#easy-navigation)
-        - [User Account Icons](#user-account-icons)
-        - [Visual Appeal](#visual-appeal)
-        - [Meta Information for SEO](#meta-information-for-seo)
-        - [Subtle Communication](#subtle-communication)
-        - [Personal Greeting](#personal-greeting)
-        - [Consistency](#consistency)
-        - [Summary](#summary-1)
-    3. [Anthology](#anthology)
-        - [Blue Pulse Anthology](#blue-pulse-anthology)
-        - [Immersive Song Cards](#immersive-song-cards)
-        - [Audio Functionality](#audio-functionality)
-        - [User-Friendly Interface](#user-friendly-interface)
-        - [Superuser Privileges (CRUD)](#superuser-privileges-crud)
-        - [Interactive Deletion](#interactive-deletion)
-        - [Responsive Design (Anthology)](#responsive-design-anthology)
-        - [In Summary](#in-summary-2)
-    4. [Contact Page](#contact-page)
-        - [Direct Communication](#direct-communication)
-        - [User-Friendly Form](#user-friendly-form)
-        - [Newsletter Subscription](#newsletter-subscription)
-        - [Responsive Design (contact us)](#responsive-design-contact-us)
-        - [Communication Options](#communication-options)
-        - [In summary](#in-summary-1)
-    5. [Comments Page](#comments-page)
-        - [Commented Songs](#commented-songs)
-        - [Comment Display](#comment-display)
-        - [User Interaction](#user-interaction)
-        - [Timestamps](#timestamps)
-        - [Editing and Deletion](#editing-and-deletion)
-        - [Add Comment Feature](#add-comment-feature)
-        - [User CRUD Operations](#user-crud-operations)
-        - [Toast Notifications](#toast-notifications)
-        - [Scroll Position Persistence](#scroll-position-persistence)
-        - [In summary](#in-summary-3)
-4. [Design](#Design)
-    1. [Blue Pulse Design Goals](#blue-pulse-design-goals)
-    2. [Blue Pulse Balsamic Mockup](#blue-pulse-balsamic-mockup)
-        - [Landing Page/Home](#landing-pagehome)
-        - [Music Page](#music-page)
-        - [Store Page](#store-page)
-        - [Comments Page](#comments-page-1)
-        - [Contact/News Letter Page](#contactnews-letter-page)
-        - [Overall](#overall)
-        - [COLOR Pallet](#color-pallet)
-    3. [Blue Pulse E-Commerce Platform](#blue-pulse-e-commerce-platform)
+   - [Navigation Overview](#navigation-overview)
+     - [Welcome to Blue Pulse!](#welcome-to-blue-pulse)
+     - [Design](#design)
+     - [Introduction](#introduction-1)
+     - [Landing Page](#landing-page)
+     - [Brief Description of the Dropdown Menu](#brief-description-of-the-dropdown-menu)
+     - [Product Management (For Superusers)](#product-management-for-superusers)
+     - [User-specific Options](#user-specific-options)
+     - [Authentication Options](#authentication-options)
+     - [Facebook link](#Facebook-link)
+   - [Landing Page](#landing-page)
+     - [Easy Navigation](#easy-navigation)
+     - [User Account Icons](#user-account-icons)
+     - [Responsive Design](#responsive-design)
+     - [Visual Appeal](#visual-appeal)
+     - [Meta Information for SEO](#meta-information-for-seo)
+     - [Subtle Communication](#subtle-communication)
+     - [Personal Greeting](#personal-greeting)
+     - [Consistency](#consistency)
+     - [Footer](#footer)
+     - [Additional Features](#additional-features)
+     - [Summary](#summary)
+4. [Anthology](#anthology)
+   - [Blue Pulse Anthology](#blue-pulse-anthology)
+   - [Song Collection](#song-collection)
+   - [Immersive Song Cards](#immersive-song-cards)
+   - [Audio Functionality](#audio-functionality)
+   - [User-Friendly Interface](#user-friendly-interface)
+   - [Superuser Privileges (CRUD)](#superuser-privileges-crud)
+   - [Interactive Deletion](#interactive-deletion)
+   - [Responsive Design (Anthology)](#responsive-design-anthology)
+   - [In Summary](#in-summary-anthology)
+5. [Contact Page](#contact-page)
+   - [Direct Communication](#direct-communication)
+   - [User-Friendly Form](#user-friendly-form)
+   - [Newsletter Subscription](#newsletter-subscription)
+   - [Responsive Design (Contact Us)](#responsive-design-contact-us)
+   - [Communication Options](#communication-options)
+   - [In Summary](#in-summary-contact-us)
+6. [Comments Page](#comments-page)
+   - [Commented Songs](#commented-songs)
+   - [Comment Display](#comment-display)
+   - [User Interaction](#user-interaction)
+   - [Timestamps](#timestamps)
+   - [Editing and Deletion](#editing-and-deletion)
+   - [Add Comment Feature](#add-comment-feature)
+   - [User CRUD Operations](#user-crud-operations)
+   - [Toast Notifications](#toast-notifications)
+   - [Scroll Position Persistence](#scroll-position-persistence)
+   - [In Summary (Comments)](#summary-comments)
+7. [Design](#design)
+   - [Blue Pulse Design Goals](#blue-pulse-design-goals)
+   - [Blue Pulse Balsamic Mockup](#blue-pulse-balsamic-mockup)
+   - [COLOR Pallet](#color-pallet)
+8. [Blue Pulse E-Commerce Platform](#blue-pulse-e-commerce-platform)
+   - [Overview](#overview)
+   - [Target Audience](#target-audience)
+   - [Products](#products)
+   - [Pricing](#pricing)
+   - [Marketing Strategies](#marketing-strategies)
+   - [How to Contribute](#how-to-contribute)
+9. [Database Design](#database-design)
+   - [Blue Pulse Database](#blue-pulse-database)
+   - [Entities](#entities)
+   - [Relationships](#relationships)
+
 # Introduction
+
+- <img src="static/images/readme/landingpagenotlogged.png" alt="Landing Page" width="1000">
 
 - The creator of the Blue Pulse project is Paul Gleeson, student at Code Institute. This project takes a lighthearted approach to present a fictional band named Blue Pulse. Although the band itself is a creation of imagination (Fingers Gleeson), the music is authentic, recorded by the group in home studios over the years.
 
@@ -103,68 +107,21 @@
 - Finally, in the Contact section, fans can send them a message, book them for a gig, or just say hello, making it easy for fans to connect with the band and join a newsletter.
 - The website is designed to provide a comprehensive overview of the band and their music to their fans and potential new listeners, making it easy for them to stay up-to-date with the band's latest news and events and hopefully paving the way for the band to recording the songs in a music studio.
 
-# How to use the site
+# Navigation Overview
 
-## Navigation Overview
+## Blue Pulse Website Navigation
 
-# Blue Pulse Website Navigation
+### Description Top Bar and Dropdown Menu
 
-## Top Navbar:
+## Top bar:
 
-- **Brand Logo:** The Blue Pulse logo is placed at the left corner, linking to the home page.
-- **Search Bar:** A search bar is included, allowing users to search for merchandise easily.
-- **Login/Logout:** The user account status is displayed on the right side, providing options to log in, register, or access account-related features.
+- At the pinnacle of the page, the search engine is placed to explore merchandise within the dedicated merchandise section. Simultaneously, the logo functions as a convenient home page marker, ensuring good navigation.
 
-## Second Navbar:
-
-- **Navigation Links:** Home, Anthology, Contact Us, Comments (if the user is authenticated), and Merchandise dropdown.
-- **Merchandise Dropdown:** Provides links to different merchandise categories (All Merchandise, Clothes, Memorabilia, Anthology CD).
-
-## Additional Features:
-
-- **User Greeting:** A personalized greeting is displayed based on whether the user is authenticated.
-- **Shopping Bag Icon:** Displays the total value of items in the user's shopping bag.
-- **Styling and Responsiveness:** The navigation is styled using Bootstrap, making it responsive for various screen sizes.
-- **Messages Alert:** Notifications and messages are displayed at the top of the page.
-- **Footer:** Includes social media links and copyright information.
-
-## Styling:
-
-- **Color Scheme:** The color scheme is consistent with a dark background, maintaining a visually appealing design.
-- **Fonts:** Various fonts are used for different elements, providing a distinctive style.
-- **Hover Effects:** Hover effects on navigation links enhance user interaction.
-- **Bootstrap Components:** Utilizes Bootstrap components for styling and responsiveness.
-
-## Media Queries:
-
-- **Responsive Design:** Media queries are used to adjust the layout for different screen sizes, ensuring a good user experience on both large and small devices.
-
-## Overall Structure:
-
-The navigation is logically structured, making it easy for users to find information and navigate between different sections of the website. The use of icons and clear labels enhances the user interface, providing a seamless browsing experience.
-
-<img src="static/images/readme/landingpagenotlogged.png" alt="Landing Page" width="1000">
-
-### Welcome to Blue Pulse!
-
-#### Design:
-
-- The landing page is crafted for a UX (user experience) that is clean and captivating, inviting visitors into the world of Blue Pulse. The goal is to make the journey through the page visually appealing and easygoing.
-
-#### Introduction:
-
-- Simply navigate to the [Heroku link](https://bluepulsepp5-165b4a2f3a08.herokuapp.com), and it will bring you to the first page (landing page). This page serves as an introduction to the band and an invitation to continue exploring the rest of the site for a cool musical experience. One of the main purposes of the page is to help fans navigate using the navigation bar.
-
-- At the pinnacle of the page, the search engine is crafted to explore merchandise within the dedicated merchandise section. Simultaneously, the logo functions as a convenient home page marker, ensuring seamless navigation.
-
-![Landing Page Search Bar](static/images/readme/landingpagesearchbar.png)
+<img src="static/images/readme/landingpagesearchbar.png" alt="Landing Page Search Bar" width="1000">
 
 - Adjacent to the search bar, on the right-hand side, a login/register button is strategically positioned. Noteworthy is its dynamic transformation to "My Profile" upon user login, enhancing user experience and providing quick access to personalized settings.
 
-![Landing Page Dropdown Menu](static/images/readme/landingpagedropmenu.png)
-![Landing Page Navbar](static/images/readme/navbar.png)
-
-### Brief Description of the Dropdown Menu
+<img src="static/images/readme/nav-1-menu.png" alt="Landing Page Dropdown Menu" width="300">
 
 **Product Management (For Superusers):**
 
@@ -188,23 +145,46 @@ The navigation is logically structured, making it easy for users to find informa
 
 - These options are presented in a dropdown menu, offering a convenient and organized way for users to access various functionalities based on their authentication status and user type.
 
-**Facebook link:**
+- **Brand Logo:** The Blue Pulse logo is placed at the left corner, linking to the home page.
+- **Search Bar:** A search bar is included, allowing users to search for merchandise easily.
+- **Login/Logout:** The user account status is displayed on the right side, providing options to log in, register, or access account-related features.
 
-- This live link is strategically placed for users to easily access Blue Pulse's Facebook profile, fostering social media engagement. The utilization of the "nofollow" attribute in the link is intentional, signaling to search engines not to influence the linked page's ranking. The button design and FontAwesome integration contribute to a visually appealing and interactive experience, aligning with the overall aesthetics of the Blue Pulse project. This inclusion not only enhances user connectivity but also supports SEO efforts by integrating social media presence into the project's documentation.
+## Navbar:
 
-# Blue Pulse Landing Page (Index)
+<img src="static/images/readme/navbar.png" alt="Landing Page Navbar" width="900">
 
-## Responsive Design
+- **Navigation Links:** Home, Anthology, Contact Us, Comments (if the user is authenticated), and Merchandise dropdown.
 
-- The landing page features responsive design, adapting to various screen sizes with the use of Bootstrap and CSS. This ensures a consistent experience for visitors on desktops, tablets, and mobile devices.
+<img src="static/images/readme/nav-1-menu-drop.png" alt="Landing Page Navbar" width="400">
+
+- **Merchandise Dropdown:** Provides links to different merchandise categories (All Merchandise, Clothes, Memorabilia, Anthology CD).
+
+## Styling:
+
+- **Color Scheme:** The color scheme is consistent with a blue background, maintaining a visually appealing design.
+- **Fonts:** Various fonts are used for different elements, providing a distinctive style.
+- **Hover Effects:** Hover effects on navigation links enhance user interaction.
+- **Bootstrap Components:** Utilizes Bootstrap components for styling and responsiveness.
+
+##############
+
+# Blue Pulse Site Guide
+
+# Landing Page
+
+- Simply navigate to the [Heroku link](https://bluepulsepp5-165b4a2f3a08.herokuapp.com), and it will bring you to the first page (landing page). This page serves as an introduction to the band and an invitation to continue exploring the rest of the site for a nice musical experience. One of the main purposes of the page is to help fans navigate using the navigation bar.
 
 ## Easy Navigation
 
-- A simple top navigation bar serves as a guide to key sections of Blue Pulse. Quick links to the home page, song anthology, contact details, and merchandise categories are readily available. User-friendly options, including account management, are integrated to enhance the overall navigation experience.
+- A simple top navigation bar serves as a guide to key sections of Blue Pulse. Quick links to the home page, song anthology, contact details, and merchandise categories are readily available. User-friendly options, including account management, are integrated to enhance the overall navigation area.
 
 ## User Account Icons
 
 - Icons at the top right provide easy access to account features. For logged-in users, there is a link to manage their profile. For those not logged in, there is a link to access account functionalities.
+
+## Responsive Design
+
+- The landing page features responsive design, adapting to various screen sizes with the use of Bootstrap and CSS. This ensures a consistent experience for visitors on desktops, tablets, and mobile devices.
 
 ## Visual Appeal
 
@@ -228,25 +208,39 @@ The navigation is logically structured, making it easy for users to find informa
 
 - Consistency in styling, covering fonts to stylesheets, presents the Blue Pulse landing page as a cohesive and stylish entity. The objective is to provide visitors with a visually harmonious experience that aligns with the rhythm of Blue Pulse.
 
+## Footer
+
+**Facebook link:**
+
+- This live link is strategically placed for users to easily access Blue Pulse's Facebook profile, fostering social media engagement. The utilization of the "nofollow" attribute in the link is intentional, signaling to search engines not to influence the linked page's ranking. The button design and FontAwesome integration contribute to a visually appealing and interactive experience, aligning with the overall aesthetics of the Blue Pulse project. This inclusion not only enhances user connectivity but also supports SEO efforts by integrating social media presence into the project's documentation.
+
+## Additional Features:
+
+- **User Greeting:** A personalized greeting is displayed based on whether the user is authenticated.
+- **Shopping Bag Icon:** Displays the total value of items in the user's shopping bag.
+- **Styling and Responsiveness:** The navigation is styled using Bootstrap, making it responsive for various screen sizes.
+- **Messages Alert:** Notifications and messages are displayed at the top of the page.
+- **Footer:** Includes social media links and copyright information and facebook link.
+
 ## Summary
 
-- The Blue Pulse landing page is designed to hopufully ensure a smooth and enjoyable interaction for visitors. From responsive design to personalized greetings, each element contributes to creating a user-friendly environment on the Blue Pulse platform, while also optimizing for SEO.
+- The Blue Pulse landing page is designed to hopufully ensure a smooth and enjoyable interaction for visitors. From responsive design to personalized greetings and discrete messaging each element contributes to creating a user-friendly environment on the Blue Pulse platform, while also optimizing for SEO.
 
-## Antholigy
+# Anthology
 
-Blue Pulse Anthology
+## Blue Pulse Anthology
 
-<img src="static/images/readme/antholigy.png" alt="Landing Page" width="1000">
+<img src="static/images/readme/antholigy.png" alt="Landing Page" width="900">
 
 # Song Collection
 
-# Blue Pulse Anthology
-
-- The Blue Pulse Anthology serves as a comprehensive platform for managing the songs. Utilizing CRUD (Create, Read, Update, Delete) functionality, it allows seamless curation for the collection.
+- The Blue Pulse Anthology serves as a comprehensive platform for managing the songs. Utilizing CRUD (Create, Read, Update, Delete) functionality, it allows easy perusal to the collection.
 
 ## Immersive Song Cards
 
 - Art photos were used from [Unsplash](https://unsplash.com) to enhance the experience with visually compelling song cards (the artists will be listed later on). Each card, supported by CRUD operations when logged in as a superuser, features images, artist names, and song titles, providing insights into the song crafted by Blue Pulse.
+
+<img src="static/images/readme/single-song.png" alt="Landing Page" width="300">
 
 ## Audio Functionality
 
@@ -266,7 +260,7 @@ Blue Pulse Anthology
 
 ## Responsive Design (Anthology)
 
-- Similar to our landing page, the Anthology page features a responsive design, adapting seamlessly to various devices for a consistent user experience during interactions.
+- Similar to our landing page, the Anthology page features a responsive design, adapting to various devices for a consistent user experience during interactions.
 
 ## In Summary
 
@@ -274,9 +268,60 @@ Blue Pulse Anthology
 
 - "Users can navigate, listen, and connect with the narratives embedded in each song, contributing to the vibrant tapestry of our musical journey."
 
+# Merchandise
+
+<img src="static/images/readme/merchandise.png" alt="Merchandise Showcase" width="900">
+
+- Each product is showcased with detailed information, including name, price, category, and a user-friendly rating system.
+
+- The Merchandise page serves as the gateway to the diverse collection of products, offering an extensive range that caters to various sizes and colors. By simply clicking on the desired item, the page loads, isolating the user's choice and providing a "visually appealing" and focused experience.
+
+<img src="static/images/readme/single-merchandise.png" alt="Merchandise Showcase" width="400">
+
+- The user can utilize the counter to add and remove items from their shopping bag. By clicking on "checkout," you are taken to the checkout view, displaying what is in your bag, along with the quantity, size, and color if applicable.
+
+- In the top left corner, a toast message is displayed containing an up-to-date display of all items, their sizes, and colors if applicable.
+
+<img src="static/images/readme/toast-checkout.png" alt="Merchandise Showcase" width="200">
+
+- By clicking on "checkout," the user is brought to the checkout page where they can finalize their order and complete the transaction.
+
+<img src="static/images/readme/pre-checkout.png" alt="Merchandise Showcase" width="400">
+
+- The user is then brought to the checkout page where they fill in their address, name, credit card details, and confirm the sale.
+
+<img src="static/images/readme/checkout.png" alt="Merchandise Showcase" width="400">
+
+- After Stripe verification, information is displayed on the page, in a toast message and also sent via a confirmation email. The user is invited to conue shopping or leave the page.aaaaaaaa
+
+<img src="static/images/readme/checkout-success.png" alt="Merchandise Showcase" width="400">
+
+- Administrative Control
+
+- For administrators, the page offers direct control with options to edit or delete merchandise items from the interface. Superusers can efficiently manage the collection with CRUD (Create, Read, Update, Delete) functionality.
+
+<img src="static/images/readme/merch-man-all.png" alt="Merchandise Showcase" width="400">
+
+
+User-Focused Interaction
+
+Wit user-focused design we try and encourages engagement, allowing visitors to explore and interact efficiently with each merchandise item.
+  
+- Deletion Confirmation (Admin)
+
+    To prevent accidental deletions, administrators are prompted with a confirmation dialog when attempting to delete merchandise items. This deliberate process ensures careful consideration before any deletion occurs.
+    
+- Responsive Design (Merchandise)
+
+    Just like our landing page, the Merchandise Showcase features a responsive design. This adaptability ensures a consistent and enjoyable user experience across various devices.
+
+- In Summary
+
+-The Merchandise Showcase is more than just a display – it's an interactive platform. With administrative controls, user-friendly features, and a visually engaging presentation, it invites users to explore, engage, and connect with our diverse merchandise collection.
+
 # Contact Page
 
-- <img src="static/images/readme/contacts.png" alt="Contacts Page" width="1000">
+<img src="static/images/readme/contacts.png" alt="Contacts Page" width="1000">
 
 # Direct Communication
 
@@ -300,17 +345,17 @@ Blue Pulse Anthology
 
 ## In summary
 
--In summary, the Contact Us page serves as a direct communication channel, featuring a user-friendly form and an optional newsletter subscription for users interested in staying informed. The design ensures a consistent experience across devices.
+- In summary, the Contact Us page serves as a direct communication channel, featuring a user-friendly form and an optional newsletter subscription for users interested in staying informed. The design ensures a consistent experience across devices.
 
 ## Comments Page
 
-- <img src="static/images/readme/comments.png" alt="Contacts Page" width="1000">
+<img src="static/images/readme/comments.png" alt="Contacts Page" width="1000">
 
 - Here you can peruse the collection of songs alongside user comments on the Comments page. Each song is presented with associated feedback from the Blue Pulse community.
 
 ## Commented Songs
 
-- For each song, comments are neatly organized in a structured format. Gain insights into user opinions, reflections, and discussions surrounding specific songs. Summer note has been added for functionality.
+- For every individual song, comments are organized in a structured format. This enables users to delve into a subject, including opinions, reflections, and discussions revolving around specific songs. Additionally, a Summer note has been incorporated to enhance functionality, contributing to a richer user experience.
 
 ## Comment Display
 
@@ -330,7 +375,7 @@ Comments feature user-generated content, providing textual insights into the Blu
 
 ## Add Comment Feature
 
-- Users can actively participate by contributing new comments. The "Add Comment" button allows for the seamless addition of user-generated content to the discussion.
+- Users can actively participate by contributing new comments. The "Add Comment" button allows for the addition of user-generated content to the discussion.
 
 ## User CRUD Operations
 
@@ -344,14 +389,15 @@ Comments feature user-generated content, providing textual insights into the Blu
 
 - The page retains scroll position to ensure a smooth and user-friendly experience, allowing users to pick up where they left off during previous visits.
 
-**In summary**, The Blue Pulse Comments page lets users join discussions, share thoughts, and be part of a lively community chat about Blue Pulse's music. CRUD operations are in place for managing content, keeping the comment section top-notch.
+## In summary(comments)
 
+- The Blue Pulse Comments page lets users join discussions, share thoughts, and be part of a lively community chat about Blue Pulse's music. CRUD operations are in place for managing content, keeping the comment section in good health.
 
 # Design
 
 ## Blue Pulse Design Goals
 
-### When designing this website for the music band Blue Pulse, its best to keep in mind the band's personality and the mood of their music. Here are some design principles that will be applied to Blue Pulse's website:
+- When designing this website for the music band Blue Pulse, its best to keep in mind the band's personality and the mood of their music. Here are some design principles that will be applied to Blue Pulse's website:
 
 - **Use Simple Backgrounds:** The best music website designs often feature simple backgrounds, with the content customized to fit an artist's personality and the mood of their music.
 - **Showcase Professional Photos:** Blue Pulse will use professional photos to showcase the band's image and personality.
@@ -372,70 +418,69 @@ Comments feature user-generated content, providing textual insights into the Blu
 
 - The landing page Balsamic Drawing: This page reflects the mood and personality of the band. It will also include a brief introduction to the band and their latest news.
 
-- <img src="static/images/readme/landingpage.png" alt="Landing Page" width="1000">
+<img src="static/images/readme/landingpage.png" alt="Landing Page" width="500">
 
 ### Music Page
 
 - Music Page Balsamic Drawing: This page reflects the mood and style of the band's music. It will contain their latest tracks and links to their music on various platforms, making it easy for fans to access their music.
 
-<img src="static/images/readme/musicpage.png" alt="Music Page" width="1000">
-
+<img src="static/images/readme/musicpage.png" alt="Music Page" width="500">
 
 ### Store Page (Merchandise)
 
 - Store Page Balsamic Drawing: In this section, fans can buy their merchandise, including t-shirts, posters, and CDs, to show their support for the band. The balsamic drawing helps to showcase the band's merchandise and reflect their style during development.
 
-<img src="static/images/readme/storepage.png" alt="Store Page" width="1000">
-
+<img src="static/images/readme/storepage.png" alt="Store Page" width="500">
 
 ### Comments Page
 
 - Comments Page Balsamic Drawing: This section will have a page that reflects the band's personal lives and creative process. It is where the band shares their thoughts on music, life, and everything in between using the guide of Balsamic Drawings.
 
-<img src="static/images/readme/storepage.png" alt="Store Page" width="1000">
-
+<img src="static/images/readme/storepage.png" alt="Store Page" width="500">
 
 ### Contact/News Letter Page
 
 - Contacts Page Balsamic Drawing: In this section, fans can send them a message, book them for a gig, or just say hello, making it easy for fans to connect with the band. The balsamic drawing will help develop the page to reflect the band's personality and style.
 
-<img src="static/images/readme/contactpage.png" alt="Contact Page" width="1000">
+<img src="static/images/readme/contactpage.png" alt="Contact Page" width="500">
 
-
-### Overall, the design of Blue Pulse's website using balsamic drawings as a design tool will guide and reflect the band's personality and style, while providing a comprehensive overview of the band and their music to their fans and potential new listeners.
+- Overall, the design of Blue Pulse's website using balsamic drawings as a design tool will guide and reflect the band's personality and style, while providing a comprehensive overview of the band and their music to their fans and potential new listeners.
 
 ### COLOR Pallet
 
 - Thank you to HookAgency for Pallet idea.
 - [Link to HookAgency](https://hookagency.com/blog/web-design-color-palettes/)
 
-<img src="static/images/readme/colorpallet1.png" alt="Color Pallet 1" width="1000">
-<img src="static/images/readme/colorpallet2.png" alt="Color Pallet 2" width="1000">
-
+<img src="static/images/readme/colorpallet1.png" alt="Color Pallet 1" width="100">
+<img src="static/images/readme/colorpallet2.png" alt="Color Pallet 2" width="100">
 
 # Blue Pulse E-Commerce Platform
 
-- The Blue Pulse band merchandise and CD download project is distinctly aligned with a Business-to-Consumer (B2C) e-commerce model for the following reasons:
+- The Blue Pulse band merchandise and CD project is aligns with a Business-to-Consumer (B2C) e-commerce model for the following reasons:
 
-Direct Sales to Consumers:
+## Direct Sales to Consumers
 
-The essence of your platform lies in the direct sale of Blue Pulse merchandise (such as T-shirts, hoodies, and hats) and digital downloads (CD) directly to individual consumers. This direct transactional approach caters specifically to Blue Pulse fans, music enthusiasts, and collectors who are the end consumers of the band's products.
-Consumer-Focused Features:
+The essence of the platform lies in the direct sale of Blue Pulse merchandise (such as T-shirts, hoodies, and hats) and the (CD) directly to individual consumers. This direct transactional approach caters specifically to Blue Pulse fans, music enthusiasts, and collectors who are the end consumers of the band's products.
 
-The platform is meticulously crafted with consumer-centric features, including an online store that showcases a variety of merchandise categories. The direct purchase options are tailored to the preferences and needs of individual consumers, ensuring a personalized and engaging shopping experience.
-Community Engagement:
+## Consumer-Focused Features
 
-A key aspect of your project is the emphasis on community engagement. Through user accounts, profiles, and comments, the platform facilitates direct interaction with individual consumers. This community-driven approach aligns with the B2C model, fostering a sense of belonging among Blue Pulse fans and creating a space for them to actively participate in the band's community.
-User Experience:
+The platform is crafted with consumer-centric features, including an online store that showcases a variety of merchandise categories. The direct purchase options are tailored to the preferences and needs of individual consumers, ensuring a personalized shopping experience.
 
-The design and functionality of your platform are thoughtfully designed to prioritize user experience. The seamless and enjoyable shopping experience is tailored to individual consumers, providing them with easy navigation, visually appealing displays, and a user-friendly interface. This focus on enhancing the user experience contributes to the overall success of your B2C e-commerce model.
-While elements of the Direct-to-Consumer (D2C) model are incorporated, especially in your efforts to establish a direct connection with Blue Pulse fans, the overarching structure and emphasis on catering directly to individual consumers solidify your project's classification within the B2C e-commerce category.
+## Community Engagement
 
-## Overview
+A key aspect of the project is the emphasis on community engagement. Through user accounts, profiles, and comments, the platform facilitates direct interaction with individual consumers. This community-driven approach aligns with the B2C model, fostering a sense of belonging among Blue Pulse fans and creating a space for them to actively participate in the band's community.
 
-Blue Pulse E-Commerce is an online platform dedicated to providing fans and music enthusiasts with a seamless shopping experience for Blue Pulse band merchandise and music. Our business model is centered around delivering high-quality products, fostering community engagement, and promoting the unique musical journey of Blue Pulse.
+## User Experience
 
-## Target Audience
+The design and functionality of the platform are designed to prioritize user experience. The enjoyable shopping experience is tailored to individual consumers, providing them with easy navigation, visually appealing displays, and a user-friendly interface. Trying to focus on enhancing the user experience will hopefully contribute to the success of the B2C e-commerce model.
+
+The structure and emphasis on catering directly to individual consumers makes the project's classification within the B2C e-commerce category.
+
+# Overview
+
+Blue Pulse E-Commerce is an online platform dedicated to providing fans and music enthusiasts with a happy shopping experience for Blue Pulse band merchandise and music. Our business model is centered around delivering high-quality products, fostering community engagement, and promoting the unique musical journey of Blue Pulse.
+
+# Target Audience
 
 Our primary target audience includes:
 
@@ -443,21 +488,21 @@ Our primary target audience includes:
 - **Music Enthusiasts:** People who enjoy rock and blues genres and are interested in supporting independent artists.
 - **Collectors:** Fans who are passionate about collecting band merchandise and limited edition items.
 
-## Products
+# Products
 
 We offer a diverse range of products, including:
 
 - **Merchandise:** T-shirts, hoodies, hats, and other apparel featuring exclusive Blue Pulse designs.
-- **CD Downloads:** (Planed)Digital downloads of the Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
+- **CD Downloads:** (Planned) Digital downloads of the Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
 
-## Pricing
+# Pricing
 
 Our pricing strategy is designed to be competitive and fair:
 
 - **Merchandise:** Prices vary based on the type of product, with occasional discounts or promotions for loyal customers.
 - **CD Downloads:** Priced affordably to make Blue Pulse's music accessible to a wider audience.
 
-## Marketing Strategies
+# Marketing Strategies
 
 To reach and engage our audience, we employ the following marketing strategies:
 
@@ -466,11 +511,13 @@ To reach and engage our audience, we employ the following marketing strategies:
 - **Collaborations:** Partnering with influencers, music bloggers, and other brands to expand our reach and connect with new audiences.
 - **SEO Optimization:** Ensuring our online store is search engine optimized to attract organic traffic.
 
-## How to Contribute
+# How to Contribute
 
-We welcome contributions to enhance the user experience, add new features, or improve existing ones. Feel free to submit pull requests or open issues.
+(Mock request)
 
-Thank you for supporting Blue Pulse and being part of our online community!
+"We welcome contributions to enhance the user experience, add new features, or improve existing ones. Feel free to submit pull requests or open issues.
+
+Thank you for supporting Blue Pulse and being part of our online community!"
 
 # Database Design
 
@@ -486,7 +533,7 @@ This repository houses the backend database for a Django web application. The da
 
 1. **musicapp_commentmod**
 
-   - The `musicapp_commentmod` table represents comments within the music app. It stores user comments on music items, capturing essential information related to user engagement with music content.
+   - The `musicapp_commentmod` table represents comments within the music app. It stores user comments on music items.
 
 2. **checkout_orderlineitem**
 
@@ -580,6 +627,8 @@ This repository houses the backend database for a Django web application. The da
 ### Many-to-Many Relationships:
 
 - `musicapp_commentmod_likes` and `musicapp_commentmod_dislikes` establish many-to-many relationships between users and comments, allowing users to like or dislike multiple comments and comments receiving likes or dislikes from multiple users.
+
+##############################################################
 
 # Features
 
