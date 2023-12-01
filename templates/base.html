@@ -161,21 +161,21 @@
                         </li>
                         <li class="nav-item second-navbar-li">
                             <a class="nav-link nav-active-color {% if request.path == '/song_list' %}active{% endif %}"
-                                aria-current="" href="{% url 'song_list' %}">Anthology</a>
+                                aria-current="page" href="{% url 'song_list' %}">Anthology</a>
                         </li>
                         <li class="nav-item second-navbar-li">
                             <a class="nav-link nav-active-color {% if request.path == '/contact_us/' %}active{% endif %}"
-                                aria-current="" href="{% url 'contact_us' %}">Contact Us</a>
+                                aria-current="page" href="{% url 'contact_us' %}">Contact Us</a>
                         </li>
 
                         <li class="nav-item second-navbar-li">
                             <a class="nav-link nav-active-color {% if request.path == '/song_all_comments/' %}active{% endif %}"
-                                aria-current="" href="{% url 'song_all_comments' %}">Comments</a>
+                                aria-current="page" href="{% url 'song_all_comments' %}">Comments</a>
                         </li>
 
 
                         <li class="nav-item dropdown ">
-                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="" href="#" role="button"
+                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="page" href="#" role="button"
                                 id="merchandiseDropdown" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 Merchandise

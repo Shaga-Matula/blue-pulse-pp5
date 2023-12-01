@@ -75,8 +75,8 @@
 </head>
 
 <body class="all-body card">
-    <header class="head-head fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-top">
+    <header class="head-head fixed-top" role="banner">
+        <nav class="navbar navbar-expand-lg navbar-top" role="navigation">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="{% url 'home' %}"><strong>Blue Pulse</strong> </a>
                 <!-- Query -->
@@ -86,7 +86,8 @@
                             <input class="form-control border border-black rounded-0 " type="text" name="q"
                                 placeholder="Search for Merchandise">
                             <div class="input-group-append">
-                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit"
+                                    aria-label="Search">
                                     <span class="icon text-white">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -111,7 +112,7 @@
                                     {% endif %}
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options"  aria-haspopup="true">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'admin:index' %}" class="dropdown-item">Product Management</a>
@@ -157,27 +158,27 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item second-navbar-li ">
                             <a class="nav-link nav-active-color {% if request.path == '/' %}active{% endif %}"
-                                href="{% url 'home' %}">Home</a>
+                                aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item second-navbar-li">
                             <a class="nav-link nav-active-color {% if request.path == '/song_list' %}active{% endif %}"
-                                aria-current="" href="{% url 'song_list' %}">Anthology</a>
+                                aria-current="page" href="{% url 'song_list' %}">Anthology</a>
                         </li>
                         <li class="nav-item second-navbar-li">
                             <a class="nav-link nav-active-color {% if request.path == '/contact_us/' %}active{% endif %}"
-                                aria-current="" href="{% url 'contact_us' %}">Contact Us</a>
+                                aria-current="page" href="{% url 'contact_us' %}">Contact Us</a>
                         </li>
 
                         <li class="nav-item second-navbar-li">
                             <a class="nav-link nav-active-color {% if request.path == '/song_all_comments/' %}active{% endif %}"
-                                aria-current="" href="{% url 'song_all_comments' %}">Comments</a>
+                                aria-current="page" href="{% url 'song_all_comments' %}">Comments</a>
                         </li>
 
 
                         <li class="nav-item dropdown ">
-                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="" href="#" role="button"
+                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="page" role="button"
                                 id="merchandiseDropdown" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                                aria-expanded="false" aria-label="Explore Merchandise Categories">
                                 Merchandise
                             </a>
                             <div class="dropdown-menu border-0 custom-dropdown-menu second-navbar "
@@ -246,7 +247,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="w-100 flex-shrink-0 mx-auto mt-3 ">
+    <footer class="w-100 flex-shrink-0 mx-auto mt-3 " role="contentinfo">
         <div class="row justify-content-center ">
 
             <div class="col-12">
@@ -263,14 +264,15 @@
                             <span>
                                 <a class="btn btn-link btn-floating btn-lg text-white m-1"
                                     href="https://www.facebook.com/profile.php?id=61554153687984" role="button"
-                                    rel="nofollow" data-mdb-ripple-color="dark">
-                                    Facebook<i class="fa-brands fa-facebook" aria-label="Facebook"></i>
+                                    rel="nofollow" data-mdb-ripple-color="dark" aria-label="Visit our Facebook page">
+                                    Facebook<i class="fa-brands fa-facebook" aria-hidden="true"></i>
                                 </a>
                             </span>
                         </small>
                     </div>
                 </div>
             </div>
+        </div>
     </footer>
 
     {% block postloadjs %}
