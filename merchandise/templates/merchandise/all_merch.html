@@ -20,7 +20,7 @@
                     <div class="card indigo-dye rounded-3 ">
                         {% if merch.image %}
                         <a href="{% url 'merch_item' merch.id %}" class="mx-auto merch-image-height text-center">
-                            <img src="{{ merch.image.url }}" alt="{{ merch.name }}" class="card-img-top img-fluid m-2 rounded-3 merch-image-width" />
+                            <img src="{{ merch.image.url }}" alt="{{ merch.name }}" class="card-img-top img-fluid m-2 rounded-3 merch-image-width">
                         </a>
                       
                         {% else %}
