@@ -9,7 +9,7 @@
                 <form class="my-1" method="post" action="#">
                     {% csrf_token %}
                     <fieldset>
-                        <div class="col-12">
+                        <div class="col-12 contact-back">
                             <h2 class="contact-us-title"><strong>Get In Touch</strong></h2>
                             <div class="form-group contact-us-label">
                                 <label for="fname">First Name:</label>
@@ -31,7 +31,7 @@
                                 <label for="message-us">Message: </label>
                                 <textarea class="form-control" name="msg" id="message-us" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary mt-4 contact-us-label">Send
+                            <button type="submit" class="btn btn-dark mt-4 contact-us-label">Send
                                 Message</button>
                         </div>
                     </fieldset>
@@ -39,13 +39,13 @@
             </aside>
 
         </div>
-        <div class="d-flex align-items-center justify-content-center mb-4 mt-3">
+        <div class="d-flex align-items-center justify-content-center mb-4 mt-3 ">
             <div
-                class="col-lg-8 col-md-8 col-sm-10 col-10 d-flex justify-content-center newsletter-format rounded-4">
-                <div class="card-body text-center newsletter-format rounded-4">
-                    <h5 class="card-title newsletter-format">Subscribe to Our Newsletter</h5>
-                    <p class="card-text newsletter-format">Stay updated with the latest news and updates!</p>
-                    <a href="{% url 'subscribe' %}" class="btn btn-primary">Join Now</a>
+                class="col-lg-8 col-md-8 col-sm-10 col-10 d-flex justify-content-center newsletter-format rounded-4 ">
+                <div class="card-body text-center rounded-4 contact-back">
+                    <h5 class="card-title  contact-back">Subscribe to Our Newsletter</h5>
+                    <p class="card-text  contact-back">Stay updated with the latest news and updates!</p>
+                    <a href="{% url 'subscribe' %}" class="btn btn-dark">Join Now</a>
                 </div>
             </div>
         </div>

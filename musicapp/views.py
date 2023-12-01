@@ -1,10 +1,17 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.core.mail import send_mail, settings
-from django.http import HttpResponseNotFound, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, redirect, render, reverse
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DeleteView, ListView, UpdateView, View
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    ListView,
+    UpdateView,
+    View
+)
 
 from .forms import CommentForm, MusicModForm
 from .models import CommentMod, ContactMod, MusicMod
@@ -22,7 +29,9 @@ class LikeCommentView(View):
             if user not in comment.likes.all():
                 comment.likes.add(user)
                 comment.dislikes.remove(user)  # remove from dislike
-                success_message = f"You have successfully added a like to this comment"
+                success_message = (
+                "You have successfully added a like to this comment"
+                    )
                 messages.success(self.request, success_message)
                 comment.save()
             else:

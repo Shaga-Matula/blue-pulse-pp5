@@ -657,14 +657,21 @@ This repository houses the backend database for a Django web application. The da
 <img src="static/images/readme/test-lighthouse-index.png" alt="Color Pallet 2" height="200">
 <img src="static/images/readme/test-lighthouse-merch.png" alt="Color Pallet 2" height="200">
 
+## Wave
+
+<img src="static/images/readme/test-wave-index.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-wave-comment.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-wave-contact.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-wave-index.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-wave-merch.png" alt="Color Pallet 2" height="200">
+
+- Note: The error in contrast above; the first error is that the search bar is greyed out, and this is a desired effect. The second error is the greeting to the user and is somehow only contrasting on the comments page. Further investigation needed.
+
 ## Manual Testing
 
 <img src="static/images/readme/manual-testing.png" alt="Color Pallet 2" width="400">
 
-
 ##############################################################
-
-
 
 # Features
 
@@ -697,7 +704,7 @@ This repository houses the backend database for a Django web application. The da
 - As a member of Blue Pulse, I want to be able to ensure that the website is designed to be responsive, so that it is easily accessible and viewable on different devices, including desktops, laptops, tablets, and smartphones.
 - As a member of Blue Pulse, I want to be able to maintain consistent branding throughout the website, including the use of the band's logo, colors, and fonts, so that the website accurately represents the band's personality and style.
 
-## These user stories can help guide the development of Blue Pulse's website with an agile style, ensuring that the website meets the needs of the band's fans and potential customers.
+- These user stories can help guide the development of Blue Pulse's website with an agile style, ensuring that the website meets the needs of the band's fans and potential customers.
 
 # Technologies
 

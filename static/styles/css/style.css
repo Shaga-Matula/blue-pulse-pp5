@@ -1,5 +1,11 @@
-
-
+.contact-back {
+    background-color: #001f2b;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #C0C0C0;
+    border-radius: 5%;
+    padding: 10px;
+    font-display: swap;
+}
 
 /* General page setup */
 html {
@@ -10,7 +16,6 @@ html {
 
 .all-body {
     background-image: url("/static/images/studio_back3.png");
-    background-color: #3e4b50;
     background-position: center center;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -89,6 +94,8 @@ html {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: white !important;
     font-display: swap;
+    font-weight: 200;
+
 }
 
 .btn-del-edit,
@@ -203,7 +210,8 @@ html {
 
 /* Merchandis all */
 .merch-image-width {
-    max-width: 80%; /* Adjust this value as needed */
+    max-width: 80%;
+    /* Adjust this value as needed */
     height: auto;
 
 }
@@ -319,7 +327,7 @@ html {
 
 .navbar-toggler {
     border-color: white;
-} 
+}
 
 /* Navbar Bottom */
 
@@ -743,29 +751,33 @@ footer {
         min-height: 0;
         padding-top: 0;
     }
+
     .min-height-padding-top {
         margin-top: 10px;
     }
+
     .nav-active-color.active {
         color: white !important;
         background-color: #001f2b;
         border-radius: 50%;
     }
+
     .nav-link:hover {
         color: white;
         background-color: #001f2b;
     }
 }
 
-  /* Styles for screens below 993 pixels */
+/* Styles for screens below 993 pixels */
 @media (max-width: 992px) {
 
-/* disable link high-light and active */
+    /* disable link high-light and active */
     .nav-active-color.active {
         color: white !important;
         background-color: #001f2b;
         border-radius: 50%;
     }
+
     .nav-link:hover {
         color: white;
         background-color: #001f2b;
