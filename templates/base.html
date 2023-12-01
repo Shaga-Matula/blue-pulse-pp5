@@ -175,8 +175,8 @@
 
 
                         <li class="nav-item dropdown ">
-                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="page" href="#" role="button"
-                                id="merchandiseDropdown" data-toggle="dropdown" aria-haspopup="true"
+                            <a class="nav-link nav-bar-status dropdown-toggle" aria-current="page" href="#"
+                                role="button" id="merchandiseDropdown" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 Merchandise
                             </a>
@@ -251,10 +251,10 @@
 
             <div class="col-12">
                 <div class="row  row-1 ">
-                    <div class="col-sm-3 text-center my-auto">
+                    <div class="col-sm-3 text-center my-auto" aria-label="Copyright Information and Contact">
                         <small>&#9400; Blue Pulse Band</small>
                         <br>
-                        <small>Email: <a href="mailto:bluepulseband@gmail.com">BluePulseBand@gmail.com</a></small>
+                        <small>Email: <a href="mailto:bluepulseband@gmail.com" aria-label="Contact Blue Pulse Band via Email">BluePulseBand@gmail.com</a></small>
                     </div>
                     <div class="col-md-3  "></div>
                     <div class="col-md-3 "></div>
@@ -263,18 +263,19 @@
                             <span>
                                 <a class="btn btn-link btn-floating btn-lg text-white m-1"
                                     href="https://www.facebook.com/profile.php?id=61554153687984" role="button"
-                                    rel="nofollow" data-mdb-ripple-color="dark">
-                                    Facebook<i class="fa-brands fa-facebook" aria-label="Facebook"></i>
+                                    rel="nofollow" data-mdb-ripple-color="dark" aria-label="Visit our Facebook page">
+                                    Facebook<i class="fa-brands fa-facebook"></i>
                                 </a>
                             </span>
                         </small>
                     </div>
                 </div>
             </div>
+        </div>
     </footer>
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
 

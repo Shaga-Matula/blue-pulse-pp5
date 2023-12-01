@@ -112,7 +112,7 @@
                                     {% endif %}
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options"  aria-haspopup="true">
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options" aria-haspopup="true">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'admin:index' %}" class="dropdown-item">Product Management</a>
@@ -205,6 +205,7 @@
                                 </ul>
                             </div>
                         </li>
+                    </ul>
                 </div>
             </div>
         </nav>
