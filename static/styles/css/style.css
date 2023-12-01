@@ -14,7 +14,7 @@ html {
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: calc(100vh - 140px);
+    min-height: 100vh;
     width: 100vw;
     margin-top: 140px;
     margin-bottom: 80px;
@@ -79,17 +79,17 @@ html {
 
 .btn-del-edit,
 .like-icon {
-    margin-left: 1rem;
+    margin-left: 10px;
 }
 
 .dis-like-button {
-    border: grey;
+    border: #808080;
     color: white;
     background-color: red;
 }
 
 .like-button {
-    border: grey;
+    border: #808080;
     color: white;
     background-color: green;
 }

@@ -646,7 +646,18 @@ This repository houses the backend database for a Django web application. The da
 [W3C Validator Error: Attribute controlslist not allowed on element audio at this point.](https://webmasters.stackexchange.com/questions/132621/w3c-validator-attribute-controlslist-not-allowed-on-element-audio-at-this-p)
 
 
-<img src="static/images/readme/aaria-error.png" alt="Color Pallet 2" width="400">
+
+
+<img src="static/images/readme/test-nu-cd.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-clothes.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-comments.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-contacts.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-index.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-memmorbelia.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-merchandise.png" alt="Color Pallet 2" width="400">
+<img src="static/images/readme/test-nu-songs.png" alt="Color Pallet 2" width="400">
+
+
 
 
 # Features
