@@ -630,6 +630,14 @@ This repository houses the backend database for a Django web application. The da
 
 ##############################################################
 
+# Testing
+
+
+<img src="static/images/readme/manual-testing.png" alt="Color Pallet 2" width="400">
+
+
+
+
 # Features
 
 ## Agile Aproach
