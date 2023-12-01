@@ -70,7 +70,7 @@ class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         comment = get_object_or_404(CommentMod, pk=self.kwargs["pk"])
-        return self.request.user == comment.user_profile.user
+        return self.request.user == comment.user_profile.user or self.request.user.is_superuser
 
     def handle_no_permission(self):
         comment = get_object_or_404(CommentMod, pk=self.kwargs["pk"])
