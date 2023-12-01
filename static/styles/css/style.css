@@ -1,3 +1,6 @@
+
+
+
 /* General page setup */
 html {
     min-height: 100vh;
@@ -6,7 +9,8 @@ html {
 }
 
 .all-body {
-    background-image: url("/static/images/studio_back.jpg");
+    background-image: url("/static/images/studio_back3.png");
+    background-color: #3e4b50;
     background-position: center center;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -20,6 +24,14 @@ html {
     margin-bottom: 80px;
 
 }
+
+
+.text-index {
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: large;
+}
+
 
 /* News Letter */
 

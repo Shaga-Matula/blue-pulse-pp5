@@ -83,8 +83,9 @@
                 <div class="col-6 col-lg-4 my-auto py-1 py-lg-0 ">
                     <form method="GET" action="{% url 'all_merchandise' %}">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0 " type="text" name="q"
-                                placeholder="Search for Merchandise">
+                            <label for="searchInput" class="visually-hidden">Search for Merchandise</label>
+                            <input id="searchInput" class="form-control border border-black rounded-0" type="text"
+                                name="q" placeholder="Search for Merchandise">
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit"
                                     aria-label="Submit Form">
@@ -101,7 +102,7 @@
                 <div class="collapse navbar-collapse justify-content-end " id="#navbarNavMain">
                     <ul class="navbar-nav d-flex flex-row justify-content-evenly ">
                         <li class="list-inline-item dropdown ">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            <a class="text-black nav-link" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg text-white"></i></div>
@@ -149,8 +150,7 @@
         <!-- Second Navbar (White Background) -->
         <nav class="navbar navbar-expand-lg second-navbar">
             <div class="container align-content-center">
-                <button class="navbar-toggler border-5" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavSecondary">
+                <button class="navbar-toggler border-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavSecondary" aria-label="">
                     <span class="navbar-toggler-icon bg-white"></span>
                 </button>
 
@@ -253,11 +253,12 @@
 
             <div class="col-12">
                 <div class="row  row-1 ">
-                    <div class="col-sm-3 text-center my-auto">
+                    <div class="col-sm-3 text-center my-auto ">
                         <small>&#9400; Blue Pulse Band</small>
                         <br>
                         <small>Email:
-                            <a href="mailto:bluepulseband@gmail.com" aria-label="Contact Blue Pulse Band via Email">Blue Pulse Band</a></small>
+                            <a href="mailto:bluepulseband@gmail.com" aria-label="Contact Blue Pulse Band via Email"  class="text-white">Blue
+                                Pulse Band</a></small>
                     </div>
                     <div class="col-md-3  "></div>
                     <div class="col-md-3 "></div>
