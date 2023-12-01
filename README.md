@@ -302,18 +302,16 @@
 
 <img src="static/images/readme/merch-man-all.png" alt="Merchandise Showcase" width="400">
 
-
 - User-Focused Interaction
 
 - With user-focused design we try and encourages engagement, allowing visitors to explore and interact efficiently with each merchandise item.
-  
 - Deletion Confirmation (Admin)
 
-    To prevent accidental deletions, administrators are prompted with a confirmation dialog when attempting to delete merchandise items. This deliberate process ensures careful consideration before any deletion occurs.
-    
+  To prevent accidental deletions, administrators are prompted with a confirmation dialog when attempting to delete merchandise items. This deliberate process ensures careful consideration before any deletion occurs.
+
 - Responsive Design (Merchandise)
 
-    Just like our landing page, the Merchandise Showcase features a responsive design. This adaptability ensures a consistent and enjoyable user experience across various devices.
+  Just like our landing page, the Merchandise Showcase features a responsive design. This adaptability ensures a consistent and enjoyable user experience across various devices.
 
 - In Summary
 
@@ -454,7 +452,7 @@ Comments feature user-generated content, providing textual insights into the Blu
 <img src="static/images/readme/colorpallet1.png" alt="Color Pallet 1" width="100">
 <img src="static/images/readme/colorpallet2.png" alt="Color Pallet 2" width="100">
 
-- Font Family :  font-family: Georgia, "Times New Roman", Times, serif;
+- Font Family : font-family: Georgia, "Times New Roman", Times, serif;
 
 # Blue Pulse E-Commerce Platform
 
@@ -630,37 +628,43 @@ This repository houses the backend database for a Django web application. The da
 
 - `musicapp_commentmod_likes` and `musicapp_commentmod_dislikes` establish many-to-many relationships between users and comments, allowing users to like or dislike multiple comments and comments receiving likes or dislikes from multiple users.
 
-##############################################################
-
 # Testing
 
+## WC3
+
+<img src="static/images/readme/audio-controll-error.png" alt="Color Pallet 2" width="400">
+
+[W3C Validator Error: Attribute controlslist not allowed on element audio at this point.](https://webmasters.stackexchange.com/questions/132621/w3c-validator-attribute-controlslist-not-allowed-on-element-audio-at-this-p)
+
+<img src="static/images/readme/test-nu-cd.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-clothes.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-comments.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-contacts.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-index.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-memmorbelia.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-merchandise.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-nu-songs.png" alt="Color Pallet 2" height="200">
+
+## WC3 Css
+
+<img src="static/images/readme/test-css.png" alt="Color Pallet 2" width="400">
+
+## Lighthouse
+
+<img src="static/images/readme/test-lighthouse-anth.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lighthouse-comments.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lighthouse-contact.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lighthouse-index.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lighthouse-merch.png" alt="Color Pallet 2" height="200">
+
+## Manual Testing
 
 <img src="static/images/readme/manual-testing.png" alt="Color Pallet 2" width="400">
 
 
+##############################################################
 
 
-## WC3  
-
-<img src="static/images/readme/audio-controll-error.png" alt="Color Pallet 2" width="400">
-
-
-[W3C Validator Error: Attribute controlslist not allowed on element audio at this point.](https://webmasters.stackexchange.com/questions/132621/w3c-validator-attribute-controlslist-not-allowed-on-element-audio-at-this-p)
-
-
-
-
-<img src="static/images/readme/test-nu-cd.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-clothes.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-comments.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-contacts.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-index.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-memmorbelia.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-merchandise.png" alt="Color Pallet 2" width="400">
-<img src="static/images/readme/test-nu-songs.png" alt="Color Pallet 2" width="400">
-
-## WC3 Css
-<img src="static/images/readme/test-css.png" alt="Color Pallet 2" width="400">
 
 # Features
 
@@ -738,7 +742,6 @@ This repository houses the backend database for a Django web application. The da
 
 <img src="static/images/readme/meta-keyword.png" alt="Color Pallet 2" width="600">
 
-
 ## Deployment
 
 ## Version Control
@@ -785,14 +788,19 @@ This repository houses the backend database for a Django web application. The da
 - Below that add the following two lines:
 
 ### Database and Cloudinary
+
 - os.environ["DATABASE_URL"]=""
 - os.environ["CLOUDINARY_URL"] = ""
 - os.environ["SECRET_KEY"]=""
+
 ### Stripe
+
 - os.environ["STRIPE_PUBLIC_KEY"]=""
 - os.environ["STRIPE_SECRET_KEY"]=""
 - os.environ["STRIPE_WH_SECRET"]=""
+
 ### Email
+
 - os.environ["EMAIL_HOST_USER"]=""
 - os.environ["EMAIL_HOST_PASS"]=""
 
