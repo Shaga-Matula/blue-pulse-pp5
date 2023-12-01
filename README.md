@@ -303,9 +303,9 @@
 <img src="static/images/readme/merch-man-all.png" alt="Merchandise Showcase" width="400">
 
 
-User-Focused Interaction
+- User-Focused Interaction
 
-Wit user-focused design we try and encourages engagement, allowing visitors to explore and interact efficiently with each merchandise item.
+- With user-focused design we try and encourages engagement, allowing visitors to explore and interact efficiently with each merchandise item.
   
 - Deletion Confirmation (Admin)
 
@@ -453,6 +453,8 @@ Comments feature user-generated content, providing textual insights into the Blu
 
 <img src="static/images/readme/colorpallet1.png" alt="Color Pallet 1" width="100">
 <img src="static/images/readme/colorpallet2.png" alt="Color Pallet 2" width="100">
+
+- Font Family :  font-family: Georgia, "Times New Roman", Times, serif;
 
 # Blue Pulse E-Commerce Platform
 
@@ -657,8 +659,8 @@ This repository houses the backend database for a Django web application. The da
 <img src="static/images/readme/test-nu-merchandise.png" alt="Color Pallet 2" width="400">
 <img src="static/images/readme/test-nu-songs.png" alt="Color Pallet 2" width="400">
 
-
-
+## WC3 Css
+<img src="static/images/readme/test-css.png" alt="Color Pallet 2" width="400">
 
 # Features
 
@@ -734,8 +736,8 @@ This repository houses the backend database for a Django web application. The da
 
 ## keyword, Description(Meta)
 
-#####################
-#####################
+<img src="static/images/readme/meta-keyword.png" alt="Color Pallet 2" width="600">
+
 
 ## Deployment
 
@@ -781,13 +783,20 @@ This repository houses the backend database for a Django web application. The da
 - If you do not have a env.py file in your workspace create one and make sure it is included in the .gitignore file.
 - At the top of the env.py file add the line: import os.
 - Below that add the following two lines:
-- os.environ["DATABASE_URL"] = "<copied URL from SQL database>"
-- os.environ["SECRET_KEY"] = "<create a secret key of your own>"
 
-## AWS storage:
+### Database and Cloudinary
+- os.environ["DATABASE_URL"]=""
+- os.environ["CLOUDINARY_URL"] = ""
+- os.environ["SECRET_KEY"]=""
+### Stripe
+- os.environ["STRIPE_PUBLIC_KEY"]=""
+- os.environ["STRIPE_SECRET_KEY"]=""
+- os.environ["STRIPE_WH_SECRET"]=""
+### Email
+- os.environ["EMAIL_HOST_USER"]=""
+- os.environ["EMAIL_HOST_PASS"]=""
 
-#########################
-#########################
+# Cloudinary
 
 ## Setting Environment Variables
 
