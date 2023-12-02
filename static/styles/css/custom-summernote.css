@@ -11,7 +11,7 @@ div.note-editable {
     margin: 0 auto !important;
 }
 
-/* Responsive styles for smaller screens */
+/* Responsive styles smaller screens */
 @media(max-width: 767px) {
     div.note-editable {
         min-height: 100% !important; /* Adjust the height for small screens */
