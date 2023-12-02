@@ -49,8 +49,8 @@ class SubscribeView(View):
             )
 
             success_message = (
-                f"You have successfully subscribed to the newsletter. \
-                Confirmation email has been sent to {instance.email}.")
+                f"Subscription successful. Confirmation email sent to ' \
+                    {instance.email}.")
             messages.success(request, success_message)
 
             return redirect("subscribe_success")
