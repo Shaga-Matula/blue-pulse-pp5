@@ -10,12 +10,16 @@ class CategoryMod(models.Model):
 
     CATEGORY_CHOICES = (
         ('clothes', 'Clothes'),
-        ('memorabilia', 'Memorabilia'), 
-        ('cd', 'CD'), 
+        ('memorabilia', 'Memorabilia'),
+        ('cd', 'CD'),
     )
 
-    name = models.CharField(max_length=254, verbose_name='Category Name', choices=CATEGORY_CHOICES)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True, verbose_name='Friendly Name')
+    name = models.CharField(max_length=254,
+                            verbose_name='Category Name',
+                            choices=CATEGORY_CHOICES)
+    friendly_name = models.CharField(max_length=254,
+                                     null=True,
+                                     blank=True, verbose_name='Friendly Name')
 
     def __str__(self):
         return self.name
@@ -24,16 +28,22 @@ class CategoryMod(models.Model):
         return self.friendly_name
 
 
-
 class MerchandiseMod(models.Model):
-    category = models.ForeignKey('CategoryMod', null=True, blank=True, on_delete=models.SET_NULL, verbose_name='Category')
-    sku = models.CharField(max_length=254, null=True, blank=True, verbose_name='SKU')
+    category = models.ForeignKey('CategoryMod',
+                                 null=True, blank=True,
+                                 on_delete=models.SET_NULL,
+                                 verbose_name='Category')
+    sku = models.CharField(max_length=254,
+                           null=True,
+                           blank=True, verbose_name='SKU', editable=False)
     name = models.CharField(max_length=254, verbose_name='Name')
     description = models.TextField(verbose_name='Description')
-    price = models.DecimalField(max_digits=6, decimal_places=2, verbose_name='Price')
+    price = models.DecimalField(max_digits=6,
+                                decimal_places=2, verbose_name='Price')
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name='Rating')
-    image = CloudinaryField('image', default='placeholder', null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2,
+                                 null=True, blank=True, verbose_name='Rating')
+    image = CloudinaryField('image', default="https://res.cloudinary.com/dsqr7dgjt/image/upload/v1700499377/jnepz9qayczlbb0gqvao.png", null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Merchandise'
