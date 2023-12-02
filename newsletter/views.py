@@ -8,6 +8,9 @@ from .models import NewsLetterMod
 
 
 class SubscribeView(View):
+    """
+    Sub Scribe
+    """
     template_name = "newsletter/subscribe.html"
 
     def get(self, request, *args, **kwargs):

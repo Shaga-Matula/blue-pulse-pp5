@@ -667,6 +667,19 @@ This repository houses the backend database for a Django web application. The da
 
 - Note: The error in contrast above; the first error is that the search bar is greyed out, and this is a desired effect. The second error is the greeting to the user and is somehow only contrasting on the comments page. Further investigation needed.
 
+## CI Python Linter
+<img src="static/images/readme/test-lint-bagapp.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-checkoutapp.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-merchandiseapp.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-musicapp.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-news-app.png" alt="Color Pallet 2" height="200">
+
+
+## Stripe Webhooks
+
+<img src="static/images/readme/webhooks.png" alt="Color Pallet 2" width="400">
+
+
 ## Manual Testing
 
 <img src="static/images/readme/manual-testing.png" alt="Color Pallet 2" width="400">
@@ -705,6 +718,55 @@ This repository houses the backend database for a Django web application. The da
 - As a member of Blue Pulse, I want to be able to maintain consistent branding throughout the website, including the use of the band's logo, colors, and fonts, so that the website accurately represents the band's personality and style.
 
 - These user stories can help guide the development of Blue Pulse's website with an agile style, ensuring that the website meets the needs of the band's fans and potential customers.
+
+# Credits and Plagiarism
+
+- Big thanks to and and all the code snippets borrowed from the below links and also Code Institute Learning Modules. 
+
+<hr style="border:1px solid white">
+
+* https://www.w3schools.com/css/css3_flexbox_responsive.asp - A tutorial on using CSS flexbox to create a responsive website.
+* https://stackoverflow.com/questions/32516886/how-to-make-bootstrap-cards-responsive - A question and answer forum on how to make Bootstrap cards responsive.
+* https://aguidehub.com/blog/how-to-make-card-responsive-in-bootstrap/ - A tutorial on how to make a card responsive in Bootstrap.
+* https://youtube.com/watch?v=Izc-0yF4EA0 - A YouTube video tutorial on how to create a responsive card using Bootstrap.
+* https://getbootstrap.com/docs/4.0/components/card/ - The official documentation for Bootstrap's card component.
+* https://github.com/othneildrew/Best-README-Template - A README template for GitHub projects.
+* https://cbea.ms/git-commit/#separate - A guide on how to separate subject from body in Git commit messages.
+* https://tinypng.com/ - A tool for compressing and optimizing PNG and JPEG images.
+* https://www.flexboxfroggy.com - A game that teaches CSS flexbox.
+* https://www.youtube.com/playlist?list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt - A YouTube playlist of tutorials on creating a responsive website using Bootstrap.
+* https://console.cloudinary.com/documentation/django_image_and_video_upload#django_forms_and_models - Documentation on how to upload images and videos in Django using Cloudinary.
+* https://codinggear.blog/django-templates-config/ - A tutorial on how to configure Django templates.
+* https://python-forum.io/thread-24612.html - A forum thread on Python programming.
+* https://www.rockandnull.com/django-user-profile/ - A tutorial on how to create a user profile in Django.
+* https://forum.djangoproject.com/t/duplicate-email-address-in-django-allauth/19064 - A forum thread on how to handle duplicate email addresses in Django Allauth.
+* https://saralgyaan.com/posts/how-to-extend-django-user-model-using-abstractuser/ - A tutorial on how to extend the Django user model using AbstractUser.
+* https://www.geeksforgeeks.org/search-bar-using-html-css-and-javascript/ - A tutorial on how to create a search bar using HTML, CSS, and JavaScript.
+* https://www.pxfuel.com/en/desktop-wallpaper-skjrf/download - A desktop wallpaper image.
+* https://django-crispy-forms.readthedocs.io/en/latest/layouts.html - Documentation on how to use Django Crispy Forms to create form layouts.
+* https://gist.github.com/delneg/b6d625708ae1a75fd5f036a5fe6f6a62 - A code snippet for creating a responsive navbar in Bootstrap.
+* https://codefellows.github.io/sea-python-401d7/lectures/django_views.html - Lecture notes on Django views.
+* Code Institute Learning Modules 
+
+
+A huge thank you for the beautiful art
+
+<img src="static/images/readme/thankyoy-photo.png" alt="Color Pallet 2" height="200">
+
+https://unsplash.com/@tswetkov- Blury
+https://unsplash.com/@krivitskiy- can you see
+https://unsplash.com/@inchristalone- looken out window
+https://unsplash.com/@geraninmo - Let it loose
+https://unsplash.com/@tinaflour - hush
+https://unsplash.com/@shnautsher - Days Like These
+https://unsplash.com/@tomterifx -  
+https://unsplash.com/@peter_forster - out of site
+https://unsplash.com/@wflwong - Jump Jack
+https://unsplash.com/@alexandermils - Moving
+
+- Bonzola permissions for screenshots.
+
+<img src="static/images/readme/bandzola-permissions.png" alt="Color Pallet 2" height="200">
 
 # Technologies
 
