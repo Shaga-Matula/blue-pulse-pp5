@@ -119,12 +119,7 @@ class SongCommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def get(self, request, pk):
         comment = get_object_or_404(CommentMod, pk=pk)
         form = CommentForm(instance=comment)
-        return render(
-            request, (
-                "comments/comment_edit.html",
-                {"form": form, "comment": comment}
-                )
-        )
+        return render(request, "comments/comment_edit.html", {"form": form, "comment": comment})
 
     def post(self, request, pk):
         comment = get_object_or_404(CommentMod, pk=pk)
@@ -381,14 +376,15 @@ class ContactUsView(CreateView):
         # Send email to the user for verification
         user_subject = "Contact Form Submission Verification"
         user_message = (
-            f"Thank you for contacting us! Your message \
-            has been received.\n\nMessage: {instance.msg}")
+            f"Thank you for contacting us! Your message "
+            f"has been received.\n\nMessage: {instance.msg}"
+        )
         user_from_email = "bluepulseband@gmail.com"
         user_recipient_list = [instance.email]
-        print(f"User Recipient List: {user_recipient_list}")
 
         send_mail(
-            user_subject, user_message, user_from_email, user_recipient_list)
+            user_subject, user_message, user_from_email, user_recipient_list
+        )
 
     def send_notification_email(self):
         instance = self.object

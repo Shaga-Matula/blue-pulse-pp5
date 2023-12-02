@@ -504,14 +504,14 @@ Our primary target audience includes:
 We offer a diverse range of products, including:
 
 - **Merchandise:** T-shirts, hoodies, hats, and other apparel featuring exclusive Blue Pulse designs.
-- **CD Downloads:** (Planned) Digital downloads of the Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
+- **CD :** Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
 
 # Pricing
 
 Our pricing strategy is designed to be competitive and fair:
 
 - **Merchandise:** Prices vary based on the type of product, with occasional discounts or promotions for loyal customers.
-- **CD Downloads:** Priced affordably to make Blue Pulse's music accessible to a wider audience.
+- **CD :** Blue Pulse Anthology CD, allowing fans to enjoy the band's music anytime, anywhere.
 
 # Marketing Strategies
 
