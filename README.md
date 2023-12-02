@@ -667,13 +667,19 @@ This repository houses the backend database for a Django web application. The da
 
 - Note: The error in contrast above; the first error is that the search bar is greyed out, and this is a desired effect. The second error is the greeting to the user and is somehow only contrasting on the comments page. Further investigation needed.
 
-## CI Python Linter
+## CI Python Linter Views
 <img src="static/images/readme/test-lint-bagapp.png" alt="Color Pallet 2" height="200">
 <img src="static/images/readme/test-lint-checkoutapp.png" alt="Color Pallet 2" height="200">
 <img src="static/images/readme/test-lint-merchandiseapp.png" alt="Color Pallet 2" height="200">
 <img src="static/images/readme/test-lint-musicapp.png" alt="Color Pallet 2" height="200">
 <img src="static/images/readme/test-lint-news-app.png" alt="Color Pallet 2" height="200">
 
+## CI Python Linter Models
+
+<img src="static/images/readme/test-lint-modmerch.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-modmusic.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-modnewsletter.png" alt="Color Pallet 2" height="200">
+<img src="static/images/readme/test-lint-modprofile.png" alt="Color Pallet 2" height="200">
 
 ## Stripe Webhooks
 
