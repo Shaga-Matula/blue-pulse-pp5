@@ -17,28 +17,40 @@ class SubscribeView(View):
     def post(self, request, *args, **kwargs):
         form = SubscribeForm(request.POST)
         if form.is_valid():
-            instance = form.save(commit=False)  # Do not save to the database yet
+            instance = form.save(commit=False)  # Delay
             instance.save()  # Save to the database now
 
             # Send confirmation email to the user
             user_subject = "Subscription Successful"
-            user_message = "Thank you for subscribing to our newsletter. You will receive updates and confirmations via email."
+            user_message = (
+                "Thank you for subscribing. You will receive \
+                    updates and confirmations via email.")
             user_from_email = settings.DEFAULT_FROM_EMAIL
             user_recipient_list = [instance.email]
 
-            send_mail(user_subject, user_message, user_from_email, user_recipient_list)
+            send_mail(
+                user_subject,
+                user_message,
+                user_from_email,
+                user_recipient_list)
 
             # Send notification email to admin 'bluepulseband@gmail.com'
             admin_subject = "New Newsletter Subscriber"
-            admin_message = f"A new subscriber with email {instance.email} has joined the newsletter."
+            admin_message = (
+                f"A new subscriber email {instance.email} has joined.")
             admin_from_email = settings.DEFAULT_FROM_EMAIL
             admin_recipient_list = ["bluepulseband@gmail.com"]
 
             send_mail(
-                admin_subject, admin_message, admin_from_email, admin_recipient_list
+                admin_subject,
+                admin_message,
+                admin_from_email,
+                admin_recipient_list
             )
 
-            success_message = f"You have successfully subscribed to the newsletter. Confirmation email has been sent to {instance.email}."
+            success_message = (
+                f"You have successfully subscribed to the newsletter. \
+                Confirmation email has been sent to {instance.email}.")
             messages.success(request, success_message)
 
             return redirect("subscribe_success")

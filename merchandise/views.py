@@ -35,7 +35,8 @@ class AllMerchView(TemplateView):
 
         if not all_merch:
             messages.warning(
-                self.request, f"Sorry, no items retrieved for '{search_query}'"
+                self.request,
+                f"Sorry, no items retrieved for '{search_query}'"
             )
 
         return context
@@ -55,6 +56,7 @@ class MerchandiseDetailView(DetailView):
         context["merch_item"] = self.object
         return context
 
+
 @login_required
 def add_merch(request):
     """Add a product to the store"""
@@ -68,7 +70,10 @@ def add_merch(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('merch_item', args=[new_product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to add product. Please ensure the form is valid.')
+                )
     else:
         form = MerchandiseForm()
 
@@ -79,11 +84,12 @@ def add_merch(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store administrators can do that.')
+        messages.error(request, 'Sorry, only the Band can do that.')
         return redirect(reverse('home'))
     product = get_object_or_404(MerchandiseMod, pk=product_id)
     if request.method == 'POST':
@@ -93,7 +99,11 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('merch_item', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, (
+                    'Failed update product. Please ensure the form is valid.'
+                    )
+                )
     else:
         form = MerchandiseForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -106,11 +116,12 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store administrators can do that.')
+        messages.error(request, 'Sorry, only Band members can do that.')
         return redirect(reverse('home'))
     product = get_object_or_404(MerchandiseMod, pk=product_id)
     product.delete()

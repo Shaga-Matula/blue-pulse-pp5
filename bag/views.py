@@ -1,5 +1,11 @@
 from django.contrib import messages
-from django.shortcuts import HttpResponse, get_object_or_404, redirect, render, reverse
+from django.shortcuts import (
+    HttpResponse,
+    get_object_or_404,
+    redirect,
+    render,
+    reverse,
+)
 from django.views import View
 
 from merchandise.models import MerchandiseMod
@@ -25,23 +31,27 @@ def add_to_bag(request, item_id):
     bag = request.session.get("bag", {})
 
     if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]["items_by_size"].keys():
-                bag[item_id]["items_by_size"][size] += quantity
-                messages.success(
-                    request,
-                    f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}',
+        if item_id in bag:
+            items_by_size = bag[item_id]["items_by_size"]
+            if size in items_by_size:
+                items_by_size[size] += quantity
+                msg = (
+                    f"Updated size {size.upper()} {product.name} "
+                    f"quantity to {items_by_size[size]}"
                 )
+                messages.success(request, msg)
             else:
-                bag[item_id]["items_by_size"][size] = quantity
-                messages.success(
-                    request, f"Added size {size.upper()} {product.name} to your bag"
-                )
+                items_by_size[size] = quantity
+                msg = f"Added size {size.upper()} ' \
+                    {product.name} to your bag"
+                messages.success(request, msg)
 
         else:
             bag[item_id] = {"items_by_size": {size: quantity}}
             messages.success(
-                request, f"Added size {size.upper()} {product.name} to your bag"
+                request,
+                f"Added size {size.upper()} ' \
+                    {product.name} to your bag",
             )
     else:
         if item_id in list(bag.keys()):
@@ -77,13 +87,18 @@ class AdjustBagView(View):
                     bag[item_id]["items_by_size"][size] = quantity
                     messages.success(
                         request,
-                        f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}',
+                        (
+                            f"Updated size {size.upper()} ' \
+                            {product.name} quantity to "
+                            f'{bag[item_id]["items_by_size"][size]}'
+                        ),
                     )
                 else:
                     bag[item_id] = {"items_by_size": {size: quantity}}
                     messages.success(
                         request,
-                        f"Removed size {size.upper()} {product.name} from your bag",
+                        f"Removed size {size.upper()} ' \
+                            {product.name} from your bag",
                     )
             else:
                 if item_id in bag and size in bag[item_id]["items_by_size"]:
@@ -91,17 +106,20 @@ class AdjustBagView(View):
                     if not bag[item_id]["items_by_size"]:
                         bag.pop(item_id)
                     messages.success(
-                        request, f"Updated {product.name} quantity to {bag[item_id]}"
+                        request, f"Updated {product.name} quantity to ' \
+                            {bag[item_id]}"
                     )
         else:
             if quantity > 0:
                 bag[item_id] = quantity
                 messages.success(
-                    request, f"Updated {product.name} quantity to {bag[item_id]}"
+                    request, f"Updated {product.name} quantity to ' \
+                        {bag[item_id]}"
                 )
             else:
                 bag.pop(item_id)
-                messages.success(request, f"Removed {product.name} from your bag")
+                messages.success(request, f"Removed ' \
+                    {product.name} from your bag")
 
         request.session["bag"] = bag
         return redirect(reverse("view_bag"))
@@ -122,7 +140,8 @@ def remove_from_bag(request, item_id):
             if not bag[item_id]["items_by_size"]:
                 bag.pop(item_id)
             messages.success(
-                request, f"Removed size {size.upper()} {product.name} from your bag"
+                request, f"Removed size {size.upper()} ' \
+                    {product.name} from your bag"
             )
         else:
             bag.pop(item_id)

@@ -16,7 +16,9 @@ from django.views.generic import (
 from .forms import CommentForm, MusicModForm
 from .models import CommentMod, ContactMod, MusicMod
 
-### like/dis-like
+# Likes
+
+
 class LikeCommentView(View):
     """
     Gets likes from comments
@@ -29,9 +31,7 @@ class LikeCommentView(View):
             if user not in comment.likes.all():
                 comment.likes.add(user)
                 comment.dislikes.remove(user)  # remove from dislike
-                success_message = (
-                "You have successfully added a like to this comment"
-                    )
+                success_message = ("You have successfully added a like")
                 messages.success(self.request, success_message)
                 comment.save()
             else:
@@ -39,6 +39,9 @@ class LikeCommentView(View):
                 messages.success(self.request, success_message)
 
         return HttpResponseRedirect(reverse("song_all_comments"))
+
+
+# Dislikes
 
 
 class DisLikeCommentView(View):
@@ -65,9 +68,6 @@ class DisLikeCommentView(View):
         return HttpResponseRedirect(reverse("song_all_comments"))
 
 
-#################################
-
-
 class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     View for deleting a user's comment.
@@ -79,7 +79,9 @@ class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         comment = get_object_or_404(CommentMod, pk=self.kwargs["pk"])
-        return self.request.user == comment.user_profile.user or self.request.user.is_superuser
+        return self.request.user == (
+            comment.user_profile.user or self.request.user.is_superuser
+            )
 
     def handle_no_permission(self):
         comment = get_object_or_404(CommentMod, pk=self.kwargs["pk"])
@@ -118,7 +120,10 @@ class SongCommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         comment = get_object_or_404(CommentMod, pk=pk)
         form = CommentForm(instance=comment)
         return render(
-            request, "comments/comment_edit.html", {"form": form, "comment": comment}
+            request, (
+                "comments/comment_edit.html",
+                {"form": form, "comment": comment}
+                )
         )
 
     def post(self, request, pk):
@@ -130,7 +135,8 @@ class SongCommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             form.save()
             return redirect("song_all_comments")
         return render(
-            request, "comments/comment_edit.html", {"form": form, "comment": comment}
+            request, "comments/comment_edit.html",
+            {"form": form, "comment": comment}
         )
 
 
@@ -172,7 +178,6 @@ class SongListCommentView(ListView):
         return context
 
 
-###########
 class SongListView(ListView):
     """
     ListView for displaying a sorted list of songs.
@@ -207,13 +212,16 @@ class SongCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         Handle case when the current user is not a superuser.
         Redirects to "song_list" with an error message.
         """
-        messages.error(self.request, "You do not have permission to add songs.")
+        messages.error(
+            self.request, "You do not have permission to add songs."
+            )
         return redirect("song_list")
 
     def form_valid(self, form):
         messages.success(
             self.request,
-            f"Successfully added {form.instance.artist_name} - {form.instance.song_title} to the database.",
+            f"Successfully added {form.instance.artist_name} - ' \
+                {form.instance.song_title} to the database.",
         )
         return super().form_valid(form)
 
@@ -238,13 +246,15 @@ class SongUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         Handle case when the current user is not a superuser.
         Redirects to "song_list" with an error message.
         """
-        messages.error(self.request, "You do not have permission to edit songs.")
+        messages.error(self.request, "You do not have permission \
+            to edit songs.")
         return redirect("song_list")
 
     def form_valid(self, form):
         messages.success(
             self.request,
-            f"Successfully updated {form.instance.artist_name} - {form.instance.song_title}.",
+            f"Successfully updated {form.instance.artist_name} - ' \
+                {form.instance.song_title}.",
         )
         return super().form_valid(form)
 
@@ -255,7 +265,6 @@ class SongDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     model = MusicMod
     template_name = "musicapp/song_confirm_delete.html"
-
 
     def test_func(self):
         """
@@ -268,7 +277,8 @@ class SongDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         Handle case when the current user is not a superuser.
         Redirects to "song_list" with an error message.
         """
-        messages.error(self.request, "You do not have permission to delete songs.")
+        messages.error(self.request, (
+            "You do not have permission to delete songs."))
         return redirect("song_list")
 
     def get_success_url(self):
@@ -276,12 +286,14 @@ class SongDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def delete(self, request, *args, **kwargs):
         if not self.request.user.is_superuser:
-            messages.error(self.request, "Sorry, only administrators can delete songs.")
+            messages.error(self.request, (
+                "Sorry, only administrators can delete songs."))
             return self.handle_no_permission()
 
         messages.success(
             self.request,
-            f"Successfully deleted {self.get_object().artist_name} - {self.get_object().song_title}.",
+            f"Successfully deleted {self.get_object().artist_name} - ' \
+                {self.get_object().song_title}.",
         )
         return super().delete(request, *args, **kwargs)
 
@@ -291,7 +303,7 @@ class ContactUsView(CreateView):
     Contacts page view
     """
     template_name = "comments/contact_us.html"
-    model = ContactMod  # Replace with the actual import path for your ContactMod model
+    model = ContactMod
     fields = [
         "fname",
         "lname",
@@ -313,8 +325,9 @@ class ContactUsView(CreateView):
 
         # Display success message
         messages.success(
-            self.request,
-            "Your message was sent successfully. We will be in touch ASAP.",
+            self.request, (
+                "Your message was sent successfully. We will be in touch .",
+                )
         )
 
         return response
@@ -323,7 +336,7 @@ class ContactUsView(CreateView):
         # Handle form validation errors
         messages.error(
             self.request,
-            "There was an error with your submission. Please check your input.",
+            "There was an error with your entry. Please check your input.",
         )
         return super().form_invalid(form)
 
@@ -332,23 +345,33 @@ class ContactUsView(CreateView):
 
         # Send email to the user for verification
         user_subject = "Contact Form Submission Verification"
-        user_message = f"Thank you for contacting us! Your message has been received.\n\nMessage: {instance.msg}"
+        user_message = (
+            f"Thank you for contacting us! Your message \
+            has been received.\n\nMessage: {instance.msg}")
         user_from_email = "bluepulseband@gmail.com"
         user_recipient_list = [instance.email]
         print(f"User Recipient List: {user_recipient_list}")
 
-        send_mail(user_subject, user_message, user_from_email, user_recipient_list)
+        send_mail(
+            user_subject, user_message, user_from_email, user_recipient_list)
 
     def send_notification_email(self):
         instance = self.object
 
         # Send email notification to admin 'bluepulseband@gmail.com'
         admin_subject = "New Contact Form Submission"
-        admin_message = f"A new contact form submission:\n\nName: {instance.fname} {instance.lname}\nEmail: {instance.email}\nPhone: {instance.phone}\nMessage: {instance.msg}"
+        admin_message = (f"A new contact form submission:\n\nName: ' \
+        {instance.fname} {instance.lname}\nEmail: {instance.email}\nPhone: ' \
+            {instance.phone}\nMessage: {instance.msg}")
         admin_from_email = "bluepulseband@gmail.com"
         admin_recipient_list = ["bluepulseband@gmail.com"]
 
-        send_mail(admin_subject, admin_message, admin_from_email, admin_recipient_list)
+        send_mail(
+            admin_subject,
+            admin_message,
+            admin_from_email,
+            admin_recipient_list
+            )
 
         return reverse("contact_us")
 

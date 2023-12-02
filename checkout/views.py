@@ -7,8 +7,13 @@ import json
 import stripe
 from django.conf import settings
 from django.contrib import messages
-from django.core.mail import send_mail
-from django.shortcuts import HttpResponse, get_object_or_404, redirect, render, reverse
+from django.shortcuts import (
+    HttpResponse,
+    get_object_or_404,
+    redirect,
+    render,
+    reverse,
+)
 from django.views.decorators.http import require_POST
 
 from bag.contexts import bag_contents
@@ -22,6 +27,9 @@ from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
+    """
+Update and cache checkout data for a Stripe PaymentIntent.
+"""
     try:
         pid = request.POST.get("client_secret").split("_secret")[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -44,6 +52,9 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    Checkout
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -79,7 +90,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data["items_by_size"].items():
+                        for size, quantity in \
+                                item_data["items_by_size"].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -91,7 +103,8 @@ def checkout(request):
                     messages.error(
                         request,
                         (
-                            "One of the products in your bag wasn't found in our database. "
+                            "One of the products in your bag wasn't \
+                            found in our database. "
                             "Please call us for assistance!"
                         ),
                     )
@@ -99,7 +112,9 @@ def checkout(request):
                     return redirect(reverse("view_bag"))
 
             request.session["save_info"] = "save-info" in request.POST
-            return redirect(reverse("checkout_success", args=[order.order_number]))
+            return redirect(
+                reverse("checkout_success", args=[order.order_number])
+                )
         else:
             messages.error(
                 request,
@@ -109,7 +124,9 @@ def checkout(request):
     else:
         bag = request.session.get("bag", {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment"
+                )
             return redirect(reverse("all_merchandise"))
 
         current_bag = bag_contents(request)
@@ -193,7 +210,6 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.",
     )
-
 
     if "bag" in request.session:
         del request.session["bag"]
