@@ -13,11 +13,11 @@
     <h1 class="text-center lifeline-font pt-lg-5 pt-md-3 pb-3"> <i>Merchandise</i></h1>
     <!-- Rendering All Merchandise -->
     <div class="row justify-content-center align-items-center">
-        <div class="col-xxl-8 col-xl-6 col-md-8 col-sm-10 col-12">
+        <section class="col-xxl-8 col-xl-6 col-md-8 col-sm-10 col-12">
             <div class="row justify-content-center">
                 {% for merch in all_merch %}
                 <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 p-1">
-                    <div class="card indigo-dye rounded-3 ">
+                    <aside class="card indigo-dye rounded-3 ">
                         {% if merch.image %}
                         <a href="{% url 'merch_item' merch.id %}" class="mx-auto merch-image-height text-center">
                             <img src="{{ merch.image.url }}" alt="{{ merch.name }}" class="card-img-top img-fluid m-2 rounded-3 merch-image-width">
@@ -28,7 +28,7 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body">
+                        <article class="card-body">
                             <h5 class="card-title">{{ merch.name }}</h5>
                             <p class="card-text">Price: €{{ merch.price }}</p>
                             <p class="card-text">Category: {{ merch.category }}</p>
@@ -42,12 +42,12 @@
                                 <a class="text-danger confirm-delete" href="{% url 'delete_product' merch.id %}">Delete</a>
                             </small>
                             {% endif %}
-                        </div>
-                    </div>
+                        </article>
+                    </aside>
                 </div>
                 {% endfor %}
             </div>
-        </div>
+        </section>
     </div>
 </main>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
+<main class="container">
     <h2 class="mb-4 text-center title-all-song pt-lg-5 pt-m-3">Comments</h2>
     <p class="card-body all_song_card title-all-song">This comments section is your space to share thoughts, discuss tracks, and connect with other fans. Whether you attended a recent concert, have insights about the band's discography, or simply want to join the conversation, feel free to drop your comments below. Remember to keep it respectful and on-topic. Let the music discussions begin! </p>
     {% for song in songs %}
@@ -60,7 +60,7 @@
         </div>
     </div>
     {% endfor %}
-</div>
+</main>
 {% endblock %}
 
 {% block postloadjs %}

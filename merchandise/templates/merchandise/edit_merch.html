@@ -11,18 +11,18 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
+<main class="container">
     <div class="row">
         <div class="col-12 col-md-6">
             <hr class="bg-white-hr">
-            <h2 class="logo-font mb-4">Merchandise Management</h2>
-            <h5 class="text-muted">Edit Merchandise</h5>
+            <h2 class="logo-font mb-4 text-white">Merchandise Management</h2>
+            <h5 class=" text-white">Edit Merchandise</h5>
             <hr class="bg-white-hr">
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6 ">
+        <div class="col-12 col-md-6 text-white">
             <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
@@ -39,7 +39,7 @@
             </form>
         </div>
     </div>
-</div>
+</main>
 {% endblock %}
 
 {% block postloadjs %}

@@ -242,6 +242,7 @@ class SongCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         )
         return super().form_valid(form)
 
+
 class SongUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     Update view for songs, allowing only superusers.
@@ -262,17 +263,35 @@ class SongUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         Handle case when the current user is not a superuser.
         Redirects to "song_list" with an error message.
         """
-        messages.error(self.request, "You do not have permission \
-            to edit songs.")
+        messages.error(self.request, "You do not have permission to edit songs.")
         return redirect("song_list")
 
     def form_valid(self, form):
+        # Check if the song file extension is 'mp3'
+        if form.instance.song_file:
+            if not form.instance.song_file.name.lower().endswith('.mp3'):
+                messages.error(
+                    self.request,
+                    'Only MP3 files are allowed. Please upload a valid MP3 file.'
+                )
+                return redirect('song_create')
+
+        # Check if the image file extension is 'png'
+        if form.instance.song_image:
+            if not form.instance.song_image.name.lower().endswith('.png'):
+                messages.error(
+                    self.request,
+                    'Only PNG images are allowed. Please upload a valid PNG image.'
+                )
+                return redirect('song_create')
+
+        # Call the parent class's form_valid method if all checks pass
         messages.success(
             self.request,
-            f"Successfully updated {form.instance.artist_name} - ' \
-                {form.instance.song_title}.",
+            f"Successfully updated {form.instance.artist_name} - {form.instance.song_title}.",
         )
         return super().form_valid(form)
+
 
 
 class SongDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):

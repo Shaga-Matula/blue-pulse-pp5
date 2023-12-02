@@ -319,7 +319,7 @@
 
 # Contact Page
 
-<img src="static/images/readme/contacts.png" alt="Contacts Page" width="1000">
+<img src="static/images/readme/contacts.png" alt="Contacts Page" width="900">
 
 # Direct Communication
 
@@ -347,7 +347,7 @@
 
 ## Comments Page
 
-<img src="static/images/readme/comments.png" alt="Contacts Page" width="1000">
+<img src="static/images/readme/comments.png" alt="Conmments Page" width="900">
 
 - Here you can peruse the collection of songs alongside user comments on the Comments page. Each song is presented with associated feedback from the Blue Pulse community.
 
@@ -390,6 +390,17 @@ Comments feature user-generated content, providing textual insights into the Blu
 ## In summary(comments)
 
 - The Blue Pulse Comments page lets users join discussions, share thoughts, and be part of a lively community chat about Blue Pulse's music. CRUD operations are in place for managing content, keeping the comment section in good health.
+
+# Forms and Validation
+
+- All forms are validated using either allauth or custom code. After submission, user will receive a clear message indicating success or any encountered issues. In the music section, validation ensures MP3 audio and PNG image formats for validation and also in the Merchandise section.
+
+<img src="static/images/readme/form-add-error-1.png" alt="Error-1" width="400">
+
+
+<img src="static/images/readme/form-addmerch.png" alt="Error-2" width="400">
+
+
 
 # Design
 
