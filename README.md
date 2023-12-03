@@ -7,7 +7,7 @@
 # Project Links
 
 - [Blue Pulse Repository](https://github.com/Shaga-Matula/blue-pulse-pp5)
-- [Blue Pulse Live Site](https://bluepulsepp5-165b4a2f3a08.herokuapp.com)
+- [Blue Pulse Live Site](https://bluepulsebandpp5-2efc9a1d43e2.herokuapp.com)
 
 ## Note on Business Model
 
