@@ -784,6 +784,15 @@ https://unsplash.com/@alexandermils - Moving
 
 <img src="static/images/readme/bandzola-permissions.png" alt="Color Pallet 2" height="200">
 
+
+# Special Thanks to: 
+- Dave_T_5P (David Trevaskis) for moral support and exchange of ideas (Code Institatute)
+- Gareth McGirr (Mentor)
+- Paul Thomas O’Riordan (The Facilatator)
+- Oliver Train 5_p (Teaching Some Django fixes)
+- Seon O'brian Gleeson (Css and JavaScript tips)
+
+
 # Technologies
 
 ## Coding Languages
