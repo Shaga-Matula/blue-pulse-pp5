@@ -166,7 +166,6 @@
 - **Hover Effects:** Hover effects on navigation links enhance user interaction.
 - **Bootstrap Components:** Utilizes Bootstrap components for styling and responsiveness.
 
-##############
 
 # Blue Pulse Site Guide
 

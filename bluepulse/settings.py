@@ -30,7 +30,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu105.gitpod.io",
     "8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu106.gitpod.io",
-    "bluepulsepp5-165b4a2f3a08.herokuapp.com",
+    "bluepulsebandpp5-2efc9a1d43e2.herokuapp.com",
 ]
 
 
@@ -225,4 +225,3 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
     DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 
-# Final Comment
