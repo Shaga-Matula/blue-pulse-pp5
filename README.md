@@ -15,6 +15,10 @@
 
 - In the context of this project, all songs have been released for perusal, but in a live environment, users would encounter 10-second samples with complete versions available for more in-depth exploration of the songs. The store would also greatly appreciate any feedback regarding the songs.
 
+# Note on song error
+
+- We are aware of 3 glitches in the songs, namely, 'Moving On' at 1:16, 'Puppets' at 1:11, and 'Days Like These' at 1:19. This is another reason we want to rerecord. 
+
 # Table of Contents
 
 1. [Introduction](#introduction)
@@ -247,7 +251,7 @@
 
 ## User-Friendly Interface
 
-- Designed for user convenience, the Anthology page incorporates a simple audo mackinisem in to allow operations for easy navigation, enabling users to explore, play and listen to the music.
+- Designed for user convenience, the Anthology page incorporates a simple audo  mechanism in to allow operations for easy navigation, enabling users to explore, play and listen to the music.
 
 ## Superuser Privileges (CRUD)
 
