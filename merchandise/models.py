@@ -43,8 +43,8 @@ class MerchandiseMod(models.Model):
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2,
                                  null=True, blank=True, verbose_name='Rating')
-    image = CloudinaryField('image', default="https://res.cloudinary.com/dsqr7dgjt/image/upload/v1700499377/jnepz9qayczlbb0gqvao.png", null=True, blank=True)
-
+    # image = CloudinaryField('image', default="https://res.cloudinary.com/dsqr7dgjt/image/upload/v1700499377/jnepz9qayczlbb0gqvao.png", null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     class Meta:
         verbose_name_plural = 'Merchandise'
 

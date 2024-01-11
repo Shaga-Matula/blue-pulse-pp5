@@ -261,15 +261,15 @@ class SongUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         messages.error(self.request, "You do not have permission to edit songs.")
         return redirect("song_list")
 
-    def form_valid(self, form):
-        # Check if the song file extension is 'mp3'
-        if form.instance.song_file:
-            if not form.instance.song_file.name.lower().endswith('.mp3'):
-                messages.error(
-                    self.request,
-                    'Only MP3 files are allowed. Please upload a valid MP3 file.'
-                )
-                return redirect('song_create')
+    # def form_valid(self, form):
+    #     # Check if the song file extension is 'mp3'
+    #     if form.instance.song_file:
+    #         if not form.instance.song_file.filename.lower().endswith('.mp3'):
+    #             messages.error(
+    #                 self.request,
+    #                 'Only MP3 files are allowed. Please upload a valid MP3 file.'
+    #             )
+    #             return redirect('song_create')
 
         # Check if the image file extension is 'png'
         if form.instance.song_image:

@@ -12,9 +12,11 @@ class MusicMod(models.Model):
 
     artist_name = models.CharField(max_length=100)
     song_title = models.CharField(max_length=100)
-    song_file = CloudinaryField("song_file", resource_type="auto")
+    song_file = models.FileField(null=True, blank=True)
+    # upload_to='your-s3-bucket/mp3/',
     # Bug fix noimage
-    song_image = CloudinaryField("song_image", default="https://res.cloudinary.com/dsqr7dgjt/image/upload/v1700499377/jnepz9qayczlbb0gqvao.png")
+    # song_image = CloudinaryField("song_image", default="https://res.cloudinary.com/dsqr7dgjt/image/upload/v1700499377/jnepz9qayczlbb0gqvao.png")
+    song_image = models.ImageField("song_image", null=True, blank=True)
 
     def __str__(self):
         return f"{self.artist_name} - {self.song_title}"
