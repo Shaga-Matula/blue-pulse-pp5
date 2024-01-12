@@ -1,0 +1,786 @@
+/* Styles */
+.contact-back {
+    background-color: #001f2b;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #C0C0C0;
+    border-radius: 5%;
+    padding: 10px;
+    font-display: swap;
+}
+
+/* General setup */
+html {
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+.all-body {
+    background-image: url("/media/studio_back3.png");
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    margin-top: 140px;
+    margin-bottom: 80px;
+
+}
+
+
+.text-index {
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: large;
+}
+
+
+/* News Letter */
+
+.newsletter-format {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #00415a;
+    font-display: swap;
+}
+
+/* Feel the beat */
+
+.feel-beat {
+
+    font-family: 'Rock Salt', cursive, 'Helvetica Neue', Arial, sans-serif;
+    font-size: xx-large;
+}
+
+/* Allauth Forms */
+.text-edit-merch .form-group label,
+.text-edit-merch,
+#div_id_category,
+#div_id_sku,
+#div_id_price,
+#div_id_name,
+#div_id_rating,
+#div_id_rating p,
+#div_id_has_sizes,
+#div_id_description,
+.text-add-merch {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    font-display: swap;
+}
+
+
+.btn-del-edit {
+    min-width: 60px;
+}
+
+.bg-white-hr {
+    background-color: white;
+    color: white;
+}
+
+.all_song_card {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #00415a;
+    border-color: silver;
+    border-style: solid;
+    font-display: swap;
+}
+
+.profile-font,
+.title-all-song {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white !important;
+    font-display: swap;
+    font-weight: 200;
+
+}
+
+.btn-del-edit,
+.like-icon {
+    margin-left: 10px;
+}
+
+.dis-like-button {
+    border: #808080;
+    color: white;
+    background-color: red;
+}
+
+.like-button {
+    border: #808080;
+    color: white;
+    background-color: green;
+}
+
+.like-count {
+    margin-left: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Comments Template */
+#id_login {
+    background-color: white;
+    color: black;
+}
+
+.comments-intro {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    background-color: #00415a;
+    padding: 10px;
+    font-display: swap;
+}
+
+.comments-card {
+    width: fit-content;
+    padding: 2%;
+}
+
+.comments-bg-color {
+    background-color: #00415a;
+}
+
+.comments-edit-card {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    background-color: var(--bs-list-group-bg);
+    width: auto;
+    font-display: swap;
+}
+
+.comments-card-title {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: x-large;
+    color: white;
+    font-display: swap;
+}
+
+.author {
+    display: inline-block;
+    clear: both;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* Padding Pages */
+
+.nav-padding-merch-item {
+    padding-top: 20px;
+}
+
+/* Div Centering to left */
+.center-element {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* page height */
+.distance-top-na-v {
+    min-height: calc(100vh - 140px);
+}
+
+/* Signup/Signout/Signin */
+.signup-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 250px);
+}
+
+.signup-form {
+    width: 100%;
+    /* Adjust the width as needed */
+    max-width: 400px;
+    /* Set a maximum width for the form */
+}
+
+.signup-text {
+    color: white;
+}
+
+/* Merchandis all */
+.merch-image-width {
+    max-width: 80%;
+    /* Adjust this value as needed */
+    height: auto;
+
+}
+
+
+.merch-image-custom {
+    border-radius: 5%;
+}
+
+
+.merch-card-height {
+    min-height: 45vh;
+}
+
+.card-img-top {
+    max-height: 80%;
+    width: auto;
+    height: 250px;
+    border-radius: 5%;
+
+}
+
+.card-music-height {
+    min-height: 50px;
+}
+
+/* merch_item (Increment and decrement) */
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* Song/Music/List  */
+
+.song-li {
+    list-style-type: none;
+}
+
+.contact-us-title,
+.contact-us-label,
+.song-head {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #eaeaea;
+    font-display: swap;
+}
+
+.face-book {
+    margin-left: 20px;
+    background-color: #4267B2;
+}
+
+.song-card {
+    color: white;
+    min-height: 400px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-display: swap;
+
+}
+
+.song-main {
+    background-color: deepskyblue;
+    border-radius: 10%;
+}
+
+/* Navbar Top */
+.nav-bar-text {
+    color: white;
+    font-size: large;
+}
+
+.navbar-top {
+    background-color: #00719c;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+/* Navbar Bottom */
+
+.textInput,
+.textinput,
+.form-control {
+    color: black;
+}
+
+.second-navbar {
+    background-color: #001f2b;
+}
+
+.second-navbar-li {
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #eaeaea;
+}
+
+.second-navbar-li a {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    white-space: nowrap;
+    font-size: large;
+    font-display: swap;
+}
+
+/* Nav bar active highlight */
+.nav-active-color.active {
+    color: white !important;
+    background-color: #00415a;
+    border-radius: 50%;
+
+}
+
+.nav-link:hover {
+    /* background-color: #00415a; */
+    color: white;
+    background-color: #00415a;
+    border-radius: 25%;
+}
+
+.nav-link:focus {
+    color: #17a2b8;
+    border-radius: 25%;
+}
+
+.nav-link {
+    border-radius: 25%;
+}
+
+
+
+/* Footer phantom main page */
+
+
+.min-height-padding-top {
+    margin-top: 100px;
+}
+
+.min-height {
+    min-height: calc(100vh - 300px);
+    padding-top: 100px;
+}
+
+.min-height-login {
+    padding-top: 200px;
+}
+
+/* Swatch Colors background colors */
+
+.deep-sky-blue {
+    background-color: #00b8ff;
+}
+
+.rich-electric-blue {
+    background-color: #009bd6;
+}
+
+.sea-blue {
+    background-color: #00719c;
+}
+
+.indigo-dye {
+    background-color: #00415a;
+}
+
+.rich-black {
+    background-color: #001f2b;
+}
+
+/* Slider for Audio song page */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+    background-color: deepskyblue;
+}
+
+/* Audio */
+audio {
+    display: flex;
+}
+
+/* Dev tool for centering */
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+/*  Fonts */
+@font-face {
+    font-family: "ECG Font";
+    src: url("/static/lifeline-font/Lifeline-7O6A.ttf") format("truetype");
+}
+
+/* Pulse Font */
+.lifeline-font {
+    font-family: "ECG Font", sans-serif;
+    font-weight: 100;
+    font-size: xx-large;
+    color: white;
+}
+
+/* Allauth  */
+
+/*  */
+
+
+/* Cards */
+.item-discpt {
+    color: white;
+    font-size: small;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-display: swap;
+}
+
+.card-title,
+.card-text {
+    color: antiquewhite;
+}
+
+.merch-card-text {
+    color: antiquewhite;
+}
+
+/* Detail main */
+
+.detail-main-background {
+    background-color: white;
+}
+
+/* Merchandise Discription Text Tags */
+
+.discription-page-text {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Star Rating */
+.stars {
+    display: inline-block;
+    font-size: 0;
+}
+
+.star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+}
+
+.star.gold {
+    background-color: gold;
+}
+
+.merch-item-height {
+    height: auto;
+    width: auto;
+    background-color: #00415a;
+}
+
+/* To Be deleted */
+.black-line {
+    height: 20px;
+    background-color: black;
+}
+
+/* Gold horizontal line */
+.gold-line {
+    height: 20px;
+    background-color: gold;
+}
+
+/* Shopping bag */
+
+.shopping-text {
+    color: white;
+}
+
+.shopping-text-hr {
+    color: white;
+    font-weight: 600;
+    height: 5px;
+}
+
+/* Bag Page */
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /*  Override link colors */
+    border: 1px solid black;
+}
+
+/* ------------------------------- bootstrap toasts */
+.text-bg-bag-message {
+    background-color: #001f2b;
+    color: white;
+}
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 4px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for="id_remember"]) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type="submit"] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type="submit"]:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #17a2b8;
+    /* text-info */
+}
+
+.login label,
+.login .error-message,
+.login input[type="email"],
+#id_remember {
+    color: white;
+}
+
+.form-group-change .form-group,
+.div_id_song_image {
+    padding-bottom: 4px;
+    color: white !important;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    height: min-content;
+    bottom: 0;
+    width: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #001f2b;
+    color: white;
+    text-align: center;
+    font-display: swap;
+}
+
+/* Media Sizes */
+/* ------------------------------------- */
+
+/* Remove gap at to of small screen 767 and below */
+@media(max-width: 767px) {
+
+    .min-height,
+    .adjust-index-height {
+        align-items: flex-start;
+        min-height: 0;
+        padding-top: 0;
+    }
+
+    .min-height-padding-top {
+        margin-top: 10px;
+    }
+
+    .nav-active-color.active {
+        color: white !important;
+        background-color: #001f2b;
+        border-radius: 50%;
+    }
+
+    .nav-link:hover {
+        color: white;
+        background-color: #001f2b;
+    }
+}
+
+/* Styles for screens below 993 pixels */
+@media (max-width: 992px) {
+
+    /* disable link high-light and active */
+    .nav-active-color.active {
+        color: white !important;
+        background-color: #001f2b;
+        border-radius: 50%;
+    }
+
+    .nav-link:hover {
+        color: white;
+        background-color: #001f2b;
+    }
+}
