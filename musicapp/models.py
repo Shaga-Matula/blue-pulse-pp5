@@ -1,4 +1,3 @@
-from cloudinary.models import CloudinaryField
 from django.db import models
 
 from profiles.models import UserProfile, User
