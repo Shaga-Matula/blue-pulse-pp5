@@ -42,10 +42,9 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    # "cloudinary_storage",
     "django.contrib.staticfiles",
-    # "cloudinary",
     "django.contrib.sites",
+    "storages",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -59,8 +58,7 @@ INSTALLED_APPS = [
     # Extra Apps
     "crispy_forms",
     "django_summernote",
-    "storages",
-    ]
+]
 
 MESSAGE_TAGS = {
     messages.DEBUG: "alert-info",
