@@ -264,7 +264,7 @@ class SongUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def form_valid(self, form):
         # Check if the song file extension is 'mp3'
         if form.instance.song_file:
-            if not form.instance.song_file.filename.lower().endswith('.mp3'):
+            if not form.instance.song_file.name.lower().endswith('.mp3'):
                 messages.error(
                     self.request,
                     'Only MP3 files are allowed. Please upload a valid MP3 file.'
