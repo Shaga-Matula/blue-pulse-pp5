@@ -37,6 +37,12 @@ html {
 }
 
 
+
+/* 404 and 505 error */
+.page-error{
+    color: white;
+}
+
 /* News Letter */
 
 .newsletter-format {
