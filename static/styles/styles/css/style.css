@@ -55,6 +55,13 @@ html {
     font-size: xx-large;
 }
 
+
+/* 404 and 505 error */
+.error-color h1{
+    color: white;
+    background-color: red;
+}
+
 /* Allauth Forms */
 .text-edit-merch .form-group label,
 .text-edit-merch,

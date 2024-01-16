@@ -30,13 +30,18 @@ html {
 
 }
 
-
 .text-index {
     color: white;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: large;
 }
 
+
+
+/* 404 and 505 error */
+.page-error{
+    color: white;
+}
 
 /* News Letter */
 

@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render
+from django.http import Http404
 
 from checkout.models import Order
 
@@ -51,3 +52,5 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
