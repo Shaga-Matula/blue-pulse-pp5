@@ -24,8 +24,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'merch_item' merch.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="https://bluepulseband.s3.eu-west-1.amazonaws.com/media/noimage.png"
+                                alt="{{ merch.name }}">
                         </a>
                         {% endif %}
                         <article class="card-body">
