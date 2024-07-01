@@ -29,6 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "8000-shagamatula-bluepulsepp-slb7pwv1gq0.ws-eu107.gitpod.io",
+    "8000-shagamatula-bluepulsepp-slb7pwv1gq0.ws-eu114.gitpod.io/",
     "8000-shagamatula-bluepulsepp-w69psvyn18h.ws-eu106.gitpod.io",
     "bluepulsebandpp5-2efc9a1d43e2.herokuapp.com",
 ]
